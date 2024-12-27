@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Elldar's HSK Retextures</name>
+	<name>Elldar's Tweaks</name>
 	<author>Elldar</author>
 	<supportedVersions>
 		<li>1.2</li>
@@ -8,14 +8,22 @@
 		<li>1.4</li>
 		<li>1.5</li>
 	</supportedVersions>
-	<packageId>Elldar.Retextures</packageId>
+	<packageId>Elldar.Tweaks</packageId>
 	<description></description>
 	<url></url>
 	<modDependencies>
 	</modDependencies>
 	<loadBefore>
+		<li>experimental.optimizations</li>
+		<li>notooshabby.rocketman</li>
 	</loadBefore>
 	<loadAfter>
+		<li>Bichang.Frilleus<li>
+		<li>XxNelsonxX.Parabellum</li>
+		<li>TheLoneTec.TSAP</li>
+		<li>regex.SKP</li>
+		<li>XxNelsonxX.NsLP</li>
+		<li>pacas.patchescompilation.v1</li>
 	</loadAfter>
 	<incompatibleWith>
 	</incompatibleWith>
