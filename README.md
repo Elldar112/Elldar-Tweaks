@@ -1,1 +1,1 @@
-Texture swap for HSK
+Various personal adjustements for HSK
