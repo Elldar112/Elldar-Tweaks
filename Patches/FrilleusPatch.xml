@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="Bichang.Frilleus">
+	<operations>
+  <li Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="Frilleus"]/comps/li[1]</xpath>
+</li>
+  
+  <li Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="Projectile_FrilleusBreath"]/projectile/damageAmountBase</xpath>
+		<value>
+			<damageAmountBase>2</damageAmountBase>
+		</value>
+  </li>
+  
+  <li Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="Projectile_FrilleusBreath"]/projectile/explosionRadius</xpath>
+		<value>
+			<explosionRadius>0.25</explosionRadius>
+		</value>
+  </li>
+  
+  <li Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="Projectile_FrilleusBreath"]/projectile/damageAmountBase</xpath>
+		<value>
+			<damageAmountBase>2</damageAmountBase>
+		</value>
+  </li>
+  
+  <li Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Projectile_FrilleusBreath"]/projectile/explosionRadius</xpath>
+		<value>
+			<explosionRadius>0.25</explosionRadius>
+		</value>
+  </li>
+	</operations>
+	</Operation>
+</Patch>
