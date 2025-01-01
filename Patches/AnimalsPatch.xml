@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 <Operation Class="PatchOperationSequence" MayRequire="bichang.frilleus">
-	<operations>
+<operations>
   <li Class="PatchOperationRemove">
 	<xpath>Defs/ThingDef[defName="Frilleus"]/comps/li[@Class="AnimalBehaviours.CompProperties_Draftable"]</xpath>
 </li>
@@ -33,6 +33,6 @@
 			<explosionRadius>0.25</explosionRadius>
 		</value>
   </li>
-	</operations>
-	</Operation>
+</operations>
+</Operation>
 </Patch>
