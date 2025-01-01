@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- <Patch>
-	<Operation Class="PatchOperationFindMod">
+<Patch>
+<!-- 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Rimatomics</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[@Name="RadSuitBodyBase" or defName = "Apparel_RadiationSuit"]/apparel/bodyPartGroups</xpath>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Apparel_RadiationSuit"]/apparel/bodyPartGroups</xpath>
 				<value>
-					<li>Hands</li>
-					<li>Feet</li>
+					<li>Torso</li>
+					<li>Neck</li>
+					<li>Shoulders</li>
+					<li>Arms</li>
+					<li>Legs</li>
 				</value>
 			</li>
 			</operations>
 		</match>
-	</Operation>		
-</Patch> -->
+	</Operation> -->
+</Patch>

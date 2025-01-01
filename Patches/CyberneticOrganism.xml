@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- <Patch>
+<Patch>
 	<Operation Class="PatchOperationSequence" MayRequire="doug.conn">
 	<operations>
 		<li Class="PatchOperationAdd">
-			<xpath>Defs/HediffDef[defName="CONN_hediff_Musclewire"]/stages/li/capMods]</xpath>
+			<xpath>Defs/HediffDef[defName="CONN_hediff_Musclewire"]/stages/li</xpath>
 				<order>Append</order>
 					<value>
-						<li>
-							<capacity>GlobalWorkSpeed</capacity>
-							<offset>0.10</offset>
-						</li>
+						<statOffsets>
+							<CONN_HealthPointAddedToPart>20</CONN_HealthPointAddedToPart>
+							<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
+						</statOffsets>
 					</value>
 		</li>
 	</operations>
 	</Operation>
-</Patch> -->
+</Patch>
