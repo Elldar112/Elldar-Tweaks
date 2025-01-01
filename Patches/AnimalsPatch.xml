@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationSequence">
+<Operation Class="PatchOperationSequence" MayRequire="bichang.frilleus">
 	<operations>
   <li Class="PatchOperationRemove">
 	<xpath>Defs/ThingDef[defName="Frilleus"]/comps/li[@Class="AnimalBehaviours.CompProperties_Draftable"]</xpath>
