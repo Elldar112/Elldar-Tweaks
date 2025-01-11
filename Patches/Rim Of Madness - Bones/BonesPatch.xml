@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- <Operation Class="PatchOperationSequence" MayRequire="sihv.rombones">
+			<operations>
+			
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Walls"]/defNames</xpath>
+				<value>
+					<li>BoneWall<li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="Make_ChemfuelFromBone"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="ROMB_Apparel_SkullMask" or defName="Sihv_Apparel_BoneArmor"]/recipeMaker/recipeUsers/li[2]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="ROMB_Apparel_SkullMask" or defName="Sihv_Apparel_BoneArmor"]/recipeMaker/recipeUsers/li[3]</xpath>
+			</li> 
+			
+			</operations>
+	</Operation> -->
+
+	<Operation Class="PatchOperationAdd" MayRequire="sihv.rombones">
+		<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Walls"]/defNames</xpath>
+			<value>
+				<li>BoneWall</li>
+			</value>
+	</Operation>
+</Patch>

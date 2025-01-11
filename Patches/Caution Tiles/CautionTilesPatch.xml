@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="essecoisa.CautionTiles">
+			<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
+				or defName="RedStripedTile" 
+				or defName="BlueStripedTile"
+				or defName="GreenStripedTile"
+				or defName="PurpleTileStripedTile" 
+				or defName="YellowStripedTileNE" 
+				or defName="RedStripedTileNE"
+				or defName="BlueStripedTileNE"
+				or defName="GreenStripedTileNE"
+				or defName="PurpleTileStripedTileNE"
+				or defName="YellowStripedTileSE"
+				or defName="RedStripedTileSE"
+				or defName="BlueStripedTileSE"
+				or defName="GreenStripedTileSE"
+				or defName="PurpleTileStripedTileSE"
+				or defName="YellowStripedTileSW"
+				or defName="RedStripedTileSW"
+				or defName="BlueStripedTileSW"
+				or defName="GreenStripedTileSW"
+				or defName="PurpleTileStripedTileSW"
+				or defName="YellowTile"
+				or defName="RedTile"
+				or defName="BlueTile"
+				or defName="GreenTile"
+				or defName="PurpleTile"]/costList/Steel</xpath>
+				<value>
+					<ConcreteResource>2</ConcreteResource>
+				</value>	
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
+				or defName="RedStripedTile" 
+				or defName="BlueStripedTile"
+				or defName="GreenStripedTile"
+				or defName="PurpleTileStripedTile" 
+				or defName="YellowStripedTileNE" 
+				or defName="RedStripedTileNE"
+				or defName="BlueStripedTileNE"
+				or defName="GreenStripedTileNE"
+				or defName="PurpleTileStripedTileNE"
+				or defName="YellowStripedTileSE"
+				or defName="RedStripedTileSE"
+				or defName="BlueStripedTileSE"
+				or defName="GreenStripedTileSE"
+				or defName="PurpleTileStripedTileSE"
+				or defName="YellowStripedTileSW"
+				or defName="RedStripedTileSW"
+				or defName="BlueStripedTileSW"
+				or defName="GreenStripedTileSW"
+				or defName="PurpleTileStripedTileSW"
+				or defName="YellowTile"
+				or defName="RedTile"
+				or defName="BlueTile"
+				or defName="GreenTile"
+				or defName="PurpleTile"]</xpath>
+				<value>
+					<designationCategory>OutsideFloors</designationCategory>
+				</value>	
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
+				or defName="RedStripedTile" 
+				or defName="BlueStripedTile"
+				or defName="GreenStripedTile"
+				or defName="PurpleTileStripedTile" 
+				or defName="YellowStripedTileNE" 
+				or defName="RedStripedTileNE"
+				or defName="BlueStripedTileNE"
+				or defName="GreenStripedTileNE"
+				or defName="PurpleTileStripedTileNE"
+				or defName="YellowStripedTileSE"
+				or defName="RedStripedTileSE"
+				or defName="BlueStripedTileSE"
+				or defName="GreenStripedTileSE"
+				or defName="PurpleTileStripedTileSE"
+				or defName="YellowStripedTileSW"
+				or defName="RedStripedTileSW"
+				or defName="BlueStripedTileSW"
+				or defName="GreenStripedTileSW"
+				or defName="PurpleTileStripedTileSW"
+				or defName="YellowTile"
+				or defName="RedTile"
+				or defName="BlueTile"
+				or defName="GreenTile"
+				or defName="PurpleTile"]</xpath>
+				<value>
+					<researchPrerequisites>Concrete_floor_C1</researchPrerequisites>
+				</value>	
+			</li>					
+			</operations>
+	</Operation>
+</Patch>

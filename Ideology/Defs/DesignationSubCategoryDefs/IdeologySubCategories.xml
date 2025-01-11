@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Ideology Floors -->
+
+	<ArchitectSense.DesignationSubCategoryDef>
+		<defName>SubCategory_FloorsIdeology</defName>
+		<label>Ideology Floors</label>
+		<description>Ideology specific floors.</description>
+		<defNames>
+			<li>Floor_Morbid_Carpet</li>
+			<li>Tile_MorbidSandstone</li>
+			<li>Tile_MorbidGranite</li>
+			<li>Tile_MorbidLimestone</li>
+			<li>Tile_MorbidSlate</li>
+			<li>Tile_MorbidMarble</li>
+			<li>Tile_SpikecoreSandstone</li>
+			<li>Tile_SpikecoreGranite</li>
+			<li>Tile_SpikecoreLimestone</li>
+			<li>Tile_SpikecoreSlate</li>
+			<li>Tile_SpikecoreMarble</li>
+			<li>Plates_Spikecore</li>
+			<li>Boards_Totemic</li>
+			<li>Tile_TotemicSandstone</li>
+			<li>Tile_TotemicGranite</li>
+			<li>Tile_TotemicLimestone</li>
+			<li>Tile_TotemicSlate</li>
+			<li>Tile_TotemicMarble</li>
+			<li>Carpet_MindbendA</li>
+			<li>Carpet_MindbendB</li>
+			<li>Carpet_MindbendC</li>
+			<li>Carpet_MindbendD</li>
+			<li>Carpet_MindbendE</li>
+			<li>Carpet_Transhumanist</li>
+			<li>Tile_Transhumanist</li>
+		</defNames>
+		<designationCategory>Floors</designationCategory>
+		<debug>false</debug>
+	</ArchitectSense.DesignationSubCategoryDef>
+	
+	<!-- Floor Slabs -->
+	
+	<ArchitectSense.DesignationSubCategoryDef>
+		<defName>SubCategory_SlabsIdeology</defName>
+		<label>Floor Slabs</label>
+		<description>Decorative slabs for the floors.</description>
+		<defNames>
+			<li>MorbidSlab_Medium</li>
+			<li>MorbidSlab_Broad</li>
+			<li>TotemicSlab_Medium</li>
+			<li>TotemicSlab_Broad</li>
+			<li>SpikecoreFloorStar_Medium</li>
+			<li>SpikecoreFloorStar_Broad</li>
+			<li>AnimalistSlab_Medium</li>
+			<li>AnimalistSlab_Broad</li>
+		</defNames>
+		<designationCategory>Accessories</designationCategory>
+		<debug>false</debug>
+	</ArchitectSense.DesignationSubCategoryDef>
+	
+</Defs>

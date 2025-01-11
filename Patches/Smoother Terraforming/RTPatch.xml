@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd" MayRequire="skyarkhangel.realisticterraform">
+		<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]/comps/li[@Class="SK.CompProperties_RestrictedPlacement"]/thingDefs</xpath>
+		<value>
+			<li>Blueprint_Peat-WaterShallow</li>
+			<li>Blueprint_Peat-SoilRich</li>
+			<li>Blueprint_Peat-SavannaSoil</li>
+			<li>Blueprint_SoftClay-WaterShallow</li>
+			<li>Blueprint_SoftClay-SoilRich</li>
+			<li>Frame_Peat-WaterShallow</li>
+			<li>Frame_Peat-SoilRich</li>
+			<li>Frame_Peat-SavannaSoil</li>
+			<li>Frame_SoftClay-WaterShallow</li>
+			<li>Frame_SoftClay-SoilRich</li> -->
+		</value>
+	</Operation> 
+</Patch>

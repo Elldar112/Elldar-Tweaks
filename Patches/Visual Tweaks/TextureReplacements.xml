@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Matter Converter -->
+  
+  <Operation Class="PatchOperationReplace">
+  	<xpath>Defs/ThingDef[defName="MatterConverter"]/texPath</xpath>
+  	<value>
+  		<texPath>Things/Building/Production/ChemLab</texPath>
+  	</value>
+  </Operation>
+
+  <!-- Organ Vat -->
+
+  <Operation Class="PatchOperationReplace">
+  	<xpath>Defs/ThingDef[defName="TableOrganvat"]/texPath</xpath>
+  	<value>
+  		<texPath>Things/Building/Decomposer</texPath>
+  	</value>
+  </Operation>
+  
+ <!-- <Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="TableOrganvat"]/graphicClass</xpath>
+  	<value>
+  		<graphicClass>Graphic_Single</graphicClass>
+  	</value>
+  </Operation> -->
+  
+  <Operation Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="TableOrganvat"]/FramePath</xpath>
+ </Operation>
+ 
+   <Operation Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="TableOrganvat"]/AnimationType</xpath>
+ </Operation>
+ 
+   <Operation Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="TableOrganvat"]/FrameCount</xpath>
+   </Operation>
+   
+  <Operation Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="TableOrganvat"]/multispeed</xpath>
+  </Operation>
+
+  <!-- EPOE --> 
+  
+   <!--  <Operation Class="PatchOperationReplace">
+  	<xpath>Defs/ThingDef[defName="TableBasicProsthetic"]/texPath</xpath>
+  	<value>
+  		<texPath>Things/Building/Production/EPOE/TableBasicProsthetics</texPath>
+  	</value>
+  </Operation> -->
+  
+    <Operation Class="PatchOperationReplace">
+  	<xpath>Defs/ThingDef[defName="TableSynthetics"]/texPath</xpath>
+  	<value>
+  		<texPath>Things/Building/Producition/EPOE/TableSynthetics</texPath>
+  	</value>
+  </Operation>
+  
+    <Operation Class="PatchOperationReplace">
+  	<xpath>Defs/ThingDef[defName="TableBionics"]/texPath</xpath>
+  	<value>
+  		<texPath>Things/Building/Producition/EPOE/TableBionics</texPath>
+  	</value>
+  </Operation>
+  
+    <Operation Class="PatchOperationReplace">
+  	<xpath>Defs/ThingDef[defName="UpgradingStation"]/texPath</xpath>
+  	<value>
+  		<texPath>Things/Building/Producition/EPOE/TableAdvancedProsthetics</texPath>
+  	</value>
+  </Operation>
+
+</Patch>
