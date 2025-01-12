@@ -20,7 +20,8 @@
     <xpath>Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="CompProperties_BiosculpterPod_HealingCycle"][key="bioregeneration"]/extraRequiredIngredients</xpath>
     <value>
       <extraRequiredIngredients>
-        <MedicineIndustrial>4</MedicineIndustrial>
+        <MedicineIndustrial>2</MedicineIndustrial>
+		<Biomatter>20</Biomatter>
       </extraRequiredIngredients>
     </value>
   </Operation>
@@ -46,8 +47,8 @@
         <durationDays>8</durationDays>
         <operatingColor>(0.500,0.000,1.000)</operatingColor>
         <extraRequiredIngredients>
-          <MedicineUltratech>1</MedicineUltratech>
-          <Biomatter>60</Biomatter>
+          <MedicineUltratech>4</MedicineUltratech>
+          <Biomatter>120</Biomatter>
         </extraRequiredIngredients>
         <requiredResearch>
           <li>Bioregeneration</li>
@@ -70,6 +71,15 @@
 		  <li>Radius</li>
 		  <li>Sternum</li>
 		  <li>Pelvis</li>
+		  <li>Finger</li>
+		  <li>Toe</li>
+		  <li>Nose</li>
+		  <li>Tongue</li>
+		  <li>Eye</li>
+		  <li>Ear</li>
+		  <li>OTail</li>
+		  <li>RightHandClaws</li>
+		  <li>LeftHandClaws</li>
         </bodyPartsToRestore>
         <conditionsToPossiblyCure>
           <li>FibrousMechanites</li>
@@ -83,6 +93,16 @@
           <li>Cirrhosis</li>
         </conditionsToPossiblyCure>
       </li>
+    </value>
+  </Operation>
+
+<!-- == Biosculptor == -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="BiosculpterPod"]/costList</xpath>
+    <value>
+      <Electronics>2</Electronics>
+	  <Rubber>10</Rubber>
+	  <Plastic>20</Plastic>
     </value>
   </Operation>
 

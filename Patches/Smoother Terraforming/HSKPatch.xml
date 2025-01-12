@@ -5,7 +5,7 @@
 		<value>
 			<building>
 				<isEdifice>false</isEdifice>
-				<canPlaceOverWall>true</canPlaceOverWall> <!-- set to false if you think that terraforming under walls is stupid-->
+				<canPlaceOverWall>false</canPlaceOverWall> <!-- set to false if you think that terraforming under walls is stupid-->
 			</building>
 			<clearBuildingArea>false</clearBuildingArea>
 		</value>
