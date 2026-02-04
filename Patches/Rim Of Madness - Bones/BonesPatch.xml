@@ -24,10 +24,23 @@
 			</operations>
 	</Operation> -->
 
-	<Operation Class="PatchOperationAdd" MayRequire="sihv.rombones">
-		<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Walls"]/defNames</xpath>
-			<value>
-				<li>BoneWall</li>
-			</value>
-	</Operation>
+  <Operation Class="PatchOperationAdd" MayRequire="GHOST.RootsofRimworld">
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Seats"]/defNames</xpath>
+    <value>
+		<li>BoneChair</li>
+		<li>BoneThrone</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd" MayRequire="sihv.rombones">
+	<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Walls"]/defNames</xpath>
+	<value>
+		<li>BoneWall</li>
+	</value>
+  </Operation>
+  
+  <Operation Class="PatchOperationRemove" MayRequire="sihv.rombones">
+	<xpath>Defs/ThingDef[@Name="DarkThroneBase"]/designatorDropdown</xpath>
+  </Operation>
+  
 </Patch>

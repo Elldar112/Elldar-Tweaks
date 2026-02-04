@@ -51,25 +51,38 @@
   	</value>
   </Operation> -->
   
-    <Operation Class="PatchOperationReplace">
+  <Operation Class="PatchOperationReplace">
   	<xpath>Defs/ThingDef[defName="TableSynthetics"]/texPath</xpath>
   	<value>
   		<texPath>Things/Building/Producition/EPOE/TableSynthetics</texPath>
   	</value>
   </Operation>
   
-    <Operation Class="PatchOperationReplace">
+  <Operation Class="PatchOperationReplace">
   	<xpath>Defs/ThingDef[defName="TableBionics"]/texPath</xpath>
   	<value>
   		<texPath>Things/Building/Producition/EPOE/TableBionics</texPath>
   	</value>
   </Operation>
-  
-    <Operation Class="PatchOperationReplace">
+
+  <Operation Class="PatchOperationReplace">
   	<xpath>Defs/ThingDef[defName="UpgradingStation"]/texPath</xpath>
   	<value>
   		<texPath>Things/Building/Producition/EPOE/TableAdvancedProsthetics</texPath>
   	</value>
   </Operation>
-
+  
+  <!-- Stone Blocks -->
+   
+  <Operation Class="PatchOperationReplace">
+  	<xpath>Defs/ThingDef[@Name="SK_StoneBlocksBase"]/graphicData</xpath>
+  	<value>
+  		<graphicData>
+			<texPath>Things/Item/Resource/Blocks</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+  	</value>
+  </Operation>
+  
 </Patch>

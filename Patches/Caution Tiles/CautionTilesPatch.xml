@@ -91,7 +91,9 @@
 				or defName="GreenTile"
 				or defName="PurpleTile"]</xpath>
 				<value>
-					<researchPrerequisites>Concrete_floor_C1</researchPrerequisites>
+					<researchPrerequisites>
+						<li>Concrete_floor_C1</li>
+					</researchPrerequisites>
 				</value>	
 			</li>					
 			</operations>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Patch>
+
+  <Operation Class="PatchOperationRemove" MayRequire="GHOST.RootsofRimworld,sihv.rombones">
+    <xpath>Defs/ThingDef[defName="RR_DecoBones"]/stuffCategories</xpath>
+  </Operation>
+  
+  <Operation Class="PatchOperationRemove" MayRequire="GHOST.RootsofRimworld,sihv.rombones">
+    <xpath>Defs/ThingDef[defName="RR_DecoBones"]/costStuffCount</xpath>
+  </Operation>
+  
+  <Operation Class="PatchOperationAdd" MayRequire="GHOST.RootsofRimworld,sihv.rombones">
+    <xpath>Defs/ThingDef[defName="RR_DecoBones"]</xpath>
+	<value>
+		<costList>
+			<BoneItem>25</BoneItem>
+		</costList>
+	</value>
+  </Operation>
+  
+</Patch>

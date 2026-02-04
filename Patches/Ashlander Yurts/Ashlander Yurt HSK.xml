@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd" MayRequire="aoba.tent,thelonetec.tsap">
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_CampingTent"]/defNames</xpath>
+    <value>
+		<li>AshlandYurt</li>
+    </value>
+  </Operation>
+  
+  	<Operation Class="PatchOperationReplace" MayRequire="ghost.ashyurts">
+		<xpath>Defs/ThingDef[defName = "AshlandYurt"]/costList</xpath>
+		<value>
+			<costList>
+				<WoodPlank>30</WoodPlank>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional" MayRequire="ghost.ashyurts">
+		<xpath>Defs/ThingDef[defName="AshlandYurt"]/researchPrerequisites</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="AshlandYurt"]/researchPrerequisites</xpath>
+			<value>
+			<researchPrerequisites>
+				<li>Beds_B1</li>
+			</researchPrerequisites>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd" MayRequire="ghost.ashyurts">
+			<xpath>Defs/ThingDef[defName="AshlandYurt"]</xpath>
+			<value>
+			<researchPrerequisites>
+				<li>Beds_B1</li>
+			</researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="ghost.ashyurts">
+		<xpath>Defs/ThoughtDef[defName = "Yurtbuff"]/stages/li[1]/baseMoodEffect</xpath>
+		<value>
+			<baseMoodEffect>2</baseMoodEffect>
+		</value>
+	</Operation>
+
+</Patch>

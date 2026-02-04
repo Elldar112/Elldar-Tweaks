@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
   <Operation Class="PatchOperationReplace" MayRequire="spoonshortage.rimkea">
@@ -7,14 +8,23 @@
     </value>
   </Operation>
   
-    <Operation Class="PatchOperationReplace" MayRequire="spoonshortage.rimkea">
+  <Operation Class="PatchOperationReplace" MayRequire="spoonshortage.rimkea">
     <xpath>Defs/TerrainDef[@Name="RIKWoodFloorBase"]/designationCategory</xpath>
     <value>
       <designationCategory>Floors</designationCategory>
     </value>
   </Operation>
   
-   <Operation Class="PatchOperationAdd" MayRequire="spoonshortage.rimkea">
+  <Operation Class="PatchOperationAdd" MayRequire="spoonshortage.rimkea">
+    <xpath>Defs/TerrainDef[@Name="RIKWoodFloorBase"]</xpath>
+    <value>
+      <researchPrerequisites>
+		<li>Wooden_floor_A1</li>
+	  </researchPrerequisites>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAdd" MayRequire="spoonshortage.rimkea">
     <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_PrimitiveWoodFloors"]/defNames</xpath>
     <value>
       <li>Floor_DarkPlanks</li>
@@ -22,7 +32,7 @@
     </value>
   </Operation>
   
-     <Operation Class="PatchOperationAdd" MayRequire="spoonshortage.rimkea">
+  <Operation Class="PatchOperationAdd" MayRequire="spoonshortage.rimkea">
     <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_WoodFloors"]/defNames</xpath>
     <value>
 	  <li>Floor_SmoothWood</li>
