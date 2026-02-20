@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Roots of Rimworld</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_TablesN"]/defNames</xpath>
+          <value><li>RR_Stump</li></value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Seats"]/defNames</xpath>
+          <value>
+            <li>RR_WoodThrone</li>
+            <li>RR_StoneThrone</li>
+            <li>RR_StoneStool</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_ComfortableSeats"]/defNames</xpath>
+          <value>
+            <li>RR_FluffPillow</li>
+            <li>RR_RoundPillow</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_AncientRugs"]/defNames</xpath>
+          <value>
+            <li>RR_RectRugOne</li>
+            <li>RR_RectRugTwo</li>
+            <li>RR_FluffyRug</li>
+            <li>RR_FluffyRoundRug</li>
+            <li>RR_PeltRug</li>
+            <li>RR_RoundRug</li>
+			<li>RR_LeatherRoundRug</li>
+            <li>RR_MatOne</li>
+            <li>RR_MatTwo</li>
+            <li>RR_MatThree</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_SpecialBeds"]/defNames</xpath>
+          <value><li>RR_Bedroll</li></value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_StandartBeds"]/defNames</xpath>
+          <value><li>RR_FurBed</li></value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_DoubleBeds"]/defNames</xpath>
+          <value><li>RR_FurDoubleBed</li></value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lights"]/defNames</xpath>
+          <value>
+            <li>RR_TallTorch</li>
+            <li>RR_ShortTorch</li>
+            <li>RR_StoneTorchOne</li>
+            <li>RR_StoneTorchTwo</li>
+            <li>RR_StoneTorchThree</li>
+            <li>RR_StoneTorchFour</li>
+            <li>RR_StoneTorchFive</li>
+            <li>RR_HangingTorch</li>
+            <li>RR_PotCandle</li>
+            <li>RR_PrimBraizer</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_OutdoorStorage"]/defNames</xpath>
+          <value>
+            <li>RR_ClosedUrn</li>
+            <li>RR_OpenUrn</li>
+            <li>RR_HandleUrn</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RR_DecoBones"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Accessories</designationCategory>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

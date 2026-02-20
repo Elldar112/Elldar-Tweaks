@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Overhaul - Banners</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_DankPyonBanners</defName>
+              <label>Banners</label>
+              <description>Banners to display Your power.</description>
+              <defNames>
+                <li>DankPyon_BannerArrow</li>
+                <li>DankPyon_BannerCrow</li>
+                <li>DankPyon_BannerGoldDragon</li>
+                <li>DankPyon_Banner7Daggers</li>
+                <li>DankPyon_BannerHand</li>
+                <li>DankPyon_BannerReaper</li>
+                <li>DankPyon_BannerAxe</li>
+              </defNames>
+              <designationCategory>Furniture</designationCategory>
+              <debug>false</debug>
+            </ArchitectSense.DesignationSubCategoryDef>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="DankPyon_BannerBase"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>Art_B2</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="DankPyon_BannerBase"]/stuffCategories</xpath>
+          <value>
+            <stuffCategories>
+              <li>Woody</li>
+            </stuffCategories>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="DankPyon_BannerBase"]/costList</xpath>
+          <value>
+            <costList>
+              <Cloth>60</Cloth>
+              <ComponentMedieval>4</ComponentMedieval>
+            </costList>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[TGH] Banners of Cyrodiil</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_DankPyonBanners"]/defNames</xpath>
+      <value>
+        <li>TGH_Banner_Anvil</li>
+        <li>TGH_Banner_Bravil</li>
+        <li>TGH_Banner_Bruma</li>
+        <li>TGH_Banner_Cheydinhal</li>
+        <li>TGH_Banner_Kvatch</li>
+        <li>TGH_Banner_Leyawiin</li>
+        <li>TGH_Banner_Skingrad</li>
+        <li>TGH_Banner_Chorrol</li>
+        <li>TGH_Banner_FightersGuild</li>
+        <li>TGH_Banner_Imperial</li>
+        <li>TGH_Banner_MagesGuild</li>
+        <li>TGH_Banner_MythicDawn</li>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

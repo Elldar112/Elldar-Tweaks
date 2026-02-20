@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Diseases Overhauled</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+	  
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="CompProperties_BiosculpterPod_HealingCycle"]/conditionsToPossiblyCure</xpath>
+			<value>
+				<li>BardelSyndrome</li>
+				<li>CampbellsDisease</li>
+				<li>CentralPathwayImpairments</li>
+				<li>CerebralArteryStenosis</li>
+				<li>Chawbaecks</li>
+				<li>EpsteinBarrVirus</li>
+				<li>HansenKampffDisease</li>
+				<li>HepatitisK</li>
+				<li>Hyperthyroidism</li>
+				<li>Hypothyroidism</li>
+				<li>MultipleSclerosis</li>
+				<li>Osteoporosis</li>
+				<li>Parkinsons</li>
+				<li>PeripheralPathwayObstruction</li>
+				<li>SecondaryDamage</li>
+				<li>ChemicalDamageModerate</li>
+				<li>ChemicalDamageSevere</li>
+				<li>BrainDamage</li>
+				<li>VoightBernsteinDisease</li>
+				<li>EncapsulatedTuberculosis</li>
+				<li>EncapsulatedMuscleParasites</li>
+				<li>EncapsulatedMalaria</li>
+				<li>EncapsulatedPlague</li>
+				<li>Psoriasis</li>
+				<li>PsoriasisInterna</li>
+				<li>InducedComa2Days</li>
+				<li>InducedComa5Days</li>
+				<li>InducedComa15Days</li>
+				<li>InducedComa30Days</li>
+				<li>InducedComaForever</li>
+				<li>ComaTimed</li>
+				<li>ComaForever</li>
+			</value>
+		</li>
+		
+     </operations>
+    </match>
+  </Operation>
+
+</Patch> 
