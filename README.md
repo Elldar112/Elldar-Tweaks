@@ -1,1 +1,1 @@
-Various personal adjustements for HSK
+Various Patches for HSK
