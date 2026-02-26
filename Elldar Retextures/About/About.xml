@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Elldar Retextures</name>
+	<author>Elldar</author>
+	<supportedVersions>
+		<li>1.2</li>
+		<li>1.3</li>
+		<li>1.4</li>
+		<li>1.5</li>
+		<li>1.6</li>
+	</supportedVersions>
+	<packageId>Elldar.textures</packageId>
+	<loadBefore>
+		<li>experimental.optimizations</li>
+		<li>notooshabby.rocketman</li>
+	</loadBefore>
+	<loadAfter>
+	</loadAfter>
+	<description>Personal Retexture collection taken from other texture mods or created on my own.</description>
+</ModMetaData>

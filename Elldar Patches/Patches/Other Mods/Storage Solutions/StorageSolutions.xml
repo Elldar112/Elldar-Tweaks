@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Storage Solutions</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- Remove old category -->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/DesignationCategoryDef[defName="CCP_StorageSolutions"]</xpath>
+        </li>
+		
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]/designationCategory</xpath>
+		  <value>
+			<designationCategory>LWM_DS_Storage</designationCategory>
+		  </value>
+		</li>
+
+        <!-- Add ArchitectSense subcategory -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_StorageSolutions</defName>
+              <label>Single Stack Storage</label>
+              <description>Shelves and boxes holding one item per cell</description>
+              <defNames>
+                <li>CCPSS_LongRack</li>
+                <li>CCPSS_Rack</li>
+                <li>CCPSS_ResourceRack</li>
+                <li>CCPSS_LongResourceRack</li>
+                <li>CCPSS_Shelf</li>
+                <li>CCPSS_LongShelf</li>
+                <li>CCPSS_HDShelf</li>
+                <li>CCPSS_HDLongShelf</li>
+                <li>CCPSS_MedicineCabinet</li>
+                <li>CCPSS_Crate</li>
+                <li>CCPSS_Strongbox</li>
+                <li>CCPSS_LargeStrongbox</li>
+                <li>CCPSS_NestingBox</li>
+				<li MayRequire="xxnelsonxx.parabellum">bunkerstorage_1size</li>
+              </defNames>
+              <designationCategory>LWM_DS_Storage</designationCategory>
+            </ArchitectSense.DesignationSubCategoryDef>
+          </value>
+        </li>
+
+        <!-- Remove Def -->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="CCPSS_ChunkBin" or defName="CCPSS_CorpseLocker"]</xpath>
+        </li>
+
+        <!-- Replace research -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>Storage_B1</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+		
+		<!-- Add Deep Stroage Support -->	
+		<li Class="PatchOperationAdd" MayRequire="lwm.deepstorage">
+          <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]</xpath>
+          <value>
+			<comps>
+				<li Class="LWM.DeepStorage.Properties">
+					<minNumberStacks>1</minNumberStacks>
+					<maxNumberStacks>1</maxNumberStacks>
+					<timeStoringTakes>20</timeStoringTakes>
+					<showContents>true</showContents>
+					<overlayType>None</overlayType>
+				</li>
+			</comps>
+          </value>
+        </li>
+		
+		<li Class="PatchOperationRemove" MayRequire="lwm.deepstorage">
+		  <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]/building/maxItemsInCell</xpath>
+		</li>
+		
+		<li Class="PatchOperationReplace" MayRequire="lwm.deepstorage">
+          <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]/preventDeteriorationOnTop</xpath>
+          <value>
+            <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+          </value>
+        </li>
+		
+      </operations>
+    </match>
+
+  </Operation>
+</Patch>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+      <xpath>Defs</xpath>
+		<value>
+			<ThingDef ParentName="MiscBuildingBase">
+				<defName>TradeAntenna</defName>
+				<label>Antenna tower</label>
+				<description>Required for orbital trading. Acts as a large scale orbital trade beacon. Can only be placed outdoors.</description>
+				<thingClass>Building_OrbitalTradeBeacon</thingClass>
+				<graphicData>
+					<texPath>Things/Building/TradeAntenna</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<shadowData>
+						<volume>(0.7,1,0.7)</volume>
+					</shadowData>
+					<drawSize>(8,8)</drawSize>
+					<!-- <damageData>
+						<rect>(0.2,0.2,0.6,0.6)</rect>
+					</damageData> -->
+				</graphicData>
+				<statBases>
+					<MaxHitPoints>375</MaxHitPoints>
+					<WorkToBuild>1100</WorkToBuild>
+					<Flammability>1.0</Flammability>
+					<Bulk>23</Bulk>
+					<Mass>11</Mass>
+				</statBases>
+				<specialDisplayRadius>60.9</specialDisplayRadius>
+				<fillPercent>0.15</fillPercent>
+				<costList>
+					<ComponentIndustrial>8</ComponentIndustrial>
+					<Mechanism>4</Mechanism>
+				</costList>
+				<building>
+					<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+				</building>
+				<comps>
+					<li Class="CompProperties_Flickable"/>
+					<li Class="CompProperties_Breakdownable"/>
+					<li Class="CompProperties_Power">
+						<compClass>CompPowerTrader</compClass>
+						<basePowerConsumption>1600</basePowerConsumption>
+					</li>
+				</comps>
+				<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+				<pathCost>20</pathCost>
+				<designationCategory>Misc</designationCategory>
+				<rotatable>false</rotatable>
+				<placeWorkers>
+					<li>PlaceWorker_ShowTradeBeaconRadius</li>
+				</placeWorkers>
+				<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+				<!-- <designationHotKey>Misc2</designationHotKey>-->
+				<researchPrerequisites>
+					<li>Telecommunications_D1</li>
+				</researchPrerequisites>
+				<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+			</ThingDef>
+		</value>
+    </Operation>
+	
+	<Operation Class="PatchOperationAdd">
+      <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Trade"]/defNames</xpath>
+		<value>
+			<li>TradeAntenna</li>
+		</value>
+	</Operation>
+
+</Patch>

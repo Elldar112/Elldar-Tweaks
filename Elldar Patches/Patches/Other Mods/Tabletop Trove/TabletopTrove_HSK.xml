@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Tabletop Trove - Additional Joy Objects and Decor</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+		<operations>
+	  
+		<!-- Architect Sense -->
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_TabletopTrove</defName>
+					  <label>Tabletop Games</label>
+					  <description>Various tabletop games, table not included.</description>
+						  <defNames>
+							<li>SorceryCards</li>
+							<li>ColonistsGame</li>
+							<li>DiscreteDictator</li>
+							<li>OneCards</li>
+							<li>TreacheryGame</li>
+							<li>MonopsonyBoard</li>
+							<li>BoardGameBoxes</li>
+							<li>DMScreen</li>
+							<li>CharacterSheet</li>
+							<li>PlayerHandbook</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+			  </value>
+			</li>
+			
+		<!-- Change Cost -->
+			<li Class="PatchOperationRemove">
+			  <xpath>Defs/ThingDef[defName="MonopsonyBoard"
+			  or defName="SorceryCards"
+			  or defName="ColonistsGame"
+			  or defName="DiscreteDictator"
+			  or defName="OneCards"
+			  or defName="TreacheryGame"
+			  or defName="BoardGameBoxes"
+			  or defName="DMScreen"
+			  or defName="CharacterSheet"
+			  or defName="PlayerHandbook"
+			  or defName="AffixSix"
+			  or defName="StrifeGame"
+			  or defName="LuijaBoard"
+			  or defName="Janko"]
+			  /stuffCategories</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+			  <xpath>Defs/ThingDef[defName="MonopsonyBoard"
+			  or defName="SorceryCards"
+			  or defName="ColonistsGame"
+			  or defName="DiscreteDictator"
+			  or defName="OneCards"
+			  or defName="TreacheryGame"
+			  or defName="BoardGameBoxes"
+			  or defName="DMScreen"
+			  or defName="CharacterSheet"
+			  or defName="PlayerHandbook"
+			  or defName="AffixSix"
+			  or defName="StrifeGame"
+			  or defName="LuijaBoard"
+			  or defName="Janko"]
+			  /costStuffCount</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="MonopsonyBoard"
+			  or defName="SorceryCards"
+			  or defName="ColonistsGame"
+			  or defName="DiscreteDictator"
+			  or defName="OneCards"
+			  or defName="TreacheryGame"
+			  or defName="AffixSix"
+			  or defName="StrifeGame"
+			  or defName="LuijaBoard"
+			  or defName="Janko"]
+			  /costList</xpath>
+			  <value>
+				<costList>
+					<ComponentMedieval>2</ComponentMedieval>
+					<Cloth>20</Cloth>
+					<Dye>2</Dye>
+				</costList>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="BoardGameBoxes"]/costList</xpath>
+			  <value>
+				<costList>
+					<Cloth>20</Cloth>
+					<Dye>2</Dye>
+				</costList>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="DMScreen"
+			  or defName="CharacterSheet"
+			  or defName="PlayerHandbook"]
+			  /costList</xpath>
+			  <value>
+				<costList>
+					<Cloth>20</Cloth>
+				</costList>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace"> <!-- Trade only -->
+			  <xpath>Defs/ThingDef[defName="AffixSix"
+			  or defName="StrifeGame"
+			  or defName="LuijaBoard"
+			  or defName="Janko"]
+			  /costList</xpath>
+			  <value>
+				<costList>
+					<ComponentMedieval>2</ComponentMedieval>
+					<WoodPlank>8</WoodPlank>
+					<Dye>2</Dye>
+				</costList>
+			  </value>
+			</li>
+			
+		<!-- Research -->
+			<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="MonopsonyBoard"
+			  or defName="SorceryCards"
+			  or defName="ColonistsGame"
+			  or defName="DiscreteDictator"
+			  or defName="OneCards"
+			  or defName="TreacheryGame"
+			  or defName="BoardGameBoxes"
+			  or defName="DMScreen"
+			  or defName="CharacterSheet"
+			  or defName="PlayerHandbook"]
+			  /researchPrerequisites</xpath>
+			  <value>
+				<researchPrerequisites>
+					<li>Piano</li>
+				</researchPrerequisites>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+			  <xpath>Defs/ResearchProjectDef[defName="TabletopGames"]</xpath>
+			  
+			<match Class="PatchOperationRemove">
+              <xpath>Defs/ResearchProjectDef[defName="TabletopGames"]</xpath>
+            </match>
+			</li>
+			
+		</operations>
+    </match>
+  </Operation>
+
+</Patch>

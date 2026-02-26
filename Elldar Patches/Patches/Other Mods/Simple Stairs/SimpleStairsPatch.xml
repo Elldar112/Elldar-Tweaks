@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+	  <li>SimpleStairs</li>
+	</mods>
+    <match Class="PatchOperationSequence">
+		<operations>
+	  
+		<!-- Architect Sense -->
+		
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>
+					<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_SimpleStairs</defName>
+					<label>Stairs</label>
+					<description>Decorative stairs and railings</description>
+					<defNames>
+					  <li>Gomi_SimpleStair</li>
+					  <li>Gomi_FloorFence</li>
+					  <li>Gomi_Handrail</li>
+					  <li>Gomi_HighWall</li>
+					</defNames>
+					<designationCategory>Structure</designationCategory>
+					<debug>false</debug>
+				  </ArchitectSense.DesignationSubCategoryDef>
+			  </value>
+			</li>
+			
+		</operations>
+    </match>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RIMkea</li>
+	  <li>RIMkea (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/TerrainDef[@Name="RIKStoneFloorBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>NaturalFloors</designationCategory>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/TerrainDef[@Name="RIKWoodFloorBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Floors</designationCategory>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/TerrainDef[@Name="RIKWoodFloorBase"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>Wooden_floor_A1</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_PrimitiveWoodFloors"]/defNames</xpath>
+          <value>
+            <li>Floor_DarkPlanks</li>
+            <li>Floor_LightPlanks</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_WoodFloors"]/defNames</xpath>
+          <value>
+            <li>Floor_SmoothWood</li>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

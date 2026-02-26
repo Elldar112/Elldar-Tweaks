@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vile's Wood You Please</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+			
+			  <li Class="PatchOperationAdd">
+				<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_DryingRack"]/defNames</xpath>
+				<value>
+					<li>SeasoningRack</li>
+				</value>
+			  </li>
+			  
+			</operations>
+		</match>	
+    </Operation>
+</Patch>

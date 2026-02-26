@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+		<operations>
+	  
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_JoySimple</defName>
+					  <label>Simple Games</label>
+					  <description>Simple joy sources.</description>
+						  <defNames>
+							<li>HoopstoneRing</li>
+							<li>HorseshoesPin</li>
+							<li>GameOfUrBoard</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_NatureShrines</defName>
+					  <label>Nature Shrines</label>
+					  <description>Simple joy sources.</description>
+						  <defNames>
+							<li>NatureShrine_Small</li>
+							<li>NatureShrine_Large</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+			  </value>
+			</li>
+			
+			<!-- <li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_Stele</defName>
+					  <label>Steles</label>
+					  <description>Ancient memorials</description>
+						  <defNames>
+							<li>SteleLarge</li>
+							<li>SteleGrand</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+			  </value>
+			</li> -->
+			
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_JoyArtistic</defName>
+					  <label>Artistic</label>
+					  <description>Ancient art</description>
+						  <defNames>
+							<li>Cairn</li>
+							<li>GlowstoneMonument</li>
+							<li>SteleLarge</li>
+							<li>SteleGrand</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_MiscAccessory</defName>
+					  <label>Misc.</label>
+					  <description>Miscellaneous accessories.</description>
+						  <defNames>
+							<li>FloorAddonA</li>
+							<li>HeadPike</li>
+							<li>WoodenDebris</li>
+						  </defNames>
+					  <designationCategory>Accessories</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+			  </value>
+			</li>
+			
+		</operations>
+  </Operation>
+
+</Patch>
