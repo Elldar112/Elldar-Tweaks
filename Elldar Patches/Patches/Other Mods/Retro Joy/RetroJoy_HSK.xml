@@ -25,12 +25,29 @@
 			</li>
 			
 			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_TablesM"]/defNames</xpath>
+			  <value>
+			  	<li>RetroSmallTable</li>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
 			  <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_TV"]/defNames</xpath>
 			  <value>
 			  	<li>RimtendoESConsole</li>
 			  </value>
 			</li>
-			
+		<!-- Research -->
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="RetroArmchair" or defName="RetroSmallTable"]</xpath>
+			  <value>
+			  	<researchPrerequisites>
+					<li>Tables_C1</li>
+				</researchPrerequisites>
+				<constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+			  </value>
+			</li>
+		
 		</operations>
     </match>
   </Operation>

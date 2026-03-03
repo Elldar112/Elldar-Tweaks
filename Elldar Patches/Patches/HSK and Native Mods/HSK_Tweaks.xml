@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Candle"]</xpath>
+    <value>
+      <costLiust>
+		<Tallow>5</Tallow>
+	  </costLiust>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/ThingDef[defName="Brazier"]</xpath>
+    <value>
+      <costLiust>
+		<WoodLog>10</WoodLog>
+	  </costLiust>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lamps"]/defNames</xpath>
+    <value>
+      <li>Lighting_PathLamp</li>
+	  <li>OutdoorGroundLamp</li>
+	  <li>FloorLightSquare</li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lights"]/defNames/li[.="Lighting_PathLamp" or .="OutdoorGroundLamp"]</xpath>
+  </Operation>
+  
+</Patch>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Animalstrawbed</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+		<operations>
+	  
+		<!-- Architect Sense -->
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_AnimalFurniture"]/defNames</xpath>
+			  <value>
+			  	<li>AnimalStrawBedSmall</li>
+				<li>AnimalStrawBed</li>
+				<li>AnimalStrawBedBig</li>
+				<li>AnimalHospitalBedSmall</li>
+				<li>AnimalHospitalBed</li>
+				<li>AnimalHospitalBedBig</li>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+			  <xpath>Defs/DesignatorDropdownGroupDef[defName="ZP_AnimalStrawBed" or defName="ZP_AnimalHMBed" or defName="ZP_AnimalHospitalBed"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+			  <xpath>Defs/ThingDef[defName="AnimalHMBedSmall" or defName="AnimalHMBed" or defName="AnimalHMBedBig"]</xpath>
+			</li>
+			
+		<!-- Research -->
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="AnimalStrawBedSmall" or defName="AnimalStrawBed" or defName="AnimalStrawBig"]</xpath>
+			  <value>
+			  	<researchPrerequisites>
+					<li>Animal_A1</li>
+				</researchPrerequisites>
+			  </value>
+			</li>
+		
+		</operations>
+    </match>
+  </Operation>
+
+</Patch>

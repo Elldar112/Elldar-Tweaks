@@ -119,7 +119,13 @@
                         <li>GL_ChessTable</li>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
+				<li Class="PatchOperationAdd">
+                    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Stove"]/defNames</xpath>
+                    <value>
+                        <li>GL_Bonfire</li>
+                    </value>
+                </li>
+                <!-- <li Class="PatchOperationAdd">
                     <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Facilities"]/defNames</xpath>
                     <value>
                         <li>GL_Cupboard</li>
@@ -134,7 +140,7 @@
                         <li>RGK_EndTableWithLamp</li>
                         <li>RGK_EndTableWithLampE</li>
                     </value>
-                </li>
+                </li> -->
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Shelfs"]/defNames</xpath>
                     <value>

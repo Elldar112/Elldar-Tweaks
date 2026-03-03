@@ -8,11 +8,8 @@
             <operations>
 			
 				<li Class="PatchOperationRemove">
-					<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lights"]/defNames/li[.="Hearth"]</xpath>
+					<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lights"]/defNames/li[.="Hearth" or .="OpenHearth"]</xpath>
 				</li>
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lights"]/defNames/li[.="OpenHearth"]</xpath>
-				</li> 
 					
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Stove"]/defNames</xpath>

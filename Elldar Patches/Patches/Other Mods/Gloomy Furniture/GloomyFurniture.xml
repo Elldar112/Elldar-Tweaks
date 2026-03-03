@@ -1,0 +1,1131 @@
+<?xml version="1.0" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>GloomyFurniture</li>
+	  <li>Gloomy Furniture (Continued)</li>
+    </mods>
+	
+	<match Class="PatchOperationSequence">
+		<operations>
+
+	<!-- Dresser -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_Dresser"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>7</ComponentIndustrial>
+				<Plastic>20</Plastic>
+				<Rubber>15</Rubber>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Dresser"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>Beds_C3</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Dresser"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>10</Beauty>
+				<Bulk>75</Bulk>
+				<Cleanliness>-2</Cleanliness>
+				<Flammability>1.0</Flammability>
+				<Mass>25</Mass>
+				<MaxHitPoints>120</MaxHitPoints>
+				<WorkToBuild>5000</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- End Table -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_EndTable"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>3</ComponentMedieval>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTable"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Metallic</li>
+				<li>Plastic</li>
+				<li>Precious</li>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTable"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>Beds_B1</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTable"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>9</Beauty>
+				<Bulk>70</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>20</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToBuild>1100</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- End Table with Lamp -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLamp"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>2</ComponentIndustrial>
+				<Glass>3</Glass>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLamp"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Metallic</li>
+				<li>Plastic</li>
+				<li>Precious</li>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLamp"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>Beds_C2</li>
+				<li>Light_C1</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLamp"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>14</Beauty>
+				<Bulk>75</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>23</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToBuild>1100</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLampE"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>4</ComponentIndustrial>
+				<ElectronicComponents>1</ElectronicComponents>
+				<Glass>3</Glass>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLampE"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Metallic</li>
+				<li>Plastic</li>
+				<li>Precious</li>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLampE"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>Beds_C2</li>
+				<li>Light_C2</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLampE"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>14</Beauty>
+				<Bulk>75</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>23</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToBuild>1100</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Bucket -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_bucketr"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_bucketr"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>0</Beauty>
+				<Comfort>0.6</Comfort>
+				<Flammability>1.0</Flammability>
+				<Mass>3</Mass>
+				<MaxHitPoints>85</MaxHitPoints>
+				<WorkToBuild>560</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+		  
+	<!-- Barrel-->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_orc"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_orc"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>2</Beauty>
+				<Comfort>0.1</Comfort>
+				<Flammability>1.0</Flammability>
+				<Mass>3</Mass>
+				<MaxHitPoints>85</MaxHitPoints>
+				<WorkToBuild>560</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Simple Chair -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_SimpleChair"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>3</ComponentMedieval>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_SimpleChair"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_SimpleChair"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>2</Beauty>
+				<Bulk>15</Bulk>
+				<Comfort>0.3</Comfort>
+				<Flammability>1.0</Flammability>
+				<Mass>5</Mass>
+				<MaxHitPoints>50</MaxHitPoints>
+				<WorkToBuild>350</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Chair -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_Chair"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>5</ComponentIndustrial>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Chair"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_Chair"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>Tables_C1</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Chair"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>5</Beauty>
+				<Bulk>8</Bulk>
+				<Comfort>0.4</Comfort>
+				<Flammability>1.0</Flammability>
+				<Mass>3</Mass>
+				<MaxHitPoints>70</MaxHitPoints>
+				<WorkToBuild>650</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Dining Chair -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGKDiningChair"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>6</ComponentIndustrial>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGKDiningChair"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGKDiningChair"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>Tables_B2</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGKDiningChair"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>6</Beauty>
+				<Bulk>41</Bulk>
+				<Comfort>0.5</Comfort>
+				<Flammability>1.0</Flammability>
+				<Mass>16</Mass>
+				<MaxHitPoints>90</MaxHitPoints>
+				<WorkToBuild>900</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Bench -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="GL_Bench"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>6</ComponentMedieval>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Bench"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Bench"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>5</Beauty>
+				<Bulk>25</Bulk>
+				<Comfort>0.45</Comfort>
+				<Flammability>1.0</Flammability>
+				<Mass>11</Mass>
+				<MaxHitPoints>80</MaxHitPoints>
+				<WorkToBuild>550</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Table 2x2 -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableA"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableA"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>6</Beauty>
+				<Bulk>38</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>14</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">12</StyleDominance>
+				<WorkToBuild>900</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Table 2x2 Fancy -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableC"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableC"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>9</Beauty>
+				<Bulk>38</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>14</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">12</StyleDominance>
+				<WorkToBuild>1200</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Table 2x2 Cloth -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableB"]/costList</xpath>
+			<value>
+			  <costList>
+				<Cloth>15</Cloth>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableB"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableB"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>9</Beauty>
+				<Bulk>38</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>14</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">12</StyleDominance>
+				<WorkToBuild>900</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Table 2x2 Cloth with Tea set -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableD"]/costList</xpath>
+			<value>
+			  <costList>
+				<Cloth>15</Cloth>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableD"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableD"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>9</Beauty>
+				<Bulk>38</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>14</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">12</StyleDominance>
+				<WorkToBuild>900</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Table 2x1 -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableE"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableE"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableE"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>2</Beauty>
+				<Bulk>28</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>10</Mass>
+				<MaxHitPoints>75</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">6</StyleDominance>
+				<WorkToBuild>700</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Table 3x2 -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableF"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableF"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableF"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>6</Beauty>
+				<Bulk>90</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>17</Mass>
+				<MaxHitPoints>150</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">18</StyleDominance>
+				<WorkToBuild>1400</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Table 2x2 -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableG"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableG"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableG"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>50</Beauty>
+				<Flammability>1.0</Flammability>
+				<Mass>10</Mass>
+				<MaxHitPoints>180</MaxHitPoints>
+				<WorkToBuild>4000</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Table 3x3 -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableH"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableH"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_TableH"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>7</Beauty>
+				<Bulk>53</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>42</Mass>
+				<MaxHitPoints>150</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">27</StyleDominance>
+				<WorkToBuild>1600</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Mini Table -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_MiniTableA"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_MiniTableA"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>1</Beauty>
+				<Bulk>14</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>5</Mass>
+				<MaxHitPoints>65</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">3</StyleDominance>
+				<WorkToBuild>500</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Mini Table Cloth -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_MiniTableB"]</xpath>
+			<value>
+			  <costList>
+				<Cloth>10</Cloth>
+			  </costList>
+			 </value>
+		  </li>
+		  
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_MiniTableB"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_MiniTableB"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>1</Beauty>
+				<Bulk>14</Bulk>
+				<Flammability>1.0</Flammability>
+				<Mass>5</Mass>
+				<MaxHitPoints>65</MaxHitPoints>
+				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">3</StyleDominance>
+				<WorkToBuild>500</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Wine Rack -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RKGWineRackB"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RKGWineRackB"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RKGWineRackB"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>12</Beauty>
+				<Flammability>1.0</Flammability>
+				<Mass>8</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToBuild>3000</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Wardrobe -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WardrobeA"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WardrobeA"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WardrobeA"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>8</Beauty>
+				<Flammability>1.0</Flammability>
+				<Mass>8</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToBuild>3000</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WardrobeB"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WardrobeB"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WardrobeB"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>15</Beauty>
+				<Flammability>1.0</Flammability>
+				<Mass>8</Mass>
+				<MaxHitPoints>120</MaxHitPoints>
+				<WorkToBuild>5000</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Bookshelf -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Bookshelf"]/costList</xpath>
+			<value>
+			  <costList>
+				<Cloth>50</Cloth>
+				<ComponentIndustrial>5</ComponentIndustrial>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Bookshelf"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Bookshelf"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>15</Beauty>
+				<Flammability>1.0</Flammability>
+				<Mass>70</Mass>
+				<MaxHitPoints>120</MaxHitPoints>
+				<WorkToBuild>7500</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Cupboard -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="GL_Cupboard"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>5</ComponentIndustrial>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Cupboard"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Cupboard"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>30</Beauty>
+				<Flammability>1.0</Flammability>
+				<Mass>35</Mass>
+				<MaxHitPoints>120</MaxHitPoints>
+				<WorkToBuild>2500</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Tableware Shelf -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_TablewareShelf"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>5</ComponentIndustrial>
+				<Mechanism>3</Mechanism>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_TablewareShelf"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_TablewareShelf"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>15</Beauty>
+				<Flammability>1.0</Flammability>
+				<Mass>15</Mass>
+				<MaxHitPoints>120</MaxHitPoints>
+				<WorkToBuild>3000</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Manger -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_Manger"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>2</ComponentMedieval>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Manger"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Manger"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Flammability>1.0</Flammability>
+				<Mass>8</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToBuild>600</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Shelf -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="GL_Shelf"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>5</ComponentIndustrial>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Shelf"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories Inherit="false">
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Shelf"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Shelf"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Flammability>0.2</Flammability>
+				<Mass>8</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToBuild>600</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Dog Bowl -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_DogBowl"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentIndustrial>1</ComponentIndustrial>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_DogBowl"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Ceramic</li>
+				<li>Glass</li>
+				<li>Metallic</li>
+				<li>Plastic</li>
+				<li>Precious</li>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_DogBowl"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>Animal_A2</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_DogBowl"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Flammability>0.0</Flammability>
+				<Mass>1</Mass>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToBuild>600</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Locker -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Locker"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>3</ComponentMedieval>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Locker"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Woody</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Locker"]/researchPrerequisites</xpath>
+			<value>
+			  <researchPrerequisites>
+				<li>ComplexFurniture</li>
+			  </researchPrerequisites>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Locker"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Flammability>0.75</Flammability>
+				<Mass>10</Mass>
+				<MaxHitPoints>180</MaxHitPoints>
+				<WorkToBuild>800</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Flower -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Flower"]/costList</xpath>
+			<value>
+			  <costList>
+				<WoodPlank>2</WoodPlank>
+			  </costList>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_Flower"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Stony</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Flower"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>15</Beauty>
+				<Flammability>0</Flammability>
+				<Mass>1</Mass>
+				<MaxHitPoints>40</MaxHitPoints>
+				<WorkToBuild>100</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Tea Set -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Teaset"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Stony</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RGK_Teaset"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>5</Beauty>
+				<Flammability>0</Flammability>
+				<Mass>1</Mass>
+				<MaxHitPoints>40</MaxHitPoints>
+				<WorkToBuild>100</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+	<!-- Teddy -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Teddy"]/stuffCategories</xpath>
+			<value>
+			  <stuffCategories>
+				<li>Fabric</li>
+				<li>Leathery</li>
+			  </stuffCategories>
+			 </value>
+		  </li>
+
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_Teddy"]/statBases</xpath>
+			<value>
+			  <statBases>
+				<Beauty>4</Beauty>
+				<Flammability>0</Flammability>
+				<Mass>1</Mass>
+				<MaxHitPoints>40</MaxHitPoints>
+				<WorkToBuild>100</WorkToBuild>
+			  </statBases>
+			 </value>
+		  </li>
+
+		</operations>
+	  </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+		
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="PlantPot_Bonsai"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ideology</designationCategory>
+			</value>
+			</li>
+			
+			<li Class="PatchOperationReplace" MayRequire="solaris.ratkinracemod">
+			<xpath>Defs/ThingDef[defName="RK_Pulpit"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ideology</designationCategory>
+			</value>
+			</li>
+
+		</operations>
+	</Operation>
+
+</Patch>

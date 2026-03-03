@@ -143,7 +143,7 @@
 			  /researchPrerequisites</xpath>
 			  <value>
 				<researchPrerequisites>
-					<li>Piano</li>
+					<li>TubeTelevision</li>
 				</researchPrerequisites>
 			  </value>
 			</li>
@@ -156,6 +156,48 @@
             </match>
 			</li>
 			
+		<!-- Attribues -->
+
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="MonopsonyBoard"
+			  or defName="SorceryCards"
+			  or defName="ColonistsGame"
+			  or defName="DiscreteDictator"
+			  or defName="OneCards"
+			  or defName="TreacheryGame"
+			  or defName="BoardGameBoxes"
+			  or defName="DMScreen"
+			  or defName="CharacterSheet"
+			  or defName="PlayerHandbook"
+			  or defName="AffixSix"
+			  or defName="StrifeGame"
+			  or defName="LuijaBoard"
+			  or defName="Janko"]/building</xpath>
+			  <value>
+				<paintable>true</paintable>
+			  </value>
+			</li>
+			
+			<!-- <li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="MonopsonyBoard"
+			  or defName="SorceryCards"
+			  or defName="ColonistsGame"
+			  or defName="DiscreteDictator"
+			  or defName="OneCards"
+			  or defName="TreacheryGame"
+			  or defName="BoardGameBoxes"
+			  or defName="DMScreen"
+			  or defName="CharacterSheet"
+			  or defName="PlayerHandbook"
+			  or defName="AffixSix"
+			  or defName="StrifeGame"
+			  or defName="LuijaBoard"
+			  or defName="Janko"]</xpath>
+			  <value>
+				<color>(51,72,156)</color>
+			  </value>
+			</li> -->
+			 
 		</operations>
     </match>
   </Operation>

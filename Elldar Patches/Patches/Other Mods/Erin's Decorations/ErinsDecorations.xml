@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Erin's Decorations</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+		<operations>
+	  
+		<!-- Architect Sense -->
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>			  
+				<ArchitectSense.DesignationSubCategoryDef>
+				  <defName>SubCategory_ErinDeco</defName>
+				  <label>Erin's Decorations</label>
+				  <description>Beautiful little additions</description>
+				  <defNames>
+					<li>ED_SmallPhotos</li>
+					<li>ED_SmallPlant</li>
+					<li>ED_Plushie</li>
+					<li>ED_Candles</li>
+					<li>ED_Pillow</li>
+					<li>ED_Clock</li>
+					<li>ED_Trophy</li>
+					<li>ED_Vase</li>
+					<li>ED_Laptop</li>
+					<li>ED_Paper</li>
+					<li>ED_Papers</li>
+					<li>ED_Book</li>
+					<li>ED_PileofBooks</li>
+					<li>ED_CatTower</li>
+					<li>ED_DogHouse</li>
+					<li>ED_PetBowl</li>
+					<li>ED_Bin</li>
+					<li>ED_Doormat</li>
+				  </defNames>
+				  <designationCategory>Furniture</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+			 </value>
+			</li>
+			
+		</operations>
+    </match>
+  </Operation>
+
+</Patch>

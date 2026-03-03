@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Roots of Rimworld</li>
     </mods>
     <match Class="PatchOperationSequence">
       <operations>
+
+	<!-- Architect Sense -->
+		<li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+
+			<!-- <ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_RR_PrimitiveLights</defName>
+              <label>Primitive Lights</label>
+              <description>Light sources that originate from the roots of humanity</description>
+              <defNames>
+                <li>RR_TallTorch</li>
+				<li>RR_ShortTorch</li>
+				<li>RR_StoneTorchOne</li>
+				<li>RR_StoneTorchTwo</li>
+				<li>RR_StoneTorchThree</li>
+				<li>RR_StoneTorchFour</li>
+				<li>RR_StoneTorchFive</li>
+				<li>RR_HangingTorch</li>
+				<li>RR_PotCandle</li>
+				<li>RR_PrimBraizer</li>
+              </defNames>
+              <designationCategory>Accossories</designationCategory>
+            </ArchitectSense.DesignationSubCategoryDef> -->
+
+			<ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_RR_PrimitiveLights</defName>
+              <label>Primitive Mats</label>
+              <description>Primitive woven mats</description>
+              <defNames>
+                <li>RR_MatOne</li>
+				<li>RR_MatTwo</li>
+				<li>RR_MatThree</li>
+              </defNames>
+              <designationCategory>Accossories</designationCategory>
+            </ArchitectSense.DesignationSubCategoryDef>
+
+		  </value>
+        </li>
 
         <li Class="PatchOperationAdd">
           <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_TablesN"]/defNames</xpath>
@@ -93,8 +131,93 @@
           </value>
         </li>
 
+	<!-- Cost -->
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_MatOne"]</xpath>
+          <value>
+			 <costList>
+				<Kindling>20</Kindling>
+				<Hay>40</Hay>
+			 </costList>
+          </value>
+        </li>
+
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_MatTwo"]</xpath>
+          <value>
+		    <costList>
+				<Kindling>10</Kindling>
+				<Hay>20</Hay>
+			</costList>
+          </value>
+        </li>
+
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_MatThree"]</xpath>
+          <value>
+			<costList>
+				<Kindling>15</Kindling>
+				<Hay>30</Hay>
+			</costList>
+          </value>
+        </li>
+
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_LeatherRoundRug"]/stuffCategories</xpath>
+          <value>
+			<li>Fabric</li>
+          </value>
+        </li>
+
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_TallTorch" or defName="RR_ShortTorch"]</xpath>
+          <value>
+		    <costList>
+				<Kindling>10</Kindling>
+			</costList>
+          </value>
+        </li>
+
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_PrimBraizer"]</xpath>
+          <value>
+		    <costList>
+				<Charcoal>5</Charcoal>
+			</costList>
+          </value>
+        </li>
+
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_StoneTorchOne"
+		  or defName="RR_StoneTorchTwo"
+		  or defName="RR_StoneTorchThree"
+		  or defName="RR_StoneTorchFour"
+		  or defName="RR_StoneTorchFive"
+		  or defName="RR_HangingTorch"
+		  or defName="RR_PotCandle"]</xpath>
+          <value>
+		    <costList>
+				<Tallow>5</Tallow>
+			</costList>
+          </value>
+        </li>
+
+	<!-- Attributes -->
+		<!-- <li Class="PatchOperationAdd">
+		  <xpath>Defs/ThingDef[defName="RR_FurBed"]</xpath>
+		  <value>
+			<uiIconPath>Things/Building/Furniture/fursingle/fursingle</uiIconPath>
+		  </value>
+		</li>
+
+		<li Class="PatchOperationAdd">
+		  <xpath>Defs/ThingDef[defName="RR_FurDobuleBed"]</xpath>
+		  <value>
+			<uiIconPath>Things/Building/Furniture/furdouble/furdouble</uiIconPath>
+		  </value>
+		</li> -->
+
       </operations>
     </match>
   </Operation>
-
 </Patch>

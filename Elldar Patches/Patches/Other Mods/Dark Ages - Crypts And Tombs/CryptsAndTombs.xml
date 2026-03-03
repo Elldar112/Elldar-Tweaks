@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dark Ages : Crypts and Tombs</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+		<operations>
+
+		<!-- Architect Sense -->
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>
+
+				<ArchitectSense.DesignationSubCategoryDef>
+				  <defName>SubCategory_DACryptBraziers</defName>
+				  <label>Crypt Braziers</label>
+				  <description>Sepulchral braziers to illuminate burial grounds, these burn with open fire.</description>
+				  <defNames>
+					<li>DA_SepulchralStatue</li>
+					<li>DA_DarkligtSepulchralStatue</li>
+					<li>DA_BloodflameSepulchralStatue</li>
+					<li>DA_SepulchralBrazier</li>
+					<li>DA_DarklightSepulchralBrazier</li>
+					<li>DA_BloodflameSepulchralBrazier</li>
+				  </defNames>
+				  <designationCategory>Furniture</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+
+				<ArchitectSense.DesignationSubCategoryDef>
+				  <defName>SubCategory_DACryptStatues</defName>
+				  <label>Crypt Statues</label>
+				  <description>Spooky statues for Your crypt.</description>
+				  <defNames>
+					<li>DA_HeroicMemorial</li>
+					<li>DA_DemonStatue</li>
+					<li>DA_GargoyleStatue</li>
+					<li>DA_ImpStatue</li>
+					<li>DA_BurialUrn</li>
+				  </defNames>
+				  <designationCategory>Furniture</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+
+				<ArchitectSense.DesignationSubCategoryDef>
+				  <defName>SubCategory_DACryptCandles</defName>
+				  <label>Crypt Candles</label>
+				  <description>Sepulchral Candles to illuminate burial grounds.</description>
+				  <defNames>
+					<li>DA_GrandCandelabra</li>
+					<li>DA_DarklightGrandCandelabra</li>
+					<li>DA_BloodGrandCandelabra</li>
+					<li>DA_Candles</li>
+					<li>DA_DarkCandles</li>
+					<li>DA_BloodCandles</li>
+				  </defNames>
+				  <designationCategory>Furniture</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+
+			  </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Graves"]/defNames</xpath>
+			  <value>
+				<li>DA_Coffin</li>
+				<li>DA_GrandSarcophagus</li>
+				<li>DA_WallTomb</li>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Walls"]/defNames</xpath>
+			  <value>
+				<li>DA_OssuaryWall</li>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationRemove">
+			  <xpath>Defs/ThingDef[@Name="DA_CandleBase"]/designatorDropdown</xpath>
+			</li>
+
+		<!-- Cost -->
+
+			<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[@Name="DA_CandleBase"]/costList</xpath>
+			  <value>
+				<costList>
+					<Tallow>2</Tallow>
+				</costList>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[@Name="DA_CandelabraBase"]/costList</xpath>
+			  <value>
+				<costList>
+					<Tallow>6</Tallow>
+				</costList>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="DA_BloodCandles" or defName="DA_BloodGrandCandelabra"]</xpath>
+			  <value>
+			    <costList>
+					<HemogenPack>2</HemogenPack>
+				</costList>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="DA_DarkCandles" or defName="DA_DarklightGrandCandelabra"]</xpath>
+			  <value>
+				<costList>
+					<Nitre>4</Nitre>
+				</costList>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[@Name="DA_CandelabraBase"]/stuffCategories</xpath>
+			  <value>
+				<stuffCategories>
+					<li>Metallic</li>
+				</stuffCategories>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="DA_SepulchralReliquary"]</xpath>
+			  <value>
+				<costList Inherit="False">
+					<SilverBar>100</SilverBar>
+					<ComponentMedieval>30</ComponentMedieval>
+					<Tallow>20</Tallow>
+				</costList>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="DA_DarklightSepulchralReliquary"]</xpath>
+			  <value>
+				<costList Inherit="False">
+					<SilverBar>100</SilverBar>
+					<ComponentMedieval>30</ComponentMedieval>
+					<Tallow>20</Tallow>
+					<Nitre>15</Nitre>
+				</costList>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="DA_BloodflameSepulchralReliquary"]</xpath>
+			  <value>
+				<costList Inherit="False">
+					<SilverBar>100</SilverBar>
+					<ComponentMedieval>30</ComponentMedieval>
+					<Tallow>20</Tallow>
+					<HemogenPack>8</HemogenPack>
+				</costList>
+			  </value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="DA_BurialUrn"]/costList</xpath>
+			  <value>
+				<costList>
+					<Skull>3</Skull>
+					<Ash>30</Ash>
+					<BoneItem MayRequire="sihv.rombones">20</BoneItem>
+				</costList>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="DA_DarklightSepulchralStatue" or defName="DA_DarklightSepulchralBrazier"]</xpath>
+			  <value>
+				<costList>
+					<Nitre>4</Nitre>
+				</costList>
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="DA_BloodflameSepulchralStatue" or defName="DA_BloodflameSepulchralBrazier"]</xpath>
+			  <value>
+				<costList>
+					<HemogenPack>2</HemogenPack>
+				</costList>
+			  </value>
+			</li>
+
+		</operations>
+    </match>
+  </Operation>
+</Patch>
