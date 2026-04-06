@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Morrowrim Ashlander Yurts</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>[JPT] Soft Warm Beds HSK</li>
+          </mods>
+
+          <match Class="PatchOperationSequence">
+            <operations>
+
+              <!-- ============== Ashlander Yurt ============== -->
+
+              <!-- Beddings Settings -->
+              <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="AshlandYurt"]/comps</xpath>
+
+                <match Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName="AshlandYurt"]/comps</xpath>
+                  <value>
+                    <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+                      <blanketDef>TentDoubleBedding</blanketDef>
+                      <beddingDef>DoubleBedding</beddingDef>
+                      <blanketInvisible>true</blanketInvisible>
+                    </li>
+                  </value>
+                </match>
+
+                <nomatch Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName="AshlandYurt"]</xpath>
+                  <value>
+                    <comps>
+                      <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+                        <blanketDef>TentDoubleBedding</blanketDef>
+                        <beddingDef>DoubleBedding</beddingDef>
+                        <blanketInvisible>true</blanketInvisible>
+                      </li>
+                    </comps>
+                  </value>
+                </nomatch>
+              </li>
+
+              <!-- Function Extension -->
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="AshlandYurt"]</xpath>
+                <value>
+                  <inspectorTabs>
+                    <li>SoftWarmBeds.ITab_Bedding</li>
+                  </inspectorTabs>
+                </value>
+              </li>
+
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="AshlandYurt"]/building</xpath>
+                <value>
+                  <fixedStorageSettings>
+                    <filter>
+                      <categories>
+                        <li>Textiles</li>
+                        <li>HTextiles</li>
+                      </categories>
+                      <thingDefs>
+                        <li>AlphaPoly</li>
+                        <li>BetaPoly</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedStorageSettings>
+                  <defaultStorageSettings>
+                    <filter>
+                      <categories>
+                        <li>Textiles</li>
+                        <li>HTextiles</li>
+                      </categories>
+                      <thingDefs>
+                        <li>AlphaPoly</li>
+                        <li>BetaPoly</li>
+                      </thingDefs>
+                    </filter>
+                  </defaultStorageSettings>
+                </value>
+              </li>
+
+              <!-- Stats -->
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="AshlandYurt"]/statBases/BedRestEffectiveness</xpath>
+                <value>
+                  <BedRestEffectiveness>0.45</BedRestEffectiveness>
+                </value>
+              </li>
+
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="AshlandYurt"]/statBases/Comfort</xpath>
+                <value>
+                  <Comfort>0.6</Comfort>
+                </value>
+              </li>
+
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="AshlandYurt"]/statBases/ImmunityGainSpeedFactor</xpath>
+                <value>
+                  <ImmunityGainSpeedFactor>0.35</ImmunityGainSpeedFactor>
+                </value>
+              </li>
+
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="AshlandYurt"]/statBases/SurgerySuccessChanceFactor</xpath>
+                <value>
+                  <SurgerySuccessChanceFactor>0.65</SurgerySuccessChanceFactor>
+                </value>
+              </li>
+
+              <!-- Insulation -->
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="AshlandYurt"]/statBases</xpath>
+                <value>
+                  <BedStuffEffectMultiplierInsulation_Cold>0.8</BedStuffEffectMultiplierInsulation_Cold>
+                  <BedStuffEffectMultiplierInsulation_Heat>0.4</BedStuffEffectMultiplierInsulation_Heat>
+                </value>
+              </li>
+
+            </operations>
+          </match>
+
+        </li>
+
+      </operations>
+    </match>
+
+  </Operation>
+
+</Patch>
