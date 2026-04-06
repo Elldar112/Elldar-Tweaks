@@ -6,34 +6,42 @@
       <li>Roots of Rimworld</li>
     </mods>
 
-  <match Class="PatchOperationFindMod">
-    <mods>
-      <li>Rim of Madness - Bones</li>
-    </mods>
-    
     <match Class="PatchOperationSequence">
       <operations>
 
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="RR_DecoBones"]/stuffCategories</xpath>
-        </li>
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>Rim of Madness - Bones</li>
+          </mods>
 
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="RR_DecoBones"]/costStuffCount</xpath>
-        </li>
+          <match Class="PatchOperationSequence">
+            <operations>
 
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="RR_DecoBones"]</xpath>
-          <value>
-            <costList>
-              <BoneItem>25</BoneItem>
-            </costList>
-          </value>
+              <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="RR_DecoBones"]/stuffCategories</xpath>
+              </li>
+
+              <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="RR_DecoBones"]/costStuffCount</xpath>
+              </li>
+
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="RR_DecoBones"]/costList</xpath>
+                <value>
+                  <costList Inherit="False">
+                    <BoneItem>25</BoneItem>
+                  </costList>
+                </value>
+              </li>
+
+            </operations>
+          </match>
+
         </li>
 
       </operations>
     </match>
-  </match>
+
   </Operation>
 
 </Patch>
