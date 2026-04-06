@@ -4,8 +4,13 @@
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Roots of Rimworld</li>
+    </mods>
+
+  <match Class="PatchOperationFindMod">
+    <mods>
       <li>Rim of Madness - Bones</li>
     </mods>
+    
     <match Class="PatchOperationSequence">
       <operations>
 
@@ -28,6 +33,7 @@
 
       </operations>
     </match>
+  </match>
   </Operation>
 
 </Patch>
