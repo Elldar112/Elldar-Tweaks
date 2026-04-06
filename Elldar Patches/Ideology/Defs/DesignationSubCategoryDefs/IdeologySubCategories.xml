@@ -58,4 +58,16 @@
 		<debug>false</debug>
 	</ArchitectSense.DesignationSubCategoryDef>
 	
+	<!-- Reliquary -->
+	
+	<ArchitectSense.DesignationSubCategoryDef>
+		<defName>SubCategory_Reliquary</defName>
+		<label>Reliquary</label>
+		<description>Ornate place to store Ideology relics.</description>
+		<defNames>
+		<li>Reliquary</li>
+		</defNames>
+	<designationCategory>Ideology</designationCategory>
+	</ArchitectSense.DesignationSubCategoryDef>
+	
 </Defs>

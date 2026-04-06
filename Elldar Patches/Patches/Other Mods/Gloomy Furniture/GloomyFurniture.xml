@@ -1,9 +1,9 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>GloomyFurniture</li>
-	  <li>Gloomy Furniture (Continued)</li>
+	  <li>GloomyFurniture (Continued)</li>
     </mods>
 	
 	<match Class="PatchOperationSequence">
@@ -11,14 +11,14 @@
 
 	<!-- Dresser -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="RGK_Dresser"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="RGK_Dresser"]</xpath>
 			<value>
 			  <costList>
 				<ComponentIndustrial>7</ComponentIndustrial>
 				<Plastic>20</Plastic>
 				<Rubber>15</Rubber>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -27,7 +27,7 @@
 			  <researchPrerequisites>
 				<li>Beds_C3</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -42,29 +42,26 @@
 				<MaxHitPoints>120</MaxHitPoints>
 				<WorkToBuild>5000</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- End Table -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="RGK_EndTable"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="RGK_EndTable"]</xpath>
 			<value>
 			  <costList>
 				<ComponentMedieval>3</ComponentMedieval>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[defName="RGK_EndTable"]/stuffCategories</xpath>
 			<value>
 			  <stuffCategories>
-				<li>Metallic</li>
-				<li>Plastic</li>
-				<li>Precious</li>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -73,7 +70,7 @@
 			  <researchPrerequisites>
 				<li>Beds_B1</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -87,7 +84,7 @@
 				<MaxHitPoints>100</MaxHitPoints>
 				<WorkToBuild>1100</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- End Table with Lamp -->
@@ -98,19 +95,16 @@
 				<ComponentIndustrial>2</ComponentIndustrial>
 				<Glass>3</Glass>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLamp"]/stuffCategories</xpath>
 			<value>
 			  <stuffCategories>
-				<li>Metallic</li>
-				<li>Plastic</li>
-				<li>Precious</li>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -120,7 +114,7 @@
 				<li>Beds_C2</li>
 				<li>Light_C1</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -134,7 +128,7 @@
 				<MaxHitPoints>100</MaxHitPoints>
 				<WorkToBuild>1100</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -145,19 +139,16 @@
 				<ElectronicComponents>1</ElectronicComponents>
 				<Glass>3</Glass>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[defName="RGK_EndTableWithLampE"]/stuffCategories</xpath>
 			<value>
 			  <stuffCategories>
-				<li>Metallic</li>
-				<li>Plastic</li>
-				<li>Precious</li>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -167,7 +158,7 @@
 				<li>Beds_C2</li>
 				<li>Light_C2</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -181,8 +172,41 @@
 				<MaxHitPoints>100</MaxHitPoints>
 				<WorkToBuild>1100</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
+
+	<!-- Beds -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_bedSingle" or defName="RGK_bedSingleB"]</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>4</ComponentMedieval>
+				<DevilstrandCloth>30</DevilstrandCloth>
+			  </costList>
+			</value>
+		  </li>
+		  
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RGK_bedDouble" or defName="RGK_bedDoubleB"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>6</ComponentMedieval>
+				<DevilstrandCloth>80</DevilstrandCloth>
+			  </costList>
+			</value>
+		  </li>
+		  
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GL_ClassyDoubleBed"]/costList</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>6</ComponentMedieval>
+				<DevilstrandCloth>80</DevilstrandCloth>
+				<Cloth>20</Cloth>
+			  </costList>
+			</value>
+		  </li>
+
 
 	<!-- Bucket -->
 		  <li Class="PatchOperationReplace">
@@ -191,7 +215,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -205,7 +229,7 @@
 				<MaxHitPoints>85</MaxHitPoints>
 				<WorkToBuild>560</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 		  
 	<!-- Barrel-->
@@ -215,7 +239,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -229,17 +253,17 @@
 				<MaxHitPoints>85</MaxHitPoints>
 				<WorkToBuild>560</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Simple Chair -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="RGK_SimpleChair"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="RGK_SimpleChair"]</xpath>
 			<value>
 			  <costList>
 				<ComponentMedieval>3</ComponentMedieval>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationAdd">
@@ -248,7 +272,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -263,17 +287,17 @@
 				<MaxHitPoints>50</MaxHitPoints>
 				<WorkToBuild>350</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Chair -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="RGK_Chair"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="RGK_Chair"]</xpath>
 			<value>
 			  <costList>
 				<ComponentIndustrial>5</ComponentIndustrial>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -282,16 +306,16 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="RGK_Chair"]/researchPrerequisites</xpath>
+			<xpath>Defs/ThingDef[defName="RGK_Chair"]</xpath>
 			<value>
 			  <researchPrerequisites>
 				<li>Tables_C1</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -306,17 +330,17 @@
 				<MaxHitPoints>70</MaxHitPoints>
 				<WorkToBuild>650</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Dining Chair -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="RGKDiningChair"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="RGKDiningChair"]</xpath>
 			<value>
 			  <costList>
 				<ComponentIndustrial>6</ComponentIndustrial>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -325,7 +349,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -334,7 +358,7 @@
 			  <researchPrerequisites>
 				<li>Tables_B2</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -349,17 +373,17 @@
 				<MaxHitPoints>90</MaxHitPoints>
 				<WorkToBuild>900</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Bench -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="GL_Bench"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="GL_Bench"]</xpath>
 			<value>
 			  <costList>
 				<ComponentMedieval>6</ComponentMedieval>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -368,7 +392,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -383,7 +407,7 @@
 				<MaxHitPoints>80</MaxHitPoints>
 				<WorkToBuild>550</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Table 2x2 -->
@@ -393,7 +417,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -408,7 +432,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">12</StyleDominance>
 				<WorkToBuild>900</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Table 2x2 Fancy -->
@@ -418,7 +442,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -433,7 +457,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">12</StyleDominance>
 				<WorkToBuild>1200</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Table 2x2 Cloth -->
@@ -443,7 +467,7 @@
 			  <costList>
 				<Cloth>15</Cloth>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -452,7 +476,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -467,7 +491,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">12</StyleDominance>
 				<WorkToBuild>900</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Table 2x2 Cloth with Tea set -->
@@ -477,7 +501,7 @@
 			  <costList>
 				<Cloth>15</Cloth>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -486,7 +510,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -501,7 +525,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">12</StyleDominance>
 				<WorkToBuild>900</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Table 2x1 -->
@@ -511,7 +535,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -520,7 +544,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -535,7 +559,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">6</StyleDominance>
 				<WorkToBuild>700</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Table 3x2 -->
@@ -545,7 +569,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -554,7 +578,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -569,7 +593,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">18</StyleDominance>
 				<WorkToBuild>1400</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Table 2x2 -->
@@ -579,7 +603,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -588,7 +612,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -601,7 +625,7 @@
 				<MaxHitPoints>180</MaxHitPoints>
 				<WorkToBuild>4000</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Table 3x3 -->
@@ -611,7 +635,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -620,7 +644,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -635,7 +659,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">27</StyleDominance>
 				<WorkToBuild>1600</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Mini Table -->
@@ -645,7 +669,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -660,7 +684,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">3</StyleDominance>
 				<WorkToBuild>500</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Mini Table Cloth -->
@@ -670,7 +694,7 @@
 			  <costList>
 				<Cloth>10</Cloth>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 		  
 		  <li Class="PatchOperationReplace">
@@ -679,7 +703,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -694,7 +718,7 @@
 				<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">3</StyleDominance>
 				<WorkToBuild>500</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Wine Rack -->
@@ -704,7 +728,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -713,7 +737,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -726,30 +750,39 @@
 				<MaxHitPoints>100</MaxHitPoints>
 				<WorkToBuild>3000</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Wardrobe -->
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="WardrobeA" or defName="WardrobeB"]</xpath>
+			<value>
+			  <costList>
+				<ComponentMedieval>4</ComponentMedieval>
+			  </costList>
+			</value>
+		  </li>
+	
 		  <li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="WardrobeA"]/stuffCategories</xpath>
+			<xpath>Defs/ThingDef[defName="WardrobeA" or defName="WardrobeB"]/stuffCategories</xpath>
 			<value>
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="WardrobeA"]/researchPrerequisites</xpath>
+			<xpath>Defs/ThingDef[defName="WardrobeA" or defName="WardrobeB"]/researchPrerequisites</xpath>
 			<value>
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="WardrobeA"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName="WardrobeA" or defName="WardrobeB"]/statBases</xpath>
 			<value>
 			  <statBases>
 				<Beauty>8</Beauty>
@@ -758,38 +791,7 @@
 				<MaxHitPoints>100</MaxHitPoints>
 				<WorkToBuild>3000</WorkToBuild>
 			  </statBases>
-			 </value>
-		  </li>
-
-		  <li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="WardrobeB"]/stuffCategories</xpath>
-			<value>
-			  <stuffCategories>
-				<li>Woody</li>
-			  </stuffCategories>
-			 </value>
-		  </li>
-
-		  <li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="WardrobeB"]/researchPrerequisites</xpath>
-			<value>
-			  <researchPrerequisites>
-				<li>ComplexFurniture</li>
-			  </researchPrerequisites>
-			 </value>
-		  </li>
-
-		  <li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="WardrobeB"]/statBases</xpath>
-			<value>
-			  <statBases>
-				<Beauty>15</Beauty>
-				<Flammability>1.0</Flammability>
-				<Mass>8</Mass>
-				<MaxHitPoints>120</MaxHitPoints>
-				<WorkToBuild>5000</WorkToBuild>
-			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Bookshelf -->
@@ -800,7 +802,7 @@
 				<Cloth>50</Cloth>
 				<ComponentIndustrial>5</ComponentIndustrial>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -809,7 +811,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -822,17 +824,17 @@
 				<MaxHitPoints>120</MaxHitPoints>
 				<WorkToBuild>7500</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Cupboard -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="GL_Cupboard"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="GL_Cupboard"]</xpath>
 			<value>
 			  <costList>
 				<ComponentIndustrial>5</ComponentIndustrial>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -841,7 +843,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -854,7 +856,7 @@
 				<MaxHitPoints>120</MaxHitPoints>
 				<WorkToBuild>2500</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Tableware Shelf -->
@@ -862,10 +864,10 @@
 			<xpath>Defs/ThingDef[defName="GL_TablewareShelf"]/costList</xpath>
 			<value>
 			  <costList>
-				<ComponentIndustrial>5</ComponentIndustrial>
-				<Mechanism>3</Mechanism>
+				<ComponentMedieval>4</ComponentMedieval>
+				<Ceramics>5</Ceramics>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -874,7 +876,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -887,17 +889,17 @@
 				<MaxHitPoints>120</MaxHitPoints>
 				<WorkToBuild>3000</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Manger -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="RGK_Manger"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="RGK_Manger"]</xpath>
 			<value>
 			  <costList>
 				<ComponentMedieval>2</ComponentMedieval>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -906,7 +908,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -918,17 +920,17 @@
 				<MaxHitPoints>100</MaxHitPoints>
 				<WorkToBuild>600</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Shelf -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="GL_Shelf"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="GL_Shelf"]</xpath>
 			<value>
 			  <costList>
 				<ComponentIndustrial>5</ComponentIndustrial>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -937,7 +939,7 @@
 			  <stuffCategories Inherit="false">
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -946,7 +948,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -958,17 +960,17 @@
 				<MaxHitPoints>100</MaxHitPoints>
 				<WorkToBuild>600</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Dog Bowl -->
 		  <li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="RGK_DogBowl"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="RGK_DogBowl"]</xpath>
 			<value>
 			  <costList>
 				<ComponentIndustrial>1</ComponentIndustrial>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -982,7 +984,7 @@
 				<li>Precious</li>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -991,7 +993,7 @@
 			  <researchPrerequisites>
 				<li>Animal_A2</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -1003,7 +1005,7 @@
 				<MaxHitPoints>100</MaxHitPoints>
 				<WorkToBuild>600</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Locker -->
@@ -1013,7 +1015,7 @@
 			  <costList>
 				<ComponentMedieval>3</ComponentMedieval>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -1022,7 +1024,7 @@
 			  <stuffCategories>
 				<li>Woody</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -1031,7 +1033,7 @@
 			  <researchPrerequisites>
 				<li>ComplexFurniture</li>
 			  </researchPrerequisites>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -1043,7 +1045,7 @@
 				<MaxHitPoints>180</MaxHitPoints>
 				<WorkToBuild>800</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Flower -->
@@ -1053,7 +1055,7 @@
 			  <costList>
 				<WoodPlank>2</WoodPlank>
 			  </costList>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationAdd">
@@ -1062,7 +1064,7 @@
 			  <stuffCategories>
 				<li>Stony</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -1075,7 +1077,7 @@
 				<MaxHitPoints>40</MaxHitPoints>
 				<WorkToBuild>100</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Tea Set -->
@@ -1085,7 +1087,7 @@
 			  <stuffCategories>
 				<li>Stony</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -1098,7 +1100,7 @@
 				<MaxHitPoints>40</MaxHitPoints>
 				<WorkToBuild>100</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
 		  </li>
 
 	<!-- Teddy -->
@@ -1109,7 +1111,7 @@
 				<li>Fabric</li>
 				<li>Leathery</li>
 			  </stuffCategories>
-			 </value>
+			</value>
 		  </li>
 
 		  <li Class="PatchOperationReplace">
@@ -1122,7 +1124,22 @@
 				<MaxHitPoints>40</MaxHitPoints>
 				<WorkToBuild>100</WorkToBuild>
 			  </statBases>
-			 </value>
+			</value>
+		  </li>
+
+	<!-- Floors -->
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/TerrainDef[defName="RGK_Terrain"]/label</xpath>
+			<value>
+				<label>Rustic Planks Horizontal</label>
+			</value>
+		  </li>
+		  
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/TerrainDef[defName="GL_Terrain"]/label</xpath>
+			<value>
+				<label>Rustic Planks Vertical</label>
+			</value>
 		  </li>
 
 		</operations>

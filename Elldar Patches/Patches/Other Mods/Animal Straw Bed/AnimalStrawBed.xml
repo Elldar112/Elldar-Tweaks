@@ -22,7 +22,7 @@
 			</li>
 			
 			<li Class="PatchOperationRemove">
-			  <xpath>Defs/DesignatorDropdownGroupDef[defName="ZP_AnimalStrawBed" or defName="ZP_AnimalHMBed" or defName="ZP_AnimalHospitalBed"]</xpath>
+			  <xpath>Defs/ThingDef[defName="ZP_AnimalStrawBed" or defName="ZP_AnimalHMBed" or defName="ZP_AnimalHospitalBed"]/designatorDropdown</xpath>
 			</li>
 			
 			<li Class="PatchOperationRemove">
@@ -38,7 +38,19 @@
 				</researchPrerequisites>
 			  </value>
 			</li>
+			
+		<!-- Cost -->
 		
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="AnimalHospitalBedSmall" or defName="AnimalHospitalBed" or defName="AnimalHospitalBedBig"]/costList</xpath>
+			  <value>
+			  	<costList>
+					<Medicine>5</Medicine>
+					<ComponentIndustrial>4</ComponentIndustrial>
+				</costList>
+			  </value>
+			</li>
+			
 		</operations>
     </match>
   </Operation>

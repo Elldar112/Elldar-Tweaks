@@ -64,6 +64,16 @@
 		  /designatorDropdown</xpath>
         </li>
 		
+	<!-- Stats -->	
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/statFactors</xpath>
+          <value>
+            <WorkTableWorkSpeedFactor>0.6</WorkTableWorkSpeedFactor>
+			<BedRestEffectiveness>0.7</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>0.7</ImmunityGainSpeedFactor>
+          </value>
+        </li>
+
       </operations>
     </match>
   </Operation>

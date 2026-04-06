@@ -41,6 +41,90 @@
 			 </value>
 			</li>
 			
+		<!-- Research -->
+		<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="ED_SmallPhotos"
+			  or def name"ED_SmallPlant"
+			  or def name"ED_Plushie"
+			  or def name"ED_Candles"
+			  or def name"ED_Pillow"
+			  or def name"ED_Clock"
+			  or def name"ED_Trophy"
+			  or def name"ED_Vase"
+			  or def name"ED_Laptop"
+			  or def name"ED_Paper"
+			  or def name"ED_Book"
+			  or def name"ED_PileofBooks"
+			  or def name"ED_CatTower"
+			  or def name"ED_DogHouse"
+			  or def name"ED_PetBowl"
+			  or def name"ED_Bin"
+			  or def name"ED_Doormat"]</xpath>
+			  <value>
+				<researchPrerequisites>
+					<li>Tables_C1</li>
+				</researchPrerequisites>
+			 </value>
+		</li>
+			
+		<!-- Cost -->	
+		<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="ED_Candles"]/costList</xpath>
+			  <value>
+				<costList>
+					<Tallow>5</Tallow>
+				</costList>
+			 </value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="ED_Laptop"]/costList</xpath>
+			  <value>
+				<costList>
+					<Plasteel>10</Plasteel>
+					<Electronics>2</Electronics>
+					<Glass>5</Glass>
+				</costList>
+			 </value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="ED_DogHouse"]</xpath>
+			  <value>
+				<costList>
+					<ComponentMedieval>4</ComponentMedieval>
+				</costList>
+			 </value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="ED_SmallPhotos"]</xpath>
+			  <value>
+				<costList>
+					<Glass>2</Glass>
+				</costList>
+			 </value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			  <xpath>Defs/ThingDef[defName="ED_Clock"]</xpath>
+			  <value>
+				<costList>
+					<ElectronicComponents>2</ElectronicComponents>
+				</costList>
+			 </value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="ED_Paper" or defName="ED_Papers" or defName="ED_Book" or defName="ED_PileofBooks"]/stuffCategories</xpath>
+			  <value>
+				<stuffCategories>
+					<li>Leathery</li>
+					<li>Fabric</li>
+				</stuffCategories>
+			 </value>
+		</li>
+			
 		</operations>
     </match>
   </Operation>

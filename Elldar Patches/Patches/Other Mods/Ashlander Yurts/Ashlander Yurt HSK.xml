@@ -3,28 +3,28 @@
 
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Tec's Assorted Patches</li>
-    </mods>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_CampingTent"]/defNames</xpath>
-      <value>
-        <li>AshlandYurt</li>
-      </value>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
       <li>Morrowrim Ashlander Yurts</li>
     </mods>
     <match Class="PatchOperationSequence">
       <operations>
 
+		<li Class="PatchOperationFindMod">
+		<mods>
+			<li>Tec's Assorted Patches</li> <!-- Add to subcategory Camping Gear - Requires Tec's Patches for Camping Tent -->
+		</mods>
+		<match Class="PatchOperationInsert">
+			<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_CampingTent"]/defNames/li[8]</xpath>
+			<value>
+				<li>AshlandYurt</li>
+			</value>
+		</match>
+		</li>
+
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName = "AshlandYurt"]/costList</xpath>
           <value>
             <costList>
-              <WoodPlank>30</WoodPlank>
+              <WoodPlank>120</WoodPlank>
             </costList>
           </value>
         </li>

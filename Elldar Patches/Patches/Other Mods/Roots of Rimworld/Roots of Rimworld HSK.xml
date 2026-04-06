@@ -8,11 +8,11 @@
       <operations>
 
 	<!-- Architect Sense -->
-		<li Class="PatchOperationAdd">
+		<!-- <li Class="PatchOperationAdd">
           <xpath>Defs</xpath>
           <value>
 
-			<!-- <ArchitectSense.DesignationSubCategoryDef>
+			<ArchitectSense.DesignationSubCategoryDef>
               <defName>SubCategory_RR_PrimitiveLights</defName>
               <label>Primitive Lights</label>
               <description>Light sources that originate from the roots of humanity</description>
@@ -28,8 +28,8 @@
 				<li>RR_PotCandle</li>
 				<li>RR_PrimBraizer</li>
               </defNames>
-              <designationCategory>Accossories</designationCategory>
-            </ArchitectSense.DesignationSubCategoryDef> -->
+              <designationCategory>Accessories</designationCategory>
+            </ArchitectSense.DesignationSubCategoryDef>
 
 			<ArchitectSense.DesignationSubCategoryDef>
               <defName>SubCategory_RR_PrimitiveLights</defName>
@@ -40,11 +40,11 @@
 				<li>RR_MatTwo</li>
 				<li>RR_MatThree</li>
               </defNames>
-              <designationCategory>Accossories</designationCategory>
+              <designationCategory>Accessories</designationCategory>
             </ArchitectSense.DesignationSubCategoryDef>
 
 		  </value>
-        </li>
+        </li> -->
 
         <li Class="PatchOperationAdd">
           <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_TablesN"]/defNames</xpath>

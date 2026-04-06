@@ -56,7 +56,16 @@
 				  </defNames>
 				  <designationCategory>Furniture</designationCategory>
 				</ArchitectSense.DesignationSubCategoryDef>
-
+				
+			  </value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Reliquary"]/defNames</xpath>
+			  <value>
+				<li>DA_SepulchralReliquary</li>
+				<li>DA_DarklightSepulchralReliquary</li>
+				<li>DA_BloodflameSepulchralBrazier</li>
 			  </value>
 			</li>
 
@@ -81,7 +90,6 @@
 			</li>
 
 		<!-- Cost -->
-
 			<li Class="PatchOperationReplace">
 			  <xpath>Defs/ThingDef[@Name="DA_CandleBase"]/costList</xpath>
 			  <value>
@@ -174,7 +182,7 @@
 			</li>
 			
 			<li Class="PatchOperationAdd">
-			  <xpath>Defs/ThingDef[defName="DA_DarklightSepulchralStatue" or defName="DA_DarklightSepulchralBrazier"]</xpath>
+			  <xpath>Defs/ThingDef[defName="DA_DarkligtSepulchralStatue" or defName="DA_DarklightSepulchralBrazier"]</xpath>
 			  <value>
 				<costList>
 					<Nitre>4</Nitre>

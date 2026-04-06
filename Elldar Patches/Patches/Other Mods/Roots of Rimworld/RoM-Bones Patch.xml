@@ -25,10 +25,10 @@
                 <xpath>Defs/ThingDef[defName="RR_DecoBones"]/costStuffCount</xpath>
               </li>
 
-              <li Class="PatchOperationReplace">
+              <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="RR_DecoBones"]/costList</xpath>
                 <value>
-                  <costList Inherit="False">
+                  <costList>
                     <BoneItem>25</BoneItem>
                   </costList>
                 </value>
