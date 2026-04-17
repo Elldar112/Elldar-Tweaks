@@ -34,7 +34,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 			
-				<Operation Class="PatchOperationAdd">
+				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]</xpath>
 					<value>
 						<comps>
@@ -147,7 +147,7 @@
 		<nomatch Class="PatchOperationSequence">
 			<operations>
 
-				<Operation Class="PatchOperationAdd">
+				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]</xpath>
 					<value>
 						<comps>
