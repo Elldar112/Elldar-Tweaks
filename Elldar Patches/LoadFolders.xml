@@ -6,14 +6,27 @@
     <li IfModActive="Ludeon.RimWorld.Ideology">Ideology</li>
     <li IfModActive="Ludeon.RimWorld.Biotech">Biotech</li>
     <li IfModActive="Ludeon.RimWorld.Anomaly">Anomaly</li> 
-    <li IfModActive="Ludeon.RimWorld.Anomaly">Odyssey</li> 
+    <li IfModActive="Ludeon.RimWorld.Anomaly">Odyssey</li>
+	<li IfModActive="Mlie.ShowMeYourHands">Defs/HandPositions</li>
   </default>
 
   <v1.5>
-    <li IfModActive="mlie.showmeyourhands">Defs/HandPositions</li>
+	<li>/</li>
+    <li IfModActive="Ludeon.Rimworld.Royalty">Royalty</li>
+    <li IfModActive="Ludeon.RimWorld.Ideology">Ideology</li>
+    <li IfModActive="Ludeon.RimWorld.Biotech">Biotech</li>
+    <li IfModActive="Ludeon.RimWorld.Anomaly">Anomaly</li> 
+    <li IfModActive="Ludeon.RimWorld.Anomaly">Odyssey</li> 
+    <li IfModActive="Mlie.ShowMeYourHands">Defs/HandPositions</li>
   </v1.5>
   
   <v1.6>
+	<li>/</li>
+    <li IfModActive="Ludeon.Rimworld.Royalty">Royalty</li>
+    <li IfModActive="Ludeon.RimWorld.Ideology">Ideology</li>
+    <li IfModActive="Ludeon.RimWorld.Biotech">Biotech</li>
+    <li IfModActive="Ludeon.RimWorld.Anomaly">Anomaly</li> 
+    <li IfModActive="Ludeon.RimWorld.Anomaly">Odyssey</li> 
     <li IfModActive="Mlie.ShowMeYourHands">Defs/HandPositions</li>
   </v1.6>
 </loadFolders>
