@@ -8,7 +8,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-				<Operation Class="PatchOperationAdd">
+				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]/comps/li[@Class="SK.CompProperties_RestrictedPlacement"]/thingDefs</xpath>
 					<value>
 						<li>Blueprint_Peat-WaterShallow</li>
@@ -22,7 +22,7 @@
 						<li>Frame_SoftClay-WaterShallow</li>
 						<li>Frame_SoftClay-SoilRich</li>
 					</value>
-				</Operation>
+				</li>
 
 			</operations>
 		</match>
