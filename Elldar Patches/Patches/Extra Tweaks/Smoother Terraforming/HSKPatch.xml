@@ -139,7 +139,7 @@
 							</li>
 						</comps>
 					</value>
-				</Operation>
+				</li>
 				
 			</operations>
 		</match>
@@ -238,7 +238,7 @@
 							</li>
 						</comps>
 					</value>
-				</Operation>
+				</li>
 
 			</operations>
 		</nomatch>
