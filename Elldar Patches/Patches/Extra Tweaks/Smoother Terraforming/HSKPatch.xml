@@ -40,7 +40,7 @@
 						<comps>
 							<li Class="SK.CompProperties_RestrictedPlacement">
 								<compClass>SK.CompRestrictedPlacement</compClass>
-								<thingDefs>
+								<!-- <thingDefs>
 									<li>Blueprint_Terraform_TilledHtoV</li>
 									<li>Blueprint_Terraform_TilledVtoH</li>
 									<li>Blueprint_Terraform_ToPackedDirt</li>
@@ -135,7 +135,7 @@
 									<li>Frame_Terraform_WaterToBlackWater</li>
 									<li>Frame_Terraform_WaterToSwamp</li>
 									<li>Frame_Terraform_WaterToBog</li>
-								</thingDefs>
+								</thingDefs> -->
 							</li>
 						</comps>
 					</value>
