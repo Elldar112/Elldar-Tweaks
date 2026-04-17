@@ -14,6 +14,6 @@
   </v1.5>
   
   <v1.6>
-    <li IfModActive="mlie.showmeyourhands">Defs/HandPositions</li>
+    <li IfModActive="Mlie.ShowMeYourHands">Defs/HandPositions</li>
   </v1.6>
 </loadFolders>
