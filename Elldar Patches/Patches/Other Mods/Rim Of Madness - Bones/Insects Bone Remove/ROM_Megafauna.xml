@@ -10,21 +10,21 @@
 			<operations>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="Arthropleura"]/statBases</xpath>
+					<xpath>Defs/ThingDef[defName="Arthropleura"]/statBases</xpath>
 					<value>
 						<BoneAmount>0</BoneAmount>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="Meganeura"]/statBases</xpath>
+					<xpath>Defs/ThingDef[defName="Meganeura"]/statBases</xpath>
 					<value>
 						<BoneAmount>0</BoneAmount>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="Pulmonoscorpius"]/statBases</xpath>
+					<xpath>Defs/ThingDef[defName="Pulmonoscorpius"]/statBases</xpath>
 					<value>
 						<BoneAmount>0</BoneAmount>
 					</value>

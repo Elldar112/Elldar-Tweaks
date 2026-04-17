@@ -5,14 +5,14 @@
 		<success>Normal</success>
 		<operations>
 		
-			<li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="PlantPot_Bonsai"]/designationCategory</xpath>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="PlantPot_Bonsai"]</xpath>
 			<value>
 				<designationCategory>Ideology</designationCategory>
 			</value>
 			</li>
 			
-			<li Class="PatchOperationReplace" MayRequire="solaris.ratkinracemod">
+			<li Class="PatchOperationReplace" MayRequire="Solaris.RatkinRaceMod">
 			<xpath>Defs/ThingDef[defName="RK_Pulpit"]/designationCategory</xpath>
 			<value>
 				<designationCategory>Ideology</designationCategory>

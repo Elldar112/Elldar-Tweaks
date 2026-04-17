@@ -1,117 +1,248 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]</xpath>
 		<value>
 			<building>
 				<isEdifice>false</isEdifice>
-				<canPlaceOverWall>false</canPlaceOverWall> <!-- set to false if you think that terraforming under walls is stupid-->
+				<canPlaceOverWall>false</canPlaceOverWall>
 			</building>
 			<clearBuildingArea>false</clearBuildingArea>
 		</value>
 	</Operation>
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]/passability</xpath>
 		<value>
 			<passability>Standable</passability>
 		</value>
 	</Operation>
-	<Operation Class="PatchOperationAdd" MayRequire="skyarkhangel.HSK">
+	
+	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]/placeWorkers</xpath>
-		<value>
-			<li>SK.PlaceWorker_NotOnThing</li>
-		</value>
+			<value>
+				<li>SK.PlaceWorker_NotOnThing</li>
+			</value>
 	</Operation>
-	<Operation Class="PatchOperationAdd" MayRequire="skyarkhangel.HSK">
-		<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]</xpath>
-		<value>
-			<comps>
-				<li Class="SK.CompProperties_RestrictedPlacement">
-					<compClass>SK.CompRestrictedPlacement</compClass>
-					<!--<thingDefs>
-						<li>Blueprint_RockyDirt-Stone</li>
-						<li>Blueprint_RockyDirt-Sand</li>
-						<li>Blueprint_RockyDirt-Gravel</li>
-						<li>Blueprint_Sand-RockyDirt</li>
-						<li>Blueprint_Sand-Gravel</li>
-						<li>Blueprint_Sand-SoilF</li>
-						<li>Blueprint_Sand-WaterShallow</li>
-						<li>Blueprint_Gravel-RockyDirt</li>
-						<li>Blueprint_Gravel-Sand</li>
-						<li>Blueprint_Gravel-SoilF</li>
-						<li>Blueprint_SoilF-RockyDirt</li>
-						<li>Blueprint_SoilF-Sand</li>
-						<li>Blueprint_SoilF-Gravel</li>
-						<li>Blueprint_SoilF-Marsh</li>
-						<li>Blueprint_SoilF-PackedDirt</li>
-						<li>Blueprint_WaterShallow-Sand</li>
-						<li>Blueprint_WaterShallow-Marsh</li>
-						<li>Blueprint_WaterShallow-WaterDeep</li>
-						<li>Blueprint_SoilMarshy-SoilF</li>
-						<li>Blueprint_SoilMarshy-RockyDirt</li>
-						<li>Blueprint_SoilMarshy-Marsh</li>
-						<li>Blueprint_Marsh-SoilMarshy</li>
-						<li>Blueprint_Marsh-WaterShallow</li>
-						<li>Blueprint_PoorSoil-MarginalSoil</li>
-						<li>Blueprint_MarginalSoil-Soil</li>
-						<li>Blueprint_LichenCoveredDirt-Soil</li>
-						<li>Blueprint_PackedDirt-SoilF</li>
-						<li>Blueprint_Stone-Topsoil</li>
-						<li>Blueprint_Topsoil-DirtFert</li>
-						<li>Blueprint_SoilF-SoilRich</li>
-						<li>Blueprint_SoilRich-SoilTilled</li>
-						<li>Blueprint_Stone-RockyDirt</li>
-						<li>Blueprint_Wasteland-Gravel</li>
-						<li>Blueprint_WaterDeep-WaterShallow</li>
-						<li>Blueprint_Ice-WaterShallow</li>
-						<li>Blueprint_Peat-WaterShallow</li>
-						<li>Blueprint_Peat-SoilRich</li>
-						<li>Blueprint_Peat-SavannaSoil</li>
-						<li>Blueprint_SoftClay-WaterShallow</li>
-						<li>Blueprint_SoftClay-SoilRich</li>
-						<li>Frame_RockyDirt-Stone</li>
-						<li>Frame_RockyDirt-Sand</li>
-						<li>Frame_RockyDirt-Gravel</li>
-						<li>Frame_Sand-RockyDirt</li>
-						<li>Frame_Sand-Gravel</li>
-						<li>Frame_Sand-SoilF</li>
-						<li>Frame_Sand-WaterShallow</li>
-						<li>Frame_Gravel-RockyDirt</li>
-						<li>Frame_Gravel-Sand</li>
-						<li>Frame_Gravel-SoilF</li>
-						<li>Frame_SoilF-RockyDirt</li>
-						<li>Frame_SoilF-Sand</li>
-						<li>Frame_SoilF-Gravel</li>
-						<li>Frame_SoilF-Marsh</li>
-						<li>Frame_SoilF-PackedDirt</li>
-						<li>Frame_WaterShallow-Sand</li>
-						<li>Frame_WaterShallow-Marsh</li>
-						<li>Frame_WaterShallow-WaterDeep</li>
-						<li>Frame_SoilMarshy-SoilF</li>
-						<li>Frame_SoilMarshy-RockyDirt</li>
-						<li>Frame_SoilMarshy-Marsh</li>
-						<li>Frame_Marsh-SoilMarshy</li>
-						<li>Frame_Marsh-WaterShallow</li>
-						<li>Frame_PoorSoil-MarginalSoil</li>
-						<li>Frame_MarginalSoil-Soil</li>
-						<li>Frame_LichenCoveredDirt-Soil</li>
-						<li>Frame_PackedDirt-SoilF</li>
-						<li>Frame_Stone-Topsoil</li>
-						<li>Frame_Topsoil-DirtFert</li>
-						<li>Frame_SoilF-SoilRich</li>
-						<li>Frame_SoilRich-SoilTilled</li>
-						<li>Frame_Stone-RockyDirt</li>
-						<li>Frame_Wasteland-Gravel</li>
-						<li>Frame_WaterDeep-WaterShallow</li>
-						<li>Frame_Ice-WaterShallow</li>
-						<li>Frame_Peat-WaterShallow</li>
-						<li>Frame_Peat-SoilRich</li>
-						<li>Frame_Peat-SavannaSoil</li>
-						<li>Frame_SoftClay-WaterShallow</li>
-						<li>Frame_SoftClay-SoilRich</li>
-					</thingDefs>-->
-				</li>
-			</comps>
-		</value>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vile's Biomes: From The Ground Up</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<Operation Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]</xpath>
+					<value>
+						<comps>
+							<li Class="SK.CompProperties_RestrictedPlacement">
+								<compClass>SK.CompRestrictedPlacement</compClass>
+								<thingDefs>
+									<li>Blueprint_Terraform_TilledHtoV</li>
+									<li>Blueprint_Terraform_TilledVtoH</li>
+									<li>Blueprint_Terraform_ToPackedDirt</li>
+									<li>Blueprint_Terraform_FillQuarry</li>
+									<li>Blueprint_Terraform_FillStone</li>
+									<li>Blueprint_Terraform_SandToDesertSand</li>
+									<li>Blueprint_Terraform_MakeDesertPavement</li>
+									<li>Blueprint_Terraform_IceToFrozenSnow</li>
+									<li>Blueprint_Terraform_ResurfaceIce</li>
+									<li>Blueprint_Terraform_ShallowToDeepWater</li>
+									<li>Blueprint_Terraform_DeepToShallowWater</li>
+									<li>Blueprint_Terraform_WaterToSand</li>
+									<li>Blueprint_Terraform_SandToWater</li>
+									<li>Blueprint_Terraform_MarshySoilToWater</li>
+									<li>Blueprint_Terraform_SodLawn</li>
+									<li>Blueprint_Terraform_SodPattern</li>
+									<li>Blueprint_Terraform_SodClover</li>
+									<li>Blueprint_Terraform_MakeGravel</li>
+									<li>Blueprint_Terraform_RemoveSod</li>
+									<li>Blueprint_Terraform_GatherNutrientsFromRichSoil</li>
+									<li>Blueprint_Terraform_GatherNutrientsFromFertileSoil</li>
+									<li>Blueprint_Terraform_GatherClay</li>
+									<li>Blueprint_Terraform_GatherSilt</li>
+									<li>Blueprint_Terraform_GatherSand</li>
+									<li>Blueprint_Terraform_GatherSandFromSandySoil</li>
+									<li>Blueprint_Terraform_GatherGravel</li>
+									<li>Blueprint_Terraform_GatherPeatFromPeatSoil</li>
+									<li>Blueprint_Terraform_GatherPeatFromMuckyPeat</li>
+									<li>Blueprint_Terraform_GatherPeatFromMuck</li>
+									<li>Blueprint_Terraform_EnrichSoil</li>
+									<li>Blueprint_Terraform_EnrichWithAsh</li>
+									<li>Blueprint_Terraform_FertileFromPacked</li>
+									<li>Blueprint_Terraform_FertileFromClay</li>
+									<li>Blueprint_Terraform_FertileFromSilty</li>
+									<li>Blueprint_Terraform_FertileFromSandy</li>
+									<li>Blueprint_Terraform_FertileFromRocky</li>
+									<li>Blueprint_Terraform_FertileFromHydric</li>
+									<li>Blueprint_Terraform_DevelopToWeak</li>
+									<li>Blueprint_Terraform_DevelopToRedClay</li>
+									<li>Blueprint_Terraform_DevelopToCrackedClay</li>
+									<li>Blueprint_Terraform_DevelopToMarshy</li>
+									<li>Blueprint_Terraform_DevelopToSand</li>
+									<li>Blueprint_Terraform_FillWetlandToMarshySoil</li>
+									<li>Blueprint_Terraform_FillWetlandToUndevelopedSoil</li>
+									<li>Blueprint_Terraform_WaterToBlackWater</li>
+									<li>Blueprint_Terraform_WaterToSwamp</li>
+									<li>Blueprint_Terraform_WaterToBog</li>
+									<li>Frame_Terraform_TilledHtoV</li>
+									<li>Frame_Terraform_TilledVtoH</li>
+									<li>Frame_Terraform_ToPackedDirt</li>
+									<li>Frame_Terraform_FillQuarry</li>
+									<li>Frame_Terraform_FillStone</li>
+									<li>Frame_Terraform_SandToDesertSand</li>
+									<li>Frame_Terraform_MakeDesertPavement</li>
+									<li>Frame_Terraform_IceToFrozenSnow</li>
+									<li>Frame_Terraform_ResurfaceIce</li>
+									<li>Frame_Terraform_ShallowToDeepWater</li>
+									<li>Frame_Terraform_DeepToShallowWater</li>
+									<li>Frame_Terraform_WaterToSand</li>
+									<li>Frame_Terraform_SandToWater</li>
+									<li>Frame_Terraform_MarshySoilToWater</li>
+									<li>Frame_Terraform_SodLawn</li>
+									<li>Frame_Terraform_SodPattern</li>
+									<li>Frame_Terraform_SodClover</li>
+									<li>Frame_Terraform_MakeGravel</li>
+									<li>Frame_Terraform_RemoveSod</li>
+									<li>Frame_Terraform_GatherNutrientsFromRichSoil</li>
+									<li>Frame_Terraform_GatherNutrientsFromFertileSoil</li>
+									<li>Frame_Terraform_GatherClay</li>
+									<li>Frame_Terraform_GatherSilt</li>
+									<li>Frame_Terraform_GatherSand</li>
+									<li>Frame_Terraform_GatherSandFromSandySoil</li>
+									<li>Frame_Terraform_GatherGravel</li>
+									<li>Frame_Terraform_GatherPeatFromPeatSoil</li>
+									<li>Frame_Terraform_GatherPeatFromMuckyPeat</li>
+									<li>Frame_Terraform_GatherPeatFromMuck</li>
+									<li>Frame_Terraform_EnrichSoil</li>
+									<li>Frame_Terraform_EnrichWithAsh</li>
+									<li>Frame_Terraform_FertileFromPacked</li>
+									<li>Frame_Terraform_FertileFromClay</li>
+									<li>Frame_Terraform_FertileFromSilty</li>
+									<li>Frame_Terraform_FertileFromSandy</li>
+									<li>Frame_Terraform_FertileFromRocky</li>
+									<li>Frame_Terraform_FertileFromHydric</li>
+									<li>Frame_Terraform_DevelopToWeak</li>
+									<li>Frame_Terraform_DevelopToRedClay</li>
+									<li>Frame_Terraform_DevelopToCrackedClay</li>
+									<li>Frame_Terraform_DevelopToMarshy</li>
+									<li>Frame_Terraform_DevelopToSand</li>
+									<li>Frame_Terraform_FillWetlandToMarshySoil</li>
+									<li>Frame_Terraform_FillWetlandToUndevelopedSoil</li>
+									<li>Frame_Terraform_WaterToBlackWater</li>
+									<li>Frame_Terraform_WaterToSwamp</li>
+									<li>Frame_Terraform_WaterToBog</li>
+								</thingDefs>
+							</li>
+						</comps>
+					</value>
+				</Operation>
+				
+			</operations>
+		</match>
+		
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+
+				<Operation Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[thingClass="FertileFields.Building_Terraform"]</xpath>
+					<value>
+						<comps>
+							<li Class="SK.CompProperties_RestrictedPlacement">
+								<compClass>SK.CompRestrictedPlacement</compClass>
+								<thingDefs>
+									<li>Blueprint_RockyDirt-Stone</li>
+									<li>Blueprint_RockyDirt-Sand</li>
+									<li>Blueprint_RockyDirt-Gravel</li>
+									<li>Blueprint_Sand-RockyDirt</li>
+									<li>Blueprint_Sand-Gravel</li>
+									<li>Blueprint_Sand-SoilF</li>
+									<li>Blueprint_Sand-WaterShallow</li>
+									<li>Blueprint_Gravel-RockyDirt</li>
+									<li>Blueprint_Gravel-Sand</li>
+									<li>Blueprint_Gravel-SoilF</li>
+									<li>Blueprint_SoilF-RockyDirt</li>
+									<li>Blueprint_SoilF-Sand</li>
+									<li>Blueprint_SoilF-Gravel</li>
+									<li>Blueprint_SoilF-Marsh</li>
+									<li>Blueprint_SoilF-PackedDirt</li>
+									<li>Blueprint_WaterShallow-Sand</li>
+									<li>Blueprint_WaterShallow-Marsh</li>
+									<li>Blueprint_WaterShallow-WaterDeep</li>
+									<li>Blueprint_SoilMarshy-SoilF</li>
+									<li>Blueprint_SoilMarshy-RockyDirt</li>
+									<li>Blueprint_SoilMarshy-Marsh</li>
+									<li>Blueprint_Marsh-SoilMarshy</li>
+									<li>Blueprint_Marsh-WaterShallow</li>
+									<li>Blueprint_PoorSoil-MarginalSoil</li>
+									<li>Blueprint_MarginalSoil-Soil</li>
+									<li>Blueprint_LichenCoveredDirt-Soil</li>
+									<li>Blueprint_PackedDirt-SoilF</li>
+									<li>Blueprint_Stone-Topsoil</li>
+									<li>Blueprint_Topsoil-DirtFert</li>
+									<li>Blueprint_SoilF-SoilRich</li>
+									<li>Blueprint_SoilRich-SoilTilled</li>
+									<li>Blueprint_Stone-RockyDirt</li>
+									<li>Blueprint_Wasteland-Gravel</li>
+									<li>Blueprint_WaterDeep-WaterShallow</li>
+									<li>Blueprint_Ice-WaterShallow</li>
+									<li>Blueprint_Peat-WaterShallow</li>
+									<li>Blueprint_Peat-SoilRich</li>
+									<li>Blueprint_Peat-SavannaSoil</li>
+									<li>Blueprint_SoftClay-WaterShallow</li>
+									<li>Blueprint_SoftClay-SoilRich</li>
+									<li>Frame_RockyDirt-Stone</li>
+									<li>Frame_RockyDirt-Sand</li>
+									<li>Frame_RockyDirt-Gravel</li>
+									<li>Frame_Sand-RockyDirt</li>
+									<li>Frame_Sand-Gravel</li>
+									<li>Frame_Sand-SoilF</li>
+									<li>Frame_Sand-WaterShallow</li>
+									<li>Frame_Gravel-RockyDirt</li>
+									<li>Frame_Gravel-Sand</li>
+									<li>Frame_Gravel-SoilF</li>
+									<li>Frame_SoilF-RockyDirt</li>
+									<li>Frame_SoilF-Sand</li>
+									<li>Frame_SoilF-Gravel</li>
+									<li>Frame_SoilF-Marsh</li>
+									<li>Frame_SoilF-PackedDirt</li>
+									<li>Frame_WaterShallow-Sand</li>
+									<li>Frame_WaterShallow-Marsh</li>
+									<li>Frame_WaterShallow-WaterDeep</li>
+									<li>Frame_SoilMarshy-SoilF</li>
+									<li>Frame_SoilMarshy-RockyDirt</li>
+									<li>Frame_SoilMarshy-Marsh</li>
+									<li>Frame_Marsh-SoilMarshy</li>
+									<li>Frame_Marsh-WaterShallow</li>
+									<li>Frame_PoorSoil-MarginalSoil</li>
+									<li>Frame_MarginalSoil-Soil</li>
+									<li>Frame_LichenCoveredDirt-Soil</li>
+									<li>Frame_PackedDirt-SoilF</li>
+									<li>Frame_Stone-Topsoil</li>
+									<li>Frame_Topsoil-DirtFert</li>
+									<li>Frame_SoilF-SoilRich</li>
+									<li>Frame_SoilRich-SoilTilled</li>
+									<li>Frame_Stone-RockyDirt</li>
+									<li>Frame_Wasteland-Gravel</li>
+									<li>Frame_WaterDeep-WaterShallow</li>
+									<li>Frame_Ice-WaterShallow</li>
+									<li>Frame_Peat-WaterShallow</li>
+									<li>Frame_Peat-SoilRich</li>
+									<li>Frame_Peat-SavannaSoil</li>
+									<li>Frame_SoftClay-WaterShallow</li>
+									<li>Frame_SoftClay-SoilRich</li>
+								</thingDefs>
+							</li>
+						</comps>
+					</value>
+				</Operation>
+
+			</operations>
+		</nomatch>
+		
 	</Operation>
+
 </Patch>

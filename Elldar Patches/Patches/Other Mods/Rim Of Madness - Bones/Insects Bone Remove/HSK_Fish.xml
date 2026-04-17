@@ -9,7 +9,7 @@
 			<operations>
 				<!-- =====[Bases]===== -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[@Name="FishThingBase"]/statBases</xpath>
+					<xpath>Defs/ThingDef[@Name="FishThingBase"]/statBases</xpath>
 					<value>
 						<BoneAmount>0</BoneAmount>
 					</value>
