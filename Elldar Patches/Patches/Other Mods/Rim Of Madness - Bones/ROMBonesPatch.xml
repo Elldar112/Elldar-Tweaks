@@ -5,39 +5,40 @@
     <mods>
       <li>Rim of Madness - Bones</li>
     </mods>
+
     <match Class="PatchOperationSequence">
       <operations>
 
-	<!-- Architect Sense -->
-		
-		<li Class="PatchOperationAdd">
+        <!-- Architect Sense -->
+
+        <li Class="PatchOperationAdd">
           <xpath>Defs</xpath>
           <value>
-			<ArchitectSense.DesignationSubCategoryDef>
-				<defName>ROM_BoneFloors</defName>
-				<label>Bone Floors</label>
-				<description>Floors made of bones - spooky.</description>
-				<defNames>
-					<li>BoneFloor</li>
-					<li>BoneFloor_Blackened</li>
-					<li>BoneChinaFloor</li>
-					<li>BoneFloor_Ashen</li>
-					<li>BoneFloor_Tile</li>
-				</defNames>
-				<designationCategory>OutsideFloors</designationCategory>
-				<debug>false</debug>
-			</ArchitectSense.DesignationSubCategoryDef>
+            <ArchitectSense.DesignationSubCategoryDef>
+              <defName>ROM_BoneFloors</defName>
+              <label>Bone Floors</label>
+              <description>Floors made of bones - spooky.</description>
+              <defNames>
+                <li>BoneFloor</li>
+                <li>BoneFloor_Blackened</li>
+                <li>BoneChinaFloor</li>
+                <li>BoneFloor_Ashen</li>
+                <li>BoneFloor_Tile</li>
+              </defNames>
+              <designationCategory>OutsideFloors</designationCategory>
+              <debug>false</debug>
+            </ArchitectSense.DesignationSubCategoryDef>
           </value>
         </li>
-		
+
         <li Class="PatchOperationAdd">
           <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Seats"]/defNames</xpath>
           <value>
             <li>BoneChair</li>
           </value>
         </li>
-		
-		<li Class="PatchOperationAdd">
+
+        <li Class="PatchOperationAdd">
           <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_RoyaltyStuff"]/defNames</xpath>
           <value>
             <li>BoneThrone</li>
@@ -50,32 +51,59 @@
             <li>BoneWall</li>
           </value>
         </li>
-		
+
         <li Class="PatchOperationRemove">
           <xpath>Defs/ThingDef[@Name="DarkThroneBase"]/designatorDropdown</xpath>
         </li>
 
-		<li Class="PatchOperationRemove">
-          <xpath>Defs/TerrainDef[defName="BoneFloor"
-		  or defName="BoneFloor_Blackened"
-		  or defName="BoneChinaFloor"
-		  or defName="BoneFloor_Ashen"
-		  or defName="BoneFloor_Tile"]
-		  /designatorDropdown</xpath>
+        <li Class="PatchOperationRemove">
+          <xpath>
+            Defs/TerrainDef[
+              defName="BoneFloor"
+              or defName="BoneFloor_Blackened"
+              or defName="BoneChinaFloor"
+              or defName="BoneFloor_Ashen"
+              or defName="BoneFloor_Tile"]/designatorDropdown
+          </xpath>
         </li>
-		
-	<!-- Stats -->	
-		<li Class="PatchOperationAdd">
+
+        <!-- Stats -->
+
+        <li Class="PatchOperationAdd">
           <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/statFactors</xpath>
           <value>
-            <WorkTableWorkSpeedFactor>0.6</WorkTableWorkSpeedFactor>
-			<BedRestEffectiveness>0.7</BedRestEffectiveness>
-			<ImmunityGainSpeedFactor>0.7</ImmunityGainSpeedFactor>
+            <WorkTableWorkSpeedFactor>0.45</WorkTableWorkSpeedFactor>
+            <BedRestEffectiveness>0.7</BedRestEffectiveness>
+            <ImmunityGainSpeedFactor>0.7</ImmunityGainSpeedFactor>
           </value>
+        </li>
+
+        <!-- Combat Extented -->
+
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>Combat Extended</li>
+          </mods>
+
+          <match Class="PatchOperationSequence">
+            <operations>
+
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BoneItem"]/statBases</xpath>
+                <value>
+                  <Bulk>0.22</Bulk>
+                  <WornBulk>0.22</WornBulk>
+                  <StuffEffectMultiplierCE>0.75</StuffEffectMultiplierCE>
+                </value>
+              </li>
+
+            </operations>
+          </match>
         </li>
 
       </operations>
     </match>
+
   </Operation>
 
 </Patch>

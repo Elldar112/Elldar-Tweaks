@@ -8,7 +8,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<!-- =====[Bases]===== -->
-				<li Class="PatchOperationAdd">
+				<!-- <li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[@Name="BaseInsect2"]/statBases</xpath>
 					<value>
 						<BoneAmount>0</BoneAmount>
@@ -16,6 +16,12 @@
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[@Name="AA_AlphaBaseInsect"]/statBases</xpath>
+					<value>
+						<BoneAmount>0</BoneAmount>
+					</value>
+				</li> -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="SK_AA_Insect"]/statBases</xpath>
 					<value>
 						<BoneAmount>0</BoneAmount>
 					</value>
