@@ -8,7 +8,7 @@
       <operations>
 
 	<!-- Architect Sense -->
-		<!-- <li Class="PatchOperationAdd">
+		<li Class="PatchOperationAdd">
           <xpath>Defs</xpath>
           <value>
 
@@ -32,7 +32,7 @@
             </ArchitectSense.DesignationSubCategoryDef>
 
 			<ArchitectSense.DesignationSubCategoryDef>
-              <defName>SubCategory_RR_PrimitiveLights</defName>
+              <defName>SubCategory_RR_PrimitiveMats</defName>
               <label>Primitive Mats</label>
               <description>Primitive woven mats</description>
               <defNames>
@@ -44,7 +44,7 @@
             </ArchitectSense.DesignationSubCategoryDef>
 
 		  </value>
-        </li> -->
+        </li>
 
         <li Class="PatchOperationAdd">
           <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_TablesN"]/defNames</xpath>
