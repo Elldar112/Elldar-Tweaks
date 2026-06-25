@@ -4,9 +4,9 @@
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="Candle"]</xpath>
     <value>
-      <costLiust>
+      <costList>
 		<Tallow>5</Tallow>
-	  </costLiust>
+	  </costList>
     </value>
   </Operation>
   
