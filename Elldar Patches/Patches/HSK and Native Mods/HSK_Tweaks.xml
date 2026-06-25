@@ -13,9 +13,9 @@
   <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
     <xpath>Defs/ThingDef[defName="Brazier"]</xpath>
     <value>
-      <costLiust>
+      <costList>
 		<WoodLog>10</WoodLog>
-	  </costLiust>
+	  </costList>
     </value>
   </Operation>
   
