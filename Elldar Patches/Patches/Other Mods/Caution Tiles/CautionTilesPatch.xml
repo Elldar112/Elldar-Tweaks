@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationSequence" MayRequire="essecoisa.CautionTiles">
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Caution Tiles [1.0+]</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
 			<operations>
 			
 			<!-- Architect Sense -->			
@@ -102,7 +107,9 @@
 						<li>Concrete_floor_C1</li>
 					</researchPrerequisites>
 				</value>	
-			</li>					
+			</li>		
+			
 			</operations>
+		</match>
 	</Operation>
 </Patch>
