@@ -11,6 +11,7 @@
 		<!-- Architect Sense -->
 		
 			<li Class="PatchOperationAdd">
+			<success>Always</success>
 			  <xpath>Defs</xpath>
 			  <value>
 					<ArchitectSense.DesignationSubCategoryDef>
@@ -22,6 +23,13 @@
 					  <li>Gomi_FloorFence</li>
 					  <li>Gomi_Handrail</li>
 					  <li>Gomi_HighWall</li>
+					  <!-- Gloomy -->
+					  <li>Gomi_RGKFloorFence</li>
+					  <li>Gomi_RGKHandrail</li>
+					  <li>Gomi_RGKHighWall</li>
+					  <li>Gomi_GLFloorFence</li>
+					  <li>Gomi_GLHandrail</li>
+					  <li>Gomi_GLHighWall</li>
 					</defNames>
 					<designationCategory>Structure</designationCategory>
 					<debug>false</debug>

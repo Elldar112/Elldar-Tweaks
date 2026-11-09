@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <!-- <Operation Class="PatchOperationFindMod">
+  <Operation Class="PatchOperationFindMod">
     <mods>
       <li>GloomyFurniture</li>
       <li>GloomyFurniture (Continued)</li>
+	  <li>GloomyFurniture (Continued) Unofficial Fix</li>
     </mods>
 
     <match Class="PatchOperationFindMod">
@@ -15,7 +16,7 @@
       <match Class="PatchOperationSequence">
         <operations>
 
-          <li Class="PatchOperationAdd">
+         <!-- <li Class="PatchOperationAdd">
             <xpath>Defs</xpath>
             <value>
               <SeedsPlease.SeedDef ParentName="SeedBase">
@@ -47,12 +48,35 @@
                 </graphicData>
               </SeedsPlease.SeedDef>
             </value>
-          </li>
+          </li> -->
+
+		<li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+			
+			<SeedsPlease.SeedDef ParentName="SeedBase">
+				<defName>Seed_GL_A</defName>
+				<label>Blossom seeds</label>
+				<sources>
+					<li>GL_TreeA</li>
+				</sources>
+			</SeedsPlease.SeedDef>
+
+			<SeedsPlease.SeedDef ParentName="SeedBase">
+				<defName>Seed_GL_B</defName>
+				<label>Glossom seed</label>
+				<sources>
+					<li>GL_TreeB</li>
+				</sources>
+			</SeedsPlease.SeedDef>
+			
+			</value>
+		</li>
 
         </operations>
       </match>
 
     </match>
-  </Operation> -->
+  </Operation>
 
 </Patch>

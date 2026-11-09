@@ -37,15 +37,16 @@
           <value>
             <li>Floor_DarkPlanks</li>
             <li>Floor_LightPlanks</li>
+			<li>Floor_SmoothWood</li>
           </value>
         </li>
 
-        <li Class="PatchOperationAdd">
+        <!-- <li Class="PatchOperationAdd">
           <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_WoodFloors"]/defNames</xpath>
           <value>
             <li>Floor_SmoothWood</li>
           </value>
-        </li>
+        </li> -->
 
       </operations>
     </match>

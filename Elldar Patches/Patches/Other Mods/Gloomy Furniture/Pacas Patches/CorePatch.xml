@@ -4,6 +4,7 @@
         <mods>
 			<li>GloomyFurniture</li>
             <li>GloomyFurniture (Continued)</li>
+			<li>GloomyFurniture (Continued) Unofficial Fix</li>
         </mods>
         
         <match Class="PatchOperationSequence">
@@ -142,21 +143,21 @@
                             <li>RGK_DogBowl</li>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
+                <!-- <li Class="PatchOperationAdd">
                     <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lights"]/defNames</xpath>
                     <value>
                         <li>GL_Wall_Lamp</li>
                         <li>RGK_lamp</li>
                         <li>RGK_LampM</li>
                     </value>
-                </li>
-                <li Class="PatchOperationAdd">
+                </li> -->
+                <!-- <li Class="PatchOperationAdd">
                     <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lamps"]/defNames</xpath>
                     <value>
                         <li>GL_Wall_LampE</li>
                         <li>RGK_lampE</li>
                     </value>
-                </li>
+                </li> -->
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/ResearchProjectDef[@Name = "PrimitiveBase" or @Name = "MedievalBase" or @Name = "IndustrialBase"]/modExtensions/li[@Class="SK.AdvancedResearchExtension"]/requiredResearchBuildings</xpath>
                     <value>

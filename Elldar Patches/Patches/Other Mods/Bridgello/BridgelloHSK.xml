@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Bridgello</li>
+        </mods>
+		
+        <match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TerrainDef[defName="Bridge"]/texturePath</xpath>
+					<value>
+						<texturePath>BridgetJones</texturePath>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TerrainDef[defName="Bridge"]/color</xpath>
+					<value>
+						<color>(255,255,255)</color>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="BridgelloRailingone" or defName="BridgelloRailingVertone"]</xpath>
+					<value>
+						<costList>
+							<Kindling>2</Kindling>
+						</costList>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="BridgelloRailingone" or defName="BridgelloRailingVertone"]/fillPercent</xpath>
+					<value>
+						<fillPercent>0</fillPercent>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TerrainDef[defName="BridgelloRailingone" or defName="BridgelloRailingVertone"]/terrainAffordanceNeeded</xpath>
+					<value>
+						<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>
+
+

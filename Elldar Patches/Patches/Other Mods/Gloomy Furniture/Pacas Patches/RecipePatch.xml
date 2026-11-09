@@ -4,6 +4,7 @@
         <mods>
 			<li>GloomyFurniture</li>
             <li>GloomyFurniture (Continued)</li>
+			<li>GloomyFurniture (Continued) Unofficial Fix</li>
         </mods>
         
         <match Class="PatchOperationSequence">
@@ -23,7 +24,7 @@
                     </operations>
                 </li>
                 
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/ThingDef/recipeMaker/recipeUsers[li="FueledSmithy"]</xpath>
@@ -35,9 +36,9 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
                 
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/ThingDef/recipeMaker/recipeUsers[li="ElectricTailoringBench"]</xpath>
@@ -49,9 +50,9 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
                 
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/ThingDef/recipeMaker/recipeUsers[li="HandTailoringBench"]</xpath>
@@ -63,10 +64,10 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
                 
                 <!-- 레시피 호환성 추가 -->
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/RecipeDef/recipeUsers[li="ElectricSmithy"]</xpath>
@@ -78,9 +79,9 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
                 
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/RecipeDef/recipeUsers[li="FueledSmithy"]</xpath>
@@ -92,9 +93,9 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
                 
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/RecipeDef/recipeUsers[li="ElectricTailoringBench"]</xpath>
@@ -106,9 +107,9 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
                 
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/RecipeDef/recipeUsers[li="HandTailoringBench"]</xpath>
@@ -120,9 +121,9 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
                 
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/WorkGiverDef[defName="DoBillsMakeWeapons"]/fixedBillGiverDefs</xpath>
@@ -135,9 +136,9 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
 
-                <li Class="PatchOperationSequence">
+                <!-- <li Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationTest">
                             <xpath>Defs/WorkGiverDef[defName="DoBillsMakeApparel"]/fixedBillGiverDefs</xpath>
@@ -150,7 +151,7 @@
                             </value>
                         </li>
                     </operations>
-                </li>
+                </li> -->
                 
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/WorkGiverDef[defName="DoBillsButcherFlesh"]/fixedBillGiverDefs</xpath>

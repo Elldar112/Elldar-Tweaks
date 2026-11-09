@@ -9,20 +9,38 @@
 		<operations>
 	  
 		<!-- Architect Sense -->
-			<li Class="PatchOperationAdd">
-			  <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_AnimalFurniture"]/defNames</xpath>
-			  <value>
-			  	<li>AnimalStrawBedSmall</li>
-				<li>AnimalStrawBed</li>
-				<li>AnimalStrawBedBig</li>
-				<li>AnimalHospitalBedSmall</li>
-				<li>AnimalHospitalBed</li>
-				<li>AnimalHospitalBedBig</li>
-			  </value>
-			</li>
 			
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+			  <value>			  
+				<ArchitectSense.DesignationSubCategoryDef>
+				  <defName>SubCategory_AnimalStrawBed</defName>
+				  <label>Animal Straw Beds</label>
+				  <description>Animal beds made out of straw, perfect for barns.</description>
+				  <defNames>
+					<li>AnimalStrawBedSmall</li>
+					<li>AnimalStrawBed</li>
+					<li>AnimalStrawBedBig</li>
+				  </defNames>
+				  <designationCategory>Furniture</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+				  <defName>SubCategory_AnimalStrawBed_Medical</defName>
+				  <label>Animal Medical Beds</label>
+				  <description>Pets deserve some care too.</description>
+				  <defNames>
+					<li>AnimalHospitalBedSmall</li>
+					<li>AnimalHospitalBed</li>
+					<li>AnimalHospitalBedBig</li>
+				  </defNames>
+				  <designationCategory>Furniture</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+			 </value>
+			</li>
+
 			<li Class="PatchOperationRemove">
-			  <xpath>Defs/ThingDef[defName="ZP_AnimalStrawBed" or defName="ZP_AnimalHMBed" or defName="ZP_AnimalHospitalBed"]/designatorDropdown</xpath>
+			  <xpath>Defs/ThingDef[@Name="AnimalStrawBedBase" or @Name="AnimalHospitalBedBase"]/designatorDropdown</xpath>
 			</li>
 			
 			<li Class="PatchOperationRemove">
@@ -31,21 +49,54 @@
 			
 		<!-- Research -->
 			<li Class="PatchOperationAdd">
-			  <xpath>Defs/ThingDef[defName="AnimalStrawBedSmall" or defName="AnimalStrawBed" or defName="AnimalStrawBig"]</xpath>
+			  <xpath>Defs/ThingDef[defName="AnimalStrawBedSmall" or defName="AnimalStrawBed" or defName="AnimalStrawBedBig"]</xpath>
 			  <value>
 			  	<researchPrerequisites>
 					<li>Animal_A1</li>
 				</researchPrerequisites>
 			  </value>
 			</li>
-			
+
 		<!-- Cost -->
-		
-			<li Class="PatchOperationAdd">
-			  <xpath>Defs/ThingDef[defName="AnimalHospitalBedSmall" or defName="AnimalHospitalBed" or defName="AnimalHospitalBedBig"]/costList</xpath>
+
+			<li Class="SK.PatchOperationReplaceExtended">
+			  <xpath>Defs/ThingDef[defName="AnimalHospitalBedSmall"]</xpath>
 			  <value>
-			  	<costList>
-					<Medicine>5</Medicine>
+			  	<stuffCategories>
+					<li>Fabric</li>
+					<li>Leathery</li>
+				</stuffCategories>
+				<costStuffCount>20</costStuffCount>
+			  </value>
+			</li>
+			
+			<li Class="SK.PatchOperationReplaceExtended">
+			  <xpath>Defs/ThingDef[defName="AnimalHospitalBed"]</xpath>
+			  <value>
+			  	<stuffCategories>
+					<li>Fabric</li>
+					<li>Leathery</li>
+				</stuffCategories>
+				<costStuffCount>30</costStuffCount>
+			  </value>
+			</li>
+			
+			<li Class="SK.PatchOperationReplaceExtended">
+			  <xpath>Defs/ThingDef[defName="AnimalHospitalBedBig"]</xpath>
+			  <value>
+			  	<stuffCategories>
+					<li>Fabric</li>
+					<li>Leathery</li>
+				</stuffCategories>
+				<costStuffCount>40</costStuffCount>
+			  </value>
+			</li>
+			
+			<li Class="SK.PatchOperationReplaceExtended">
+			  <xpath>Defs/ThingDef[defName="AnimalHospitalBedSmall" or defName="AnimalHospitalBed" or defName="AnimalHospitalBedBig"]</xpath>
+			  <value>
+				<costList Replace="true">
+					<MedicineIndustrial>5</MedicineIndustrial>
 					<ComponentIndustrial>4</ComponentIndustrial>
 				</costList>
 			  </value>

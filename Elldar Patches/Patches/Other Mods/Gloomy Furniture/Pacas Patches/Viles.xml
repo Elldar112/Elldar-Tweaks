@@ -6,6 +6,7 @@
     <mods>
       <li>GloomyFurniture</li>
       <li>GloomyFurniture (Continued)</li>
+	  <li>GloomyFurniture (Continued) Unofficial Fix</li>
     </mods>
 
     <match Class="PatchOperationFindMod">

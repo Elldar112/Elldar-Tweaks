@@ -4,6 +4,7 @@
     <mods>
       <li>GloomyFurniture</li>
       <li>GloomyFurniture (Continued)</li>
+	  <li>GloomyFurniture (Continued) Unofficial Fix</li>
     </mods>
 
     <match Class="PatchOperationSequence">
@@ -53,13 +54,12 @@
                 <li>RugC_Large</li>
               </defNames>
               <designationCategory>Accessories</designationCategory>
-              <debug>false</debug>
             </ArchitectSense.DesignationSubCategoryDef>
 
             <ArchitectSense.DesignationSubCategoryDef>
-              <defName>SubCategory_GloomyLamps</defName>
-              <label>Street Lamps</label>
-              <description>Fancy</description>
+              <defName>SubCategory_GloomyLampsStreet</defName>
+              <label>Classic Street Lamps</label>
+              <description>Fancy standing lights</description>
               <defNames>
                 <li>RGK_Street_Lamp_L</li>
                 <li>RGK_Street_Lamp</li>
@@ -67,13 +67,25 @@
                 <li>RGK_Street_Lamp_SevenE</li>
               </defNames>
               <designationCategory>Accessories</designationCategory>
-              <debug>false</debug>
+            </ArchitectSense.DesignationSubCategoryDef>
+			
+			<ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_GloomyLamps</defName>
+              <label>Classic Lamps</label>
+              <description>Fancy small lights</description>
+              <defNames>
+                <li>RGK_lamp</li>
+				<li>RGK_lampE</li>
+                <li>GL_Wall_Lamp</li>
+                <li>GL_Wall_LampE</li>
+              </defNames>
+              <designationCategory>Accessories</designationCategory>
             </ArchitectSense.DesignationSubCategoryDef>
 
             <ArchitectSense.DesignationSubCategoryDef>
               <defName>SubCategory_GloomyJoyTables</defName>
               <label>Game Tables</label>
-              <description>Billiard and poker.</description>
+              <description>Billiard and poker</description>
               <defNames>
                 <li>BilliardsTable</li>
 				<li>PokerTable</li>
@@ -81,7 +93,6 @@
                 <li>GL_PokerTable</li>
               </defNames>
               <designationCategory>Joy</designationCategory>
-              <debug>false</debug>
             </ArchitectSense.DesignationSubCategoryDef>
 
             <ArchitectSense.DesignationSubCategoryDef>
@@ -120,12 +131,12 @@
               <description>Cupboards, kitchen shelves and drawers</description>
               <defNames>
                 <li>GL_Cupboard</li>
+				<li>SM_Sink</li>
                 <li>GL_TablewareShelf</li>
 				<li>SM_ButcherShelf</li>
 				<li>SM_KitchenCupboard_A</li>
 				<li>SM_KitchenCupboard_B</li>
 				<li>SM_KitchenCupboard_C</li>
-				<li>SM_Sink</li>
 				<li>SM_CornerIRD</li>
               </defNames>
               <designationCategory>Furniture</designationCategory>
@@ -168,11 +179,11 @@
               <label>Classic Decor</label>
               <description>Flowers, tea cups boards and other decorations</description>
               <defNames>
-                <li>RGK_bucketr</li>
-                <li>RGK_orc</li>
 				<li>RGK_Flower</li>
                 <li>RGK_Teaset</li>
                 <li>GL_Teddy</li>
+				<li>RGK_bucketr</li>
+                <li>RGK_orc</li>
 				<!-- Gloomy Deco -->
 				<li>GloomyDeco_Board</li>
                 <li>GloomyDeco_Kennel</li>
@@ -196,8 +207,8 @@
 
 			<ArchitectSense.DesignationSubCategoryDef>
               <defName>SubCategory_GloomyPebbleFloor</defName>
-              <label>Pebble</label>
-              <description>Tiny rocks made into a floor</description>
+              <label>Pebble Floor</label>
+              <description>Tiny rocks turned into a floor</description>
               <defNames>
                 <li>PebbleSandstone</li>
                 <li>PebbleGranite</li>
@@ -235,8 +246,14 @@
 				<li>GL_ClassyDoubleBed</li>
             </value>
 		</li>
+		
+		<li Class="PatchOperationRemove">
+		  <success>Always</success>
+          <xpath>Defs/TerrainDef[@Name="WoodFloorBase" or @Name="PebbleBase"]/designatorDropdown</xpath>
+        </li>
 
 		<li Class="PatchOperationRemove">
+		  <success>Always</success>
           <xpath>Defs/ThingDef[defName="RGK_Street_Lamp"
 		  or defName="RGK_Street_Lamp_L"
 		  or defName="RGK_Street_Lamp_Seven"
@@ -251,9 +268,7 @@
 		  or defName="GL_Street_Lamp_White"
 		  or defName="GL_Street_Lamp_Seven_White"
 		  or defName="GL_Street_Lamp_SevenE_White"
-		  or @Name="WallLightBase"
-		  or @Name="WoodFloorBase"
-		  or @Name="PebbleBase"]/designatorDropdown</xpath>
+		  or @Name="WallLightBase"]/designatorDropdown</xpath>
 		</li>
 
       </operations>

@@ -72,11 +72,25 @@
 				<li Class="LWM.DeepStorage.Properties">
 					<minNumberStacks>1</minNumberStacks>
 					<maxNumberStacks>1</maxNumberStacks>
-					<timeStoringTakes>20</timeStoringTakes>
+					<timeStoringTakes>5</timeStoringTakes>
 					<showContents>true</showContents>
-					<overlayType>None</overlayType>
+					<overlayType>SumOfItemsPerCell</overlayType>
 				</li>
 			</comps>
+          </value>
+        </li>
+		
+		<li Class="PatchOperationAdd" MayRequire="lwm.deepstorage">
+          <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]/inspectorTabs</xpath>
+          <value>
+				<li>LWM.DeepStorage.ITab_DeepStorage_Inventory</li>
+          </value>
+        </li>
+		
+		<li Class="PatchOperationAdd" MayRequire="lwm.deepstorage">
+          <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]</xpath>
+          <value>
+				<drawGUIOverlay>true</drawGUIOverlay>
           </value>
         </li>
 		
@@ -85,7 +99,7 @@
 		</li>
 		
 		<li Class="PatchOperationReplace" MayRequire="lwm.deepstorage">
-          <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]/preventDeteriorationOnTop</xpath>
+          <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase"]/building/preventDeteriorationOnTop</xpath>
           <value>
             <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
           </value>

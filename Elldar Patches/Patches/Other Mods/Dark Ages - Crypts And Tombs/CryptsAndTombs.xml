@@ -14,6 +14,20 @@
 			  <value>
 
 				<ArchitectSense.DesignationSubCategoryDef>
+				  <defName>SubCategory_DACryptStatues</defName>
+				  <label>Crypt Statues</label>
+				  <description>Spooky statues for Your crypt.</description>
+				  <defNames>
+					<li>DA_HeroicMemorial</li>
+					<li>DA_DemonStatue</li>
+					<li>DA_GargoyleStatue</li>
+					<li>DA_ImpStatue</li>
+					<li>DA_BurialUrn</li>
+				  </defNames>
+				  <designationCategory>Furniture</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
 				  <defName>SubCategory_DACryptBraziers</defName>
 				  <label>Crypt Braziers</label>
 				  <description>Sepulchral braziers to illuminate burial grounds, these burn with open fire.</description>
@@ -24,20 +38,6 @@
 					<li>DA_SepulchralBrazier</li>
 					<li>DA_DarklightSepulchralBrazier</li>
 					<li>DA_BloodflameSepulchralBrazier</li>
-				  </defNames>
-				  <designationCategory>Furniture</designationCategory>
-				</ArchitectSense.DesignationSubCategoryDef>
-
-				<ArchitectSense.DesignationSubCategoryDef>
-				  <defName>SubCategory_DACryptStatues</defName>
-				  <label>Crypt Statues</label>
-				  <description>Spooky statues for Your crypt.</description>
-				  <defNames>
-					<li>DA_HeroicMemorial</li>
-					<li>DA_DemonStatue</li>
-					<li>DA_GargoyleStatue</li>
-					<li>DA_ImpStatue</li>
-					<li>DA_BurialUrn</li>
 				  </defNames>
 				  <designationCategory>Furniture</designationCategory>
 				</ArchitectSense.DesignationSubCategoryDef>
@@ -176,7 +176,6 @@
 				<costList>
 					<Skull>3</Skull>
 					<Ash>30</Ash>
-					<BoneItem MayRequire="sihv.rombones">20</BoneItem>
 				</costList>
 			  </value>
 			</li>

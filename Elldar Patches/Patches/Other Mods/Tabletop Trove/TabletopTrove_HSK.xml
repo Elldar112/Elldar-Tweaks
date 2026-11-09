@@ -178,7 +178,7 @@
 			  </value>
 			</li>
 			
-			<!-- <li Class="PatchOperationAdd">
+			<li Class="PatchOperationAdd">
 			  <xpath>Defs/ThingDef[defName="MonopsonyBoard"
 			  or defName="SorceryCards"
 			  or defName="ColonistsGame"
@@ -192,11 +192,11 @@
 			  or defName="AffixSix"
 			  or defName="StrifeGame"
 			  or defName="LuijaBoard"
-			  or defName="Janko"]</xpath>
+			  or defName="Janko"]/graphicData</xpath>
 			  <value>
-				<color>(51,72,156)</color>
+				<color>(225,205,170)</color>
 			  </value>
-			</li> -->
+			</li>
 			 
 		</operations>
     </match>

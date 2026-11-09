@@ -27,6 +27,17 @@
 			  </value>
 			</li>
 		
+		<!-- Cost -->
+		
+		<li Class="PatchOperationReplace">
+			  <xpath>Defs/ThingDef[defName="GSAnimalBedBigPrestige"]/costList</xpath>
+			  <value>
+			  	<costList>
+					<GoldBar>2</GoldBar>
+				</costList>
+			  </value>
+		</li>
+		
 		</operations>
     </match>
   </Operation>

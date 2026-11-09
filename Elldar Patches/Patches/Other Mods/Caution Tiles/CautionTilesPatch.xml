@@ -1,108 +1,96 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationSequence" MayRequire="essecoisa.CautionTiles">
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Caution Tiles [1.0+]</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
 			<operations>
 			
-			<!-- Architect Sense -->			
-			
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
-				or defName="RedStripedTile" 
+			<!-- Remove Defs -->
+			<li Class="PatchOperationRemove">
+			<xpath>Defs/TerrainDef[defName="RedStripedTile" 
 				or defName="BlueStripedTile"
 				or defName="GreenStripedTile"
 				or defName="PurpleTileStripedTile" 
-				or defName="YellowStripedTileNE" 
 				or defName="RedStripedTileNE"
 				or defName="BlueStripedTileNE"
 				or defName="GreenStripedTileNE"
 				or defName="PurpleTileStripedTileNE"
-				or defName="YellowStripedTileSE"
 				or defName="RedStripedTileSE"
 				or defName="BlueStripedTileSE"
 				or defName="GreenStripedTileSE"
 				or defName="PurpleTileStripedTileSE"
-				or defName="YellowStripedTileSW"
 				or defName="RedStripedTileSW"
 				or defName="BlueStripedTileSW"
 				or defName="GreenStripedTileSW"
 				or defName="PurpleTileStripedTileSW"
-				or defName="YellowTile"
 				or defName="RedTile"
 				or defName="BlueTile"
 				or defName="GreenTile"
 				or defName="PurpleTile"]</xpath>
-				<value>
+			</li>
+			
+			<!-- Architect Sense -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
+				or defName="YellowStripedTileNE" 
+				or defName="YellowStripedTileSE"
+				or defName="YellowStripedTileSW"
+				or defName="YellowTile"]/designatorDropdown</xpath>
+			</li>
+					
+			<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ArchitectSense.DesignationSubCategoryDef>
+				  <defName>SubCategory_CautionTiles</defName>
+				  <label>Caution Tiles</label>
+				  <description>Striped caution tiles to decorate your base, can be painted to other colors.</description>
+						<defNames>
+							<li>YellowStripedTile</li>
+							<li>YellowStripedTileNE</li>
+							<li>YellowStripedTileSE</li>
+							<li>YellowStripedTileSW</li>
+							<li>YellowTile</li>
+						</defNames>
 					<designationCategory>OutsideFloors</designationCategory>
-				</value>	
+				</ArchitectSense.DesignationSubCategoryDef>
+			</value>
 			</li>
 			
 			<!-- Cost -->
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
-				or defName="RedStripedTile" 
-				or defName="BlueStripedTile"
-				or defName="GreenStripedTile"
-				or defName="PurpleTileStripedTile" 
+			<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
 				or defName="YellowStripedTileNE" 
-				or defName="RedStripedTileNE"
-				or defName="BlueStripedTileNE"
-				or defName="GreenStripedTileNE"
-				or defName="PurpleTileStripedTileNE"
 				or defName="YellowStripedTileSE"
-				or defName="RedStripedTileSE"
-				or defName="BlueStripedTileSE"
-				or defName="GreenStripedTileSE"
-				or defName="PurpleTileStripedTileSE"
 				or defName="YellowStripedTileSW"
-				or defName="RedStripedTileSW"
-				or defName="BlueStripedTileSW"
-				or defName="GreenStripedTileSW"
-				or defName="PurpleTileStripedTileSW"
-				or defName="YellowTile"
-				or defName="RedTile"
-				or defName="BlueTile"
-				or defName="GreenTile"
-				or defName="PurpleTile"]/costList</xpath>
-				<value>
-					<costList>
-						<ConcreteResource>2</ConcreteResource>
-					</costList>	
-				</value>	
+				or defName="YellowTile"]/costList</xpath>
+			<value>
+				<costList>
+					<ConcreteResource>2</ConcreteResource>
+				</costList>	
+			</value>	
 			</li>
 			
 			<!-- Research -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
-				or defName="RedStripedTile" 
-				or defName="BlueStripedTile"
-				or defName="GreenStripedTile"
-				or defName="PurpleTileStripedTile" 
+			<xpath>Defs/TerrainDef[defName="YellowStripedTile" 
 				or defName="YellowStripedTileNE" 
-				or defName="RedStripedTileNE"
-				or defName="BlueStripedTileNE"
-				or defName="GreenStripedTileNE"
-				or defName="PurpleTileStripedTileNE"
 				or defName="YellowStripedTileSE"
-				or defName="RedStripedTileSE"
-				or defName="BlueStripedTileSE"
-				or defName="GreenStripedTileSE"
-				or defName="PurpleTileStripedTileSE"
 				or defName="YellowStripedTileSW"
-				or defName="RedStripedTileSW"
-				or defName="BlueStripedTileSW"
-				or defName="GreenStripedTileSW"
-				or defName="PurpleTileStripedTileSW"
-				or defName="YellowTile"
-				or defName="RedTile"
-				or defName="BlueTile"
-				or defName="GreenTile"
-				or defName="PurpleTile"]</xpath>
-				<value>
-					<researchPrerequisites>
-						<li>Concrete_floor_C1</li>
-					</researchPrerequisites>
-				</value>	
-			</li>					
+				or defName="YellowTile"]</xpath>
+			<value>
+				<researchPrerequisites>
+					<li>Concrete_floor_C1</li>
+				</researchPrerequisites>
+			</value>	
+			</li>		
+			
 			</operations>
+		</match>
+		
 	</Operation>
 </Patch>
