@@ -1,0 +1,5 @@
+<Patch>
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef/recipes/li[substring(text(), string-length(text()) - 4) = "_Meat" or substring(text(), string-length(text()) - 3) = "_Veg"]</xpath>
+  </Operation>
+</Patch>

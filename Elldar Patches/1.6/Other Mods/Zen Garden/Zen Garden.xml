@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+	  <li>Zen Garden </li>
+      <li>Zen Garden (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+	  
+		<!-- Architect Sense -->
+		
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/DesignationCategoryDef[defName="ZEN_Decoration"]/label</xpath>
+			<value>
+			  <label>Zen Garden</label>
+			</value>
+		  </li>
+		  
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="ZEN_FlowerArch"]/designationCategory</xpath>
+			<value>
+			  <designationCategory>ZEN_Decoration</designationCategory>
+			</value>
+		  </li>
+		  
+		  <li Class="PatchOperationRemove">
+		  <success>Always</success>
+			<xpath>Defs/TerrainDef[@Name="ZEN_RoughBase" or @Name="ZEN_NormalBase"]/designatorDropdown</xpath>
+		  </li>
+		  
+		  <li Class="PatchOperationRemove">
+		  <success>Always</success>
+			<xpath>Defs/TerrainDef[@Name="ZEN_RoughBase" or @Name="ZEN_NormalBase"]/uiIconPath</xpath>
+		  </li>
+		  
+		  <li Class="PatchOperationRemove">
+			<xpath>Defs/TerrainDef[defName="ZEN_GravelNormalJade"]</xpath>
+		  </li>
+		  
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+			
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_GravelRake</defName>
+					<label>Rake Gravel</label>
+					<description>Rake gravel into artistic shapes</description>
+					<defNames>
+						<li>ZEN_GravelCurve</li>
+						<li>ZEN_GravelHoriz</li>
+						<li>ZEN_GravelVert</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_GravelRough</defName>
+					<label>Rough Gravel</label>
+					<description>This gravel is too rough to be raked</description>
+					<defNames>
+						<li>ZEN_GravelRoughSandstone</li>
+						<li>ZEN_GravelRoughGranite</li>
+						<li>ZEN_GravelRoughLimestone</li>
+						<li>ZEN_GravelRoughSlate</li>
+						<li>ZEN_GravelRoughMarble</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_GravelNormal</defName>
+					<label>Unraked Gravel</label>
+					<description>Gravel that can be raked into artistic shapes</description>
+					<defNames>
+						<li>ZEN_GravelNormalSandstone</li>
+						<li>ZEN_GravelNormalGranite</li>
+						<li>ZEN_GravelNormalLimestone</li>
+						<li>ZEN_GravelNormalSlate</li>
+						<li>ZEN_GravelNormalMarble</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_Borders</defName>
+					<label>Border Paths</label>
+					<description>Border paths filled with gravel or water</description>
+					<defNames>
+						<li>ZEN_BorderPath</li>
+						<li>ZEN_BorderPond</li>
+						<li>ZEN_bpPillar</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_Fountains</defName>
+					<label>Fountains</label>
+					<description>Decorative stone fountains</description>
+					<defNames>
+						<li>ZEN_SmallFountain</li>
+						<li>ZEN_LargeFountain</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_Rocks</defName>
+					<label>Stacked Rocks</label>
+					<description>Natural rocks that are stacked on top of each other</description>
+					<defNames>
+						<li>ZEN_StackedRocks</li>
+						<li>ZEN_LargeStackedRocks</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_Lanterns</defName>
+					<label>Zen lanterns</label>
+					<description>Some lights for the garden</description>
+					<defNames>
+						<li>ZEN_Tachidoro</li>
+						<li>ZEN_Andon</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_Hedge</defName>
+					<label>Hedges and arches</label>
+					<description>Some greenery for the garden</description>
+					<defNames>
+						<li>ZEN_Hedge</li>
+						<li>ZEN_FlowerArch</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+				<ArchitectSense.DesignationSubCategoryDef>
+					<defName>SubCategory_Zen_HalfWalls</defName>
+					<label>Half walls</label>
+					<description>Small walls for the garden, they act as a fence</description>
+					<defNames>
+						<li>ZEN_Fence</li>
+						<li>ZEN_BonboriFence</li>
+					</defNames>
+					<designationCategory>ZEN_Decoration</designationCategory>
+				</ArchitectSense.DesignationSubCategoryDef>
+				
+			</value>
+		  </li>
+		  
+		<!-- Buildings -->
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+			<xpath>Defs/ThingDef[defName="ZEN_BonboriFence"]</xpath>
+			<value>
+				<costList Replace="true">
+					<ElectronicComponents>2</ElectronicComponents>
+				</costList>
+			</value>
+		</li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+			<xpath>Defs/ThingDef[defName="ZEN_Tachidoro" or defName="ZEN_Andon"]</xpath>
+			<value>
+				<costList>
+					<ElectronicComponents>2</ElectronicComponents>
+				</costList>
+			</value>
+		</li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+			<xpath>Defs/ThingDef[defName="ZEN_Hedge"]</xpath>
+			<value>
+				<costList>
+					<Kindling>2</Kindling>
+					<Seed_Bush>4</Seed_Bush>
+				</costList>
+			</value>
+		</li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+			<xpath>Defs/ThingDef[defName="ZEN_FlowerArch"]</xpath>
+			<value>
+				<costList>
+					<Kindling>20</Kindling>
+					<Seed_Bush>8</Seed_Bush>
+				</costList>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationRemove">
+		<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ZenFountainBase"]/comps/li[compClass="CompQuality"]</xpath>
+		</li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+			<xpath>Defs/ThingDef[@Name="ZenFountainBase"]</xpath>
+			<value>
+				<costList>
+					<ElectronicComponents>2</ElectronicComponents>
+					<Mechanism>4</Mechanism>
+				</costList>
+				<researchPrerequisites>
+					<li>Art_C1</li>
+				</researchPrerequisites>
+			</value>
+		</li>	
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

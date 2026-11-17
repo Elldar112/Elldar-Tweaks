@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rim of Madness - Bones</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- Architect Sense -->
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <ArchitectSense.DesignationSubCategoryDef>
+              <defName>ROM_BoneFloors</defName>
+              <label>Bone Floors</label>
+              <description>Floors made of bones - spooky.</description>
+              <defNames>
+                <li>BoneFloor</li>
+                <li>BoneFloor_Blackened</li>
+                <li>BoneFloor_Ashen</li>
+                <li>BoneFloor_Tile</li>
+				<li>BoneChinaFloor</li>
+              </defNames>
+              <designationCategory>OutsideFloors</designationCategory>
+              <debug>false</debug>
+            </ArchitectSense.DesignationSubCategoryDef>
+          </value>
+        </li>
+
+        <li Class="PatchOperationInsert">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Seats"]/defNames/li[4]</xpath>
+          <value>
+            <li>BoneChair</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationInsert">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_RoyaltyStuff"]/defNames/li[3]</xpath>
+          <value>
+            <li>BoneThrone</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Walls"]/defNames</xpath>
+          <value>
+            <li>BoneWall</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[@Name="DarkThroneBase"]/designatorDropdown</xpath>
+        </li>
+
+        <li Class="PatchOperationRemove">
+          <xpath>
+            Defs/TerrainDef[
+              defName="BoneFloor"
+              or defName="BoneFloor_Blackened"
+              or defName="BoneChinaFloor"
+              or defName="BoneFloor_Ashen"
+              or defName="BoneFloor_Tile"]/designatorDropdown
+          </xpath>
+        </li>
+		
+		<!-- Research -->
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="BoneRefine"]</xpath>
+          <value>
+			<modExtensions>
+				<li Class="ResearchTreeSK.ResearchTreeSKModExtension" />
+			</modExtensions>
+			<researchViewX>10.00</researchViewX>
+			<researchViewY>28.00</researchViewY>
+          </value>
+        </li>
+		
+		<li Class="PatchOperationRemove">
+          <xpath>Defs/ResearchProjectDef[defName="BoneRefineII"]</xpath>
+        </li>
+		
+		<!-- Recipes -->
+		
+		<li Class="PatchOperationRemove">
+          <xpath>Defs/RecipeDef[defName="MakeBonePlasteel"]</xpath>
+        </li>
+		
+		<li Class="PatchOperationRemove">
+		  <xpath>Defs/ThingDef/recipes/li[text()="MakeBonePlasteel"]</xpath>
+		</li>
+
+		<!-- Apparel -->
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="ROMB_Apparel_SkullMask"]</xpath>
+          <value>
+			<costList>
+			  <BoneItem>40</BoneItem>
+			</costList>
+			<statBases>
+			  <WorkToMake>5000</WorkToMake>
+			  <MaxHitPoints>100</MaxHitPoints>
+			  <Mass>1.4</Mass>
+			  <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			  <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			</statBases>
+			<equippedStatOffsets>
+			  <WorkSpeedGlobal>-0.02</WorkSpeedGlobal>
+			  <SocialImpact>-0.10</SocialImpact>
+			  <Suppressability>-0.03</Suppressability>
+			</equippedStatOffsets>
+			<recipeMaker>
+				<workSpeedStat>SmithingSpeed</workSpeedStat>
+				<workSkill>Crafting</workSkill>
+				<effectWorking>Smith</effectWorking>
+				<soundWorking>Recipe_Machining</soundWorking>
+					<recipeUsers Replace="True">
+						<li>CraftingSpot</li>
+						<li>LeatherworkerTable</li>
+					</recipeUsers>
+				<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+			</recipeMaker>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="Sihv_Apparel_BoneArmor"]</xpath>
+          <value>
+			<costList>
+			  <BoneItem>120</BoneItem>
+			</costList>
+			<statBases>
+			  <WorkToMake>20000</WorkToMake>
+			  <MaxHitPoints>150</MaxHitPoints>
+			  <Mass>3</Mass>
+			  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			  <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			</statBases>
+			<equippedStatOffsets>
+			  <WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+			  <SocialImpact>-0.08</SocialImpact>
+			  <Suppressability>-0.03</Suppressability>
+			</equippedStatOffsets>
+			<recipeMaker>
+				<workSpeedStat>SmithingSpeed</workSpeedStat>
+				<workSkill>Crafting</workSkill>
+				<effectWorking>Smith</effectWorking>
+				<soundWorking>Recipe_Machining</soundWorking>
+					<recipeUsers Replace="True">
+						<li>CraftingSpot</li>
+						<li>LeatherworkerTable</li>
+					</recipeUsers>
+				<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+			</recipeMaker>
+          </value>
+        </li>
+
+        <!-- Stats -->
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/statFactors</xpath>
+          <value>
+            <WorkTableWorkSpeedFactor>0.45</WorkTableWorkSpeedFactor>
+            <BedRestEffectiveness>0.7</BedRestEffectiveness>
+            <ImmunityGainSpeedFactor>0.7</ImmunityGainSpeedFactor>
+          </value>
+        </li>
+
+        <!-- Combat Extented -->
+
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>Combat Extended</li>
+          </mods>
+
+          <match Class="PatchOperationSequence">
+            <operations>
+
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BoneItem"]/statBases</xpath>
+                <value>
+                  <Bulk>0.22</Bulk>
+                  <WornBulk>0.22</WornBulk>
+                  <StuffEffectMultiplierCE>0.75</StuffEffectMultiplierCE>
+                </value>
+              </li>
+
+            </operations>
+          </match>
+        </li>
+
+      </operations>
+    </match>
+
+  </Operation>
+
+</Patch>

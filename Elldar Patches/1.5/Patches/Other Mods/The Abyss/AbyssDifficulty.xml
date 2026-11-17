@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>The Abyss</li>
+			<li>The Abyss (Continued)</li>
+        </mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DifficultyDef[defName="Abyss"]/label</xpath>
+					<value>
+						<label>☠☠☠ Abyss</label>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DifficultyDef[defName="True_Abyss"]/label</xpath>
+					<value>
+						<label>☠☠☠☠ True Abyss</label>
+					</value>
+				</li>
+				
+				<!-- MendAndRecycle code can't handle absurdily high <difficulty> numbers and returns 0 resources with an error if set too high (was originally 40) -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DifficultyDef[defName="True_Abyss"]/difficulty</xpath>
+					<value>
+						<difficulty>10</difficulty>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+
+</Patch>

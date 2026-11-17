@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Furniture Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- ========== Joy Furniture ========== -->
+
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[@Name="VFE_RadioBase" or defName="Frame_Radio_Industrial" or defName="Frame_Radio_Spacer"]/constructEffect</xpath>
+				</li>
+				
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Radio_Industrial"]</xpath>
+					<value>
+						<costList>
+							<Plastic>8</Plastic>
+							<Rubber>2</Rubber>
+							<ComponentIndustrial>2</ComponentIndustrial>
+							<ElectronicComponents>4</ElectronicComponents>
+						</costList>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+						</stuffCategories>
+						<costStuffCount>20</costStuffCount>
+						<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Radio_Spacer"]</xpath>
+					<value>
+						<costList>
+							<Plastic>12</Plastic>
+							<Rubber>2</Rubber>
+							<ComponentIndustrial>6</ComponentIndustrial>
+							<ElectronicComponents>4</ElectronicComponents>
+							<Electronics>2</Electronics>
+						</costList>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>20</costStuffCount>
+						<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Joy_Arcade"]</xpath>
+					<value>
+						<costList>
+							<Plastic>12</Plastic>
+							<Rubber>2</Rubber>
+							<Glass>8</Glass>
+							<ComponentIndustrial>5</ComponentIndustrial>
+							<ElectronicComponents>2</ElectronicComponents>
+							<Electronics>1</Electronics>
+						</costList>
+						<costStuffCount>30</costStuffCount>
+						<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Joy_InudstrialComputer"]</xpath>
+					<value>
+						<costList>
+							<Plastic>15</Plastic>
+							<Glass>15</Glass>
+							<ComponentIndustrial>6</ComponentIndustrial>
+							<ElectronicComponents>4</ElectronicComponents>
+							<Electronics>2</Electronics>
+						</costList>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+						</stuffCategories>
+						<costStuffCount>20</costStuffCount>
+						<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Joy_ModernComputer"]</xpath>
+					<value>
+						<costList>
+							<Plastic>35</Plastic>
+							<ComponentIndustrial>10</ComponentIndustrial>
+							<ElectronicComponents>4</ElectronicComponents>
+							<Electronics>4</Electronics>
+							<Microchips>1</Microchips>
+						</costList>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+						</stuffCategories>
+						<costStuffCount>40</costStuffCount>
+						<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Joy_Piano"]</xpath>
+					<value>
+						<costList>
+							<ComponentIndustrial>6</ComponentIndustrial>
+						</costList>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+						<costStuffCount>180</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Joy_RouletteTable"]</xpath>
+					<value>
+						<costList>
+							<Cloth>40</Cloth>
+							<ComponentIndustrial>4</ComponentIndustrial>
+						</costList>
+						<costStuffCount>160</costStuffCount>
+						<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+						<researchPrerequisites>
+							<li>Harpsichord</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Joy_DartsBoard"]</xpath>
+					<value>
+						<costList>
+							<Cloth>40</Cloth>
+							<ComponentIndustrial>4</ComponentIndustrial>
+						</costList>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+						</stuffCategories>
+						<costStuffCount>15</costStuffCount>
+						<researchPrerequisites>
+							<li>Harpsichord</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Joy_PunchingBag"]</xpath>
+					<value>
+						<costList>
+							<Steel>40</Steel>
+						</costList>
+						<researchPrerequisites>
+							<li>Piano</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<!-- ========== Modern Furniture ========== -->
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Bed_Ergonomic"]</xpath>
+					<value>
+						<costList>
+							<ComponentIndustrial>8</ComponentIndustrial>
+						</costList>
+						<stuffCategories>
+							<li>Fabric</li>
+							<li>HF</li>
+						</stuffCategories>
+						<costStuffCount>65</costStuffCount>
+						<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+						<researchPrerequisites>
+							<li>MF_ModernFurniture</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Bed_DoubleErgonomic"]</xpath>
+					<value>
+						<costList>
+							<ComponentIndustrial>16</ComponentIndustrial>
+						</costList>
+						<stuffCategories>
+							<li>Fabric</li>
+							<li>HF</li>
+						</stuffCategories>
+						<costStuffCount>130</costStuffCount>
+						<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+						<researchPrerequisites>
+							<li>MF_ModernFurniture</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Table_Wardrobe"]</xpath>
+					<value>
+						<costList>
+							<ComponentMedieval>4</ComponentMedieval>
+						</costList>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+						</stuffCategories>
+						<costStuffCount>80</costStuffCount>
+						<researchPrerequisites>
+							<li>MF_ModernFurniture</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Seat_ModernChair"]</xpath>
+					<value>
+						<costList>
+							<Rubber>4</Rubber>
+							<Plastic>8</Plastic>
+							<ComponentIndustrial>4</ComponentIndustrial>
+						</costList>
+						<stuffCategories>
+							<li>Fabric</li>
+							<li>Leathery</li>
+						</stuffCategories>
+						<costStuffCount>60</costStuffCount>
+					</value>
+				</li>
+
+				<!-- ========== Royal Furniture ========== -->
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Bed_Kingsize"]</xpath>
+					<value>
+						<costList>
+							<ComponentIndustrial>16</ComponentIndustrial>
+							<GoldBar>8</GoldBar>
+						</costList>
+						<stuffCategories>
+							<li>Fabric</li>
+							<li>HF</li>
+						</stuffCategories>
+						<costStuffCount>130</costStuffCount>
+						<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Table_RoyalEndTable"]</xpath>
+					<value>
+						<costList>
+							<ComponentIndustrial>4</ComponentIndustrial>
+							<GoldBar>2</GoldBar>
+						</costList>
+						<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Table_RoyalDresser"]</xpath>
+					<value>
+						<costList>
+							<Rubber>15</Rubber>
+							<Plastic>20</Plastic>
+							<ComponentIndustrial>6</ComponentIndustrial>
+							<GoldBar>4</GoldBar>
+						</costList>
+						<costStuffCount>70</costStuffCount>
+						<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Seat_RoyalChair"]</xpath>
+					<value>
+						<costList>
+							<ComponentIndustrial>4</ComponentIndustrial>
+							<GoldBar>2</GoldBar>
+						</costList>
+						<costStuffCount>65</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Seat_RoyalArmchair"]</xpath>
+					<value>
+						<costList>
+							<ComponentIndustrial>4</ComponentIndustrial>
+							<GoldBar>4</GoldBar>
+						</costList>
+						<costStuffCount>140</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Table_Royal1x1c"]</xpath>
+					<value>
+						<costList>
+							<GoldBar>4</GoldBar>
+						</costList>
+						<costStuffCount>25</costStuffCount>
+						<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Table_Royal2x2c"]</xpath>
+					<value>
+						<costList>
+							<GoldBar>8</GoldBar>
+						</costList>
+						<costStuffCount>100</costStuffCount>
+						<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Table_Royal1x2c"]</xpath>
+					<value>
+						<costList>
+							<GoldBar>6</GoldBar>
+						</costList>
+						<costStuffCount>50</costStuffCount>
+						<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Table_Royal3x3c"]</xpath>
+					<value>
+						<costList>
+							<GoldBar>12</GoldBar>
+						</costList>
+						<costStuffCount>150</costStuffCount>
+						<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+					</value>
+				</li>
+
+				<li Class="SK.PatchOperationReplaceExtended">
+					<xpath>Defs/ThingDef[defName="Table_Royal2x4c"]</xpath>
+					<value>
+						<costList>
+							<GoldBar>12</GoldBar>
+						</costList>
+						<costStuffCount>140</costStuffCount>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+</Patch>

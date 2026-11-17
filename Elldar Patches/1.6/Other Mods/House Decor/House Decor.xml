@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[ATW] House Decor</li>
+			<li>[ATW] House Decor 1.6 (Temp)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Architect Sense -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <ArchitectSense.DesignationSubCategoryDef>
+                            <defName>SubCategory_HouseDecor_Windows</defName>
+                            <label>Windows</label>
+                            <description>Windows and curtains to spice up the walls.</description>
+                            <defNames>
+                                <li>AtwoodDoubleWindow</li>
+                                <li>AtwoodWindow</li>
+                                <li>AtwoodDoubleCurtains</li>
+                                <li>AtwoodCurtains</li>
+                            </defNames>
+                            <designationCategory>Structure</designationCategory>
+                        </ArchitectSense.DesignationSubCategoryDef>
+
+                        <ArchitectSense.DesignationSubCategoryDef>
+                            <defName>SubCategory_HouseDecor_Plants</defName>
+                            <label>Decorative Plants</label>
+                            <description>Decorative plants for indoors and outdoors.</description>
+                            <defNames>
+                                <li>AtwoodHousePlant</li>
+                                <li>AtwoodAfricanVioletA</li>
+                                <li>AtwoodAfricanVioletB</li>
+                                <li>AtwoodWaterPlant</li>
+                            </defNames>
+                            <designationCategory>Furniture</designationCategory>
+                        </ArchitectSense.DesignationSubCategoryDef>
+
+                        <ArchitectSense.DesignationSubCategoryDef>
+                            <defName>SubCategory_HouseDecor_Aquarium</defName>
+                            <label>Aquarium</label>
+                            <description>Windows and curtains to spice up the walls.</description>
+                            <defNames>
+                                <li>AtwoodAquarium</li>
+                                <li>AtwoodAquariumBasic</li>
+                            </defNames>
+                            <designationCategory>Joy</designationCategory>
+                        </ArchitectSense.DesignationSubCategoryDef>
+                    </value>
+                </li>
+				
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lights"]/defNames</xpath>
+                    <value>
+                        <li>AtwoodCandles</li>
+                        <li>AtwoodCandlesB</li>
+                    </value>
+                </li>
+
+                <!-- <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef
+					[defName="AtwoodDoubleWindow"
+					or defName="AtwoodWindow"
+					or defName="AtwoodDoubleCurtains"
+					or defName="AtwoodCurtains"
+					or defName="AtwoodHousePlant"
+					or defName="AtwoodAfricanVioletA"
+					or defName="AtwoodAfricanVioletB"
+					or defName="AtwoodWaterPlant"
+					or defName="AtwoodCandles"
+					or defName="AtwoodCandlesB"]</xpath>
+                    <value>
+                        <designationCategory>Furniture</designationCategory>
+                    </value>
+                </li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/designationCategoryDef[defName="Decor"]</xpath>
+				</li> -->
+
+                <!-- Research -->
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodDoubleWindow" or defName="AtwoodWindow" or defName="AtwoodDoubleCurtains" or defName="AtwoodCurtains"]</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Construction_B3</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodCandles" or defName="AtwoodCandlesB"]</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Light_B2</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodHousePlant" or defName="AtwoodAfricanVioletA" or defName="AtwoodAfricanVioletB" or defName="AtwoodWaterPlant"]</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Accessory_B1</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodAquarium" or defName="AtwoodAquariumBasic"]</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>TubeTelevision</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+
+                <!-- Cost: Candles -->
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodCandles" or defName="AtwoodCandlesB"]</xpath>
+                    <value>
+                        <stuffCategories>
+                            <li>Metallic</li>
+                            <li>Woody</li>
+                        </stuffCategories>
+                        <costList>
+                            <Tallow>5</Tallow>
+                        </costList>
+                    </value>
+                </li>
+
+                <!-- Cost: Decorative Plants -->
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodHousePlant" or defName="AtwoodAfricanVioletA" or defName="AtwoodAfricanVioletB"]</xpath>
+                    <value>
+                        <costList>
+							<Ceramics>4</Ceramics>
+                            <Fertilizer>2</Fertilizer>
+                            <Seed_Bush>1</Seed_Bush>
+                        </costList>
+                    </value>
+                </li>
+
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodWaterPlant"]</xpath>
+                    <value>
+                        <costList>
+                            <Fertilizer>4</Fertilizer>
+                            <Seed_Bush>2</Seed_Bush>
+                        </costList>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="AtwoodHousePlant" or defName="AtwoodAfricanVioletA" or defName="AtwoodAfricanVioletB" or defName="AtwoodWaterPlant"]/stuffCategories</xpath>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="AtwoodHousePlant" or defName="AtwoodAfricanVioletA" or defName="AtwoodAfricanVioletB" or defName="AtwoodWaterPlant"]/costStuffCount</xpath>
+                </li>
+
+                <!-- Cost: Aquarium -->
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodAquariumBasic"]</xpath>
+                    <value>
+                        <stuffCategories>
+                            <li>Metallic</li>
+                        </stuffCategories>
+                        <costList>
+                            <Glass>35</Glass>
+                        </costList>
+                    </value>
+                </li>
+
+                <li Class="SK.PatchOperationReplaceExtended">
+                    <xpath>Defs/ThingDef[defName="AtwoodAquarium"]</xpath>
+                    <value>
+                        <stuffCategories>
+                            <li>Metallic</li>
+                        </stuffCategories>
+                        <costList>
+                            <Glass>35</Glass>
+                            <ElectronicComponents>2</ElectronicComponents>
+                        </costList>
+                    </value>
+                </li>
+
+                <!-- Attributes -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AtwoodCandles" or defName="AtwoodCandlesB"]/comps/li[1]</xpath>
+                    <value>
+                        <li Class="CompProperties_Refuelable">
+                             <fuelConsumptionRate>0.5</fuelConsumptionRate>
+                             <fuelCapacity>25.0</fuelCapacity>
+                             <fuelConsumptionPerTickInRain>0.001</fuelConsumptionPerTickInRain>
+                             <fuelFilter>
+                                 <thingDefs>
+                                    <li>Tallow</li>
+                                </thingDefs>
+                                </fuelFilter>
+                            <initialFuelPercent>1</initialFuelPercent>
+                            <destroyOnNoFuel>false</destroyOnNoFuel>
+                        </li>
+                    </value>
+                </li>
+				
+				<li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="AtwoodCandles"]</xpath>
+                    <value>
+                        <uiIconPath>Things/Decor/AtwoodCandles_north</uiIconPath>
+                    </value>
+                </li>
+				
+				<li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="AtwoodCandlesB"]</xpath>
+                    <value>
+                        <uiIconPath>Things/Decor/AtwoodCandles_south</uiIconPath>
+                    </value>
+                </li>
+				
+				<li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AtwoodAfricanVioletB"]/uiIconPath</xpath>
+                    <value>
+                        <uiIconPath>Things/Decor/AfricanViolet_east</uiIconPath>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

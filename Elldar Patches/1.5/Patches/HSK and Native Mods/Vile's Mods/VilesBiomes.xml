@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vile's Biomes: From The Ground Up</li>
+        </mods>
+		
+        <match Class="PatchOperationSequence">
+        <operations>
+			
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Plant_Cranberry" or defName="Plant_Blueberry" or defName="Plant_Bearberry"]/plant</xpath>
+				<value>
+					<maxMeshCount>4</maxMeshCount>
+					<visualSizeRange>
+						<min>0.2</min>
+						<max>0.4</max>
+					</visualSizeRange>
+				</value>
+			</li>
+			  
+		</operations>
+		</match>
+
+    </Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vile's Mountains and Meadows</li>
+        </mods>
+		
+        <match Class="PatchOperationSequence">
+        <operations>
+			
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Plant_Cloudberry"]/plant</xpath>
+				<value>
+					<maxMeshCount>4</maxMeshCount>
+					<visualSizeRange>
+						<min>0.2</min>
+						<max>0.8</max>
+					</visualSizeRange>
+				</value>
+			</li>
+			  
+		</operations>
+		</match>
+
+    </Operation>
+	
+</Patch>

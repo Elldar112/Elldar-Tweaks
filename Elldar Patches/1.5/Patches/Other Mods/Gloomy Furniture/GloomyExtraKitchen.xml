@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Gloomy Extra - Kitchen</li>
+      <li>Gloomy Extra - Kitchen (Continued)</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+      <operations>
+	  
+	  <!-- Cupboards -->
+        <li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="SM_KitchenCupboard_A" or defName="SM_KitchenCupboard_B" or defName="SM_KitchenCupboard_C" or defName="SM_CornerIRD"]</xpath>
+          <value>
+            <costList>
+              <ComponentMedieval>4</ComponentMedieval>
+            </costList>
+            <researchPrerequisites>
+              <li>Tables_B2</li>
+            </researchPrerequisites>
+            <statBases>
+              <Beauty>9</Beauty>
+              <Bulk>70</Bulk>
+              <Flammability>1.0</Flammability>
+              <Mass>20</Mass>
+              <MaxHitPoints>120</MaxHitPoints>
+              <WorkToBuild>1100</WorkToBuild>
+            </statBases>
+          </value>
+        </li>
+		
+		<!-- Butcher Shelf -->
+        <li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="SM_ButcherShelf"]</xpath>
+          <value>
+            <costList>
+              <ComponentMedieval>4</ComponentMedieval>
+              <Glass>5</Glass>
+            </costList>
+			<researchPrerequisites>
+              <li>Tables_B2</li>
+            </researchPrerequisites>
+            <statBases>
+              <Beauty>15</Beauty>
+              <Flammability>1.0</Flammability>
+              <Mass>15</Mass>
+              <MaxHitPoints>120</MaxHitPoints>
+              <WorkToBuild>3000</WorkToBuild>
+            </statBases>
+          </value>
+        </li>
+		
+		<!-- Kitchen Sink -->
+        <li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="SM_Sink"]</xpath>
+          <value>
+            <costList>
+              <ComponentIndustrial>8</ComponentIndustrial>
+              <Mechanism>1</Mechanism>
+            </costList>
+            <researchPrerequisites>
+              <li>Tables_B2</li>
+            </researchPrerequisites>
+            <statBases>
+              <Beauty>10</Beauty>
+              <Bulk>75</Bulk>
+              <Cleanliness>-2</Cleanliness>
+              <Flammability>1.0</Flammability>
+              <Mass>25</Mass>
+              <MaxHitPoints>120</MaxHitPoints>
+              <WorkToBuild>5000</WorkToBuild>
+            </statBases>
+          </value>
+        </li>
+		
+		<!-- Kitchen Floor -->
+
+		<li Class="PatchOperationRemove">
+          <xpath>Defs/TerrainDef[defName="SuffedKitchenTile"]</xpath>
+        </li>
+		<li Class="PatchOperationRemove">
+          <xpath>Defs/TerrainDef[@Name="KitchenTileBase"]/designatorDropdown</xpath>
+        </li>
+		
+		<li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+			<ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_GloomyKitchenFloor</defName>
+              <label>Kitchen Tiles</label>
+              <description>Classic kitchen floor, easy to clean</description>
+              <defNames>
+                <li>SandstoneKitchenTile</li>
+                <li>GraniteKitchenTile</li>
+				<li>LimestoneKitchenTile</li>
+                <li>SlateKitchenTile</li>
+                <li>MarbleKitchenTile</li>
+              </defNames>
+              <designationCategory>NaturalFloors</designationCategory>
+            </ArchitectSense.DesignationSubCategoryDef>
+          </value>
+        </li>
+		
+      </operations>
+    </match>
+  </Operation>
+</Patch>

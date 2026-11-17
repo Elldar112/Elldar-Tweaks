@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>HMC Biomes</li>
+        </mods>
+		
+        <match Class="PatchOperationSequence">
+        <operations>
+			
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Plant_Buckwheat"]/plant</xpath>
+				<value>
+					<maxMeshCount>4</maxMeshCount>
+					<visualSizeRange>
+						<min>0.2</min>
+						<max>0.8</max>
+					</visualSizeRange>
+				</value>
+			</li>
+			  
+		</operations>
+		</match>
+
+    </Operation>
+	
+</Patch>

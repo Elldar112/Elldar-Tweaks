@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+
+        <!-- Create AOMorefurniture category -->
+		
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs</xpath>
+          <value>
+            <DesignationCategoryDef>
+              <defName>AOMorefurniture</defName>
+              <label>VFE</label>
+              <description>The new pieces of furniture added by the Vanilla Furniture Expanded mod.</description>
+              <order>455</order>
+              <specialDesignatorClasses>
+                <li>Designator_Cancel</li>
+                <li>Designator_Deconstruct</li>
+              </specialDesignatorClasses>
+            </DesignationCategoryDef>
+          </value>
+        </li>
+
+        <!-- Joy -->
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Radio_Industrial"
+            or defName="Radio_Spacer"
+            or defName="Joy_Arcade"
+            or defName="Joy_InudstrialComputer"
+            or defName="Joy_ModernComputer"
+            or defName="Joy_Piano"
+            or defName="Joy_RouletteTable"
+            or defName="Joy_DartsBoard"
+            or defName="Joy_PunchingBag"]</xpath>
+          <value>
+            <designationCategory>Joy</designationCategory>
+          </value>
+        </li>
+
+        <!-- VFE -->
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="AirConditioningUnit"
+			or defName="Bin_Small"
+			or defName="Bin_Large"
+            or defName="Light_Streetlamp"
+            or defName="Seat_Bench"
+            or defName="Seat_Cushion"
+            or defName="Seat_ModernChair"
+            or defName="Seat_RoyalArmchair"
+            or defName="Seat_RoyalChair"
+            or defName="Seat_SquareChair"
+            or defName="Shelf_WeaponRack"
+			or defName="Stone_Campfire"
+			or defName="Stone_DarklightCampfire"
+            or defName="Table_1x1c"
+            or defName="Table_Counter"
+            or defName="Table_Royal1x1c"
+            or defName="Table_Royal1x2c"
+            or defName="Table_Royal2x2c"
+            or defName="Table_Royal2x4c"
+            or defName="Table_Royal3x3c"
+            or defName="Table_RoyalDresser"
+            or defName="Table_RoyalEndTable"
+            or defName="Table_Wardrobe"
+			or defName="Misc_FileCabinet"
+			or defName="VFE_AnimalSacrophagus"
+            or defName="VFE_CoffeeTable"
+            or defName="VFE_DeskLamp"
+            or defName="VFE_FloorLamp"
+            or defName="VFE_LongPlantPot"
+            or defName="VFE_ModularCouch"
+            or defName="VFE_RoyalLamp"
+            or defName="VFE_RoyalWardrobe"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+		
+		<!-- <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName=defName="Bed_DoubleErgonomic"
+            or defName="Bed_Ergonomic"
+            or defName="Bed_Kingsize"
+            or defName="Bed_Simple"
+            or defName="Bed_StoneSlab"
+            or defName="VFE_Bed_SimpleDouble"
+            or defName="VFE_Bed_StoneSlabDouble"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li> -->
+
+      </operations>
+    </match>
+  </Operation>
+</Patch>

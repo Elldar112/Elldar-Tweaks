@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[MUS]太空基地家具Space Base Furniture</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+	  
+	  <!-- Architect Sense -->
+	  
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

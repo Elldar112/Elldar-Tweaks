@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Gloomy -->
+	
+		<Operation Class="PatchOperationFindMod">
+			<mods>
+			  <li>GloomyFurniture</li>
+			  <li>GloomyFurniture (Continued)</li>
+			  <li>GloomyFurniture (Continued) Unofficial Fix</li>
+			</mods>
+
+			<match Class="PatchOperationSequence">
+			  <operations>
+			  
+			  <li Class="PatchOperationReplace"> <!-- Move any thing from this category to vanilla "Furniture" first, to avoid removal from the Architect menu -->
+				<xpath>Defs/ThingDef[designationCategory="OldStyleFurniture" or designationCategory="OldStyleDeco"]/designationCategory</xpath>
+				<success>Always</success>
+				<value>
+					<designationCategory>Furniture</designationCategory>
+				</value>
+			  </li>
+			  
+			  <li Class="PatchOperationReplace"> <!-- Move any floor from this category to vanilla "Floors" first, to avoid removal from the Architect menu -->
+				<xpath>Defs/TerrainDef[designationCategory="OldStyleFurniture" or designationCategory="OldStyleDeco"]/designationCategory</xpath>
+				<success>Always</success>
+				<value>
+					<designationCategory>Floors</designationCategory>
+				</value>
+			  </li>
+			  
+			  <li Class="PatchOperationRemove"> <!-- Remove Category, use Architect Sense subCategory to move Defs from "Floors" or "Furniture" to desired final Category -->
+				<xpath>Defs/DesignationCategoryDef[defName="OldStyleFurniture" or defName="OldStyleDeco"]</xpath>
+			  </li>
+
+			  </operations>
+			</match>
+		</Operation>
+		
+	<!-- House Decor -->
+
+		<Operation Class="PatchOperationFindMod">
+			<mods>
+			  <li>[ATW] House Decor</li>
+			  <li>[ATW] House Decor 1.6 (Temp)</li>
+			</mods>
+
+			<match Class="PatchOperationSequence">
+			  <operations>
+			  
+			  <li Class="PatchOperationReplace"> <!-- Move any thing from this category to vanilla "Furniture" first, to avoid removal from the Architect menu -->
+			  <success>Always</success>
+				<xpath>Defs/ThingDef[designationCategory="Decor"]/designationCategory</xpath>
+				<value>
+					<designationCategory>Furniture</designationCategory>
+				</value>
+			  </li>
+			  
+			  <li Class="PatchOperationReplace"> <!-- Move any floor from this category to vanilla "Floors" first, to avoid removal from the Architect menu -->
+			  <success>Always</success>
+				<xpath>Defs/TerrainDef[designationCategory="Decor"]/designationCategory</xpath>
+				<value>
+					<designationCategory>Floors</designationCategory>
+				</value>
+			  </li>
+			  
+			  <li Class="PatchOperationRemove"> <!-- Remove Category, use Architect Sense subCategory to move Defs from "Floors" or "Furniture" to desired final Category -->
+			  <success>Always</success>
+				<xpath>Defs/designationCategoryDef[defName="Decor"]</xpath> <!-- This has to be lowercase designationCategoryDef for this mod specific, -->
+			  </li>
+
+			  </operations>
+			</match>
+		
+		</Operation>
+	  
+</Patch>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ATH's Styleable Framework</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Decoration"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Ideology</designationCategory>
+          </value>
+        </li>
+		
+		<li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Decoration"]/label</xpath>
+          <value>
+            <label>Styleable Decoration</label>
+          </value>
+        </li>
+		
+		<li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Decoration"]/description</xpath>
+          <value>
+            <description>Decoration matching colony Ideology style</description>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

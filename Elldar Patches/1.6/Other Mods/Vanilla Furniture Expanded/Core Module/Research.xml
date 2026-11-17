@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Vanilla Furniture Expanded</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<operations>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_BasicFurniture"]/researchViewX</xpath>
+                <value>
+                    <researchViewX>0.00</researchViewX>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_BasicFurniture"]/researchViewY</xpath>
+                <value>
+                    <researchViewY>8.00</researchViewY>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_BasicFurniture"]/tab</xpath>
+                <value>
+                    <tab>Buildings_SK</tab>
+                </value>
+            </li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ResearchProjectDef[defName="MF_BasicFurniture"]/modExtensions/li[@Class="ResearchTreeSK.ResearchTreeSKModExtension"]</xpath>
+				<nomatch Class="PatchOperationConditional">
+					<xpath>/Defs/ResearchProjectDef[defName="MF_BasicFurniture"]/modExtensions</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_BasicFurniture"]/modExtensions</xpath>
+						<value>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_BasicFurniture"]</xpath>
+						<value>
+						<modExtensions>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</modExtensions>
+						</value>
+					</nomatch>
+				</nomatch>
+			</li>
+
+			<li Class="PatchOperationAdd">
+                <xpath>Defs/ResearchProjectDef[defName="Beds_A1"]</xpath>
+                <value>
+					<prerequisites>
+						<li>MF_BasicFurniture</li>
+					</prerequisites>  
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/researchViewX</xpath>
+                <value>
+                    <researchViewX>5.00</researchViewX>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/researchViewY</xpath>
+                <value>
+                    <researchViewY>8.00</researchViewY>
+                </value>
+            </li>
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/tab</xpath>
+                <value>
+                    <tab>Buildings_SK</tab>
+                </value>
+            </li>
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/prerequisites</xpath>
+                <value>
+					<prerequisites>
+						<li>Tables_B2</li>
+					</prerequisites>  
+                </value>
+            </li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/modExtensions/li[@Class="ResearchTreeSK.ResearchTreeSKModExtension"]</xpath>
+				<nomatch Class="PatchOperationConditional">
+					<xpath>/Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/modExtensions</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/modExtensions</xpath>
+						<value>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_ModernFurniture"]</xpath>
+						<value>
+						<modExtensions>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</modExtensions>
+						</value>
+					</nomatch>
+				</nomatch>
+			</li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_RoyalFurniture"]/researchViewX</xpath>
+                <value>
+                    <researchViewX>6.00</researchViewX>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_RoyalFurniture"]/researchViewY</xpath>
+                <value>
+                    <researchViewY>9.00</researchViewY>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_RoyalFurniture"]/label</xpath>
+                <value>
+                    <label>Royal Furniture</label>
+                </value>
+            </li>
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_RoyalFurniture"]/tab</xpath>
+                <value>
+                    <tab>Buildings_SK</tab>
+                </value>
+            </li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ResearchProjectDef[defName="MF_RoyalFurniture"]/modExtensions/li[@Class="ResearchTreeSK.ResearchTreeSKModExtension"]</xpath>
+				<nomatch Class="PatchOperationConditional">
+					<xpath>/Defs/ResearchProjectDef[defName="MF_RoyalFurniture"]/modExtensions</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_RoyalFurniture"]/modExtensions</xpath>
+						<value>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_RoyalFurniture"]</xpath>
+						<value>
+						<modExtensions>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</modExtensions>
+						</value>
+					</nomatch>
+				</nomatch>
+			</li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_WasteDisposal"]/researchViewX</xpath>
+                <value>
+                    <researchViewX>8.00</researchViewX>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_WasteDisposal"]/researchViewY</xpath>
+                <value>
+                    <researchViewY>7.00</researchViewY>
+                </value>
+            </li>
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_WasteDisposal"]/tab</xpath>
+                <value>
+                    <tab>Buildings_SK</tab>
+                </value>
+            </li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ResearchProjectDef[defName="MF_WasteDisposal"]/modExtensions/li[@Class="ResearchTreeSK.ResearchTreeSKModExtension"]</xpath>
+				<nomatch Class="PatchOperationConditional">
+					<xpath>/Defs/ResearchProjectDef[defName="MF_WasteDisposal"]/modExtensions</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_WasteDisposal"]/modExtensions</xpath>
+						<value>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_WasteDisposal"]</xpath>
+						<value>
+						<modExtensions>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</modExtensions>
+						</value>
+					</nomatch>
+				</nomatch>
+			</li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/researchViewX</xpath>
+                <value>
+                    <researchViewX>7.00</researchViewX>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/researchViewY</xpath>
+                <value>
+                    <researchViewY>9.00</researchViewY>
+                </value>
+            </li>
+			<li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/tab</xpath>
+                <value>
+                    <tab>Buildings_SK</tab>
+                </value>
+            </li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/modExtensions/li[@Class="ResearchTreeSK.ResearchTreeSKModExtension"]</xpath>
+				<nomatch Class="PatchOperationConditional">
+					<xpath>/Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/modExtensions</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/modExtensions</xpath>
+						<value>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="MF_ModernFurniture"]</xpath>
+						<value>
+						<modExtensions>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</modExtensions>
+						</value>
+					</nomatch>
+				</nomatch>
+			</li>
+			
+	<!-- ==== Undo changes VFE does to research back to normal HSK state ==== -->
+			
+			<!-- ComplexFurniture -->
+			<li Class="SK.PatchOperationReplaceExtended">
+				<xpath>Defs/ResearchProjectDef[defName="ComplexFurniture"]</xpath>
+				<value>
+					<label>Furniture I</label>
+					<baseCost>250</baseCost>
+					<prerequisites DeepReplace="true" />
+					<researchViewX>3.00</researchViewX>
+					<researchViewY>7.00</researchViewY>
+					<tab>Buildings_SK</tab>
+				</value>
+			</li>
+
+
+			<!-- TubeTelevision -->
+			<li Class="SK.PatchOperationReplaceExtended">
+				<xpath>Defs/ResearchProjectDef[defName="TubeTelevision"]</xpath>
+				<value>
+					<label>Enjoyment VI</label>
+					<baseCost>800</baseCost>
+					<prerequisites DeepReplace="true">
+						<li>Piano</li>
+					</prerequisites>
+					<researchViewX>11.00</researchViewX>
+					<researchViewY>6.00</researchViewY>
+					<tab>Buildings_SK</tab>
+				</value>
+			</li>
+
+
+			<!-- FlatscreenTelevision -->
+			<li Class="SK.PatchOperationReplaceExtended">
+				<xpath>Defs/ResearchProjectDef[defName="FlatscreenTelevision"]</xpath>
+				<value>
+					<label>Enjoyment VII</label>
+					<baseCost>1000</baseCost>
+					<prerequisites DeepReplace="true">
+						<li>TubeTelevision</li>
+						<li>Electronics_C2</li>
+					</prerequisites>
+					<researchViewX>12.00</researchViewX>
+					<researchViewY>6.00</researchViewY>
+					<tab>Buildings_SK</tab>
+				</value>
+			</li>
+
+		</operations>
+		</match>
+    </Operation>	
+</Patch>	

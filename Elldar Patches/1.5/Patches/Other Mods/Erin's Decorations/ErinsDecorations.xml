@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Erin's Decorations</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- Architect Sense -->
+        <li Class="PatchOperationAdd">
+	  	  <xpath>Defs</xpath>
+	  	  <value>
+			<ArchitectSense.DesignationSubCategoryDef>
+				<defName>SubCategory_ErinDeco</defName>
+				<label>Erin's Decorations</label>
+				<description>Beautiful little additions</description>
+				<defNames>
+					<li>ED_SmallPhotos</li>
+					<li>ED_SmallPlant</li>
+					<li>ED_Plushie</li>
+					<li>ED_Candles</li>
+					<li>ED_Pillow</li>
+					<li>ED_Clock</li>
+					<li>ED_Trophy</li>
+					<li>ED_Vase</li>
+					<li>ED_Laptop</li>
+					<li>ED_Paper</li>
+					<li>ED_Papers</li>
+					<li>ED_Book</li>
+					<li>ED_PileofBooks</li>
+					<li>ED_CatTower</li>
+					<li>ED_DogHouse</li>
+					<li>ED_PetBowl</li>
+					<li>ED_Bin</li>
+					<li>ED_Doormat</li>
+				</defNames>
+				<designationCategory>Furniture</designationCategory>
+			</ArchitectSense.DesignationSubCategoryDef>
+	  	  </value>
+        </li>
+
+        <!-- Research -->
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ResearchProjectDef[defName="ED_SimpleDecorations"]</xpath>
+	  	  <value>
+			<modExtensions>
+				<li Class="ResearchTreeSK.ResearchTreeSKModExtension" />
+			</modExtensions>
+			<prerequisites>
+				<li>Tables_C1</li>
+				<li>Art_C1</li>
+			</prerequisites>
+			<baseCost>700</baseCost>
+			<techLevel>Industrial</techLevel>
+			<researchViewX>8.00</researchViewX>
+			<researchViewY>5.00</researchViewY>
+	  	  </value>
+        </li>
+
+        <!-- Cost -->
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_Candles"]</xpath>
+	  	  <value>
+			<costList>
+				<Tallow>5</Tallow>
+			</costList>
+	  	  </value>
+        </li>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_Laptop"]</xpath>
+	  	  <value>
+			<costList>
+				<Electronics>1</Electronics>
+				<Glass>5</Glass>
+			</costList>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>10</costStuffCount>
+	  	  </value>
+        </li>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_DogHouse"]</xpath>
+	  	  <value>
+			<costList>
+				<ComponentMedieval>4</ComponentMedieval>
+			</costList>
+	  	  </value>
+        </li>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_SmallPhotos"]</xpath>
+	  	  <value>
+			<costList>
+				<Glass>4</Glass>
+			</costList>
+	  	  </value>
+        </li>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_Clock"]</xpath>
+	  	  <value>
+			<costList>
+				<ElectronicComponents>2</ElectronicComponents>
+				<Glass>4</Glass>
+			</costList>
+			<costStuffCount>2</costStuffCount>
+	  	  </value>
+        </li>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_Bin"]</xpath>
+	  	  <value>
+			<costList>
+				<ComponentIndustrial>2</ComponentIndustrial>
+			</costList>
+			<costStuffCount>4</costStuffCount>
+	  	  </value>
+        </li>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_Paper" or defName="ED_Papers" or defName="ED_Book" or defName="ED_PileofBooks"]</xpath>
+	  	  <value>
+			<costList>
+				<Cloth>4</Cloth>
+			</costList>
+	  	  </value>
+        </li>
+
+        <li Class="PatchOperationRemove">
+	  	  <xpath>Defs/ThingDef[defName="ED_Paper" or defName="ED_Papers" or defName="ED_Book" or defName="ED_PileofBooks"]/stuffCategories</xpath>
+        </li>
+
+        <li Class="PatchOperationRemove">
+	  	  <xpath>Defs/ThingDef[defName="ED_Paper" or defName="ED_Papers" or defName="ED_Book" or defName="ED_PileofBooks"]/costStuffCount</xpath>
+        </li>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_Vase"]</xpath>
+	  	  <value>
+			<stuffCategories>
+				<li>Ceramic</li>
+				<li>Stony</li>
+			</stuffCategories>
+	  	  </value>
+        </li>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+	  	  <xpath>Defs/ThingDef[defName="ED_SmallPlant"]</xpath>
+	  	  <value>
+			<costList>
+				<Fertilizer>2</Fertilizer>
+			</costList>
+			<stuffCategories>
+				<li>Ceramic</li>
+				<li>Stony</li>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>4</costStuffCount>
+	  	  </value>
+        </li>
+
+        <!-- Attributes -->
+        <li Class="PatchOperationAdd">
+	  	  <xpath>Defs/ThingDef[defName="ED_Paper" or defName="ED_Papers" or defName="ED_Book" or defName="ED_PileofBooks"]/graphicData</xpath>
+	  	  <value>
+			<color>(185,150,105)</color>
+	  	  </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+	  	  <xpath>Defs/ThingDef[defName="ED_Doormat"]</xpath>
+	  	  <value>
+			<defaultPlacingRot>South</defaultPlacingRot>
+	  	  </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

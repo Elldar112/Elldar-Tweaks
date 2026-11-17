@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Roots of Rimworld</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+	<!-- Architect Sense -->
+		<li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+
+			<ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_RR_PrimitiveLights</defName>
+              <label>Primitive Lights</label>
+              <description>Light sources that originate from the roots of humanity</description>
+              <defNames>
+				<li>RR_StoneTorchOne</li>
+				<li>RR_StoneTorchTwo</li>
+				<li>RR_StoneTorchThree</li>
+				<li>RR_StoneTorchFour</li>
+				<li>RR_StoneTorchFive</li>
+				<li>RR_HangingTorch</li>
+				<li>RR_PotCandle</li>
+				<li>RR_PrimBraizer</li>
+				<li>RR_TallTorch</li>
+				<li>RR_ShortTorch</li>
+              </defNames>
+              <designationCategory>Accessories</designationCategory>
+            </ArchitectSense.DesignationSubCategoryDef>
+
+			<ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_RR_PrimitiveMats</defName>
+              <label>Primitive Mats</label>
+              <description>Primitive woven mats</description>
+              <defNames>
+                <li>RR_MatOne</li>
+				<li>RR_MatTwo</li>
+				<li>RR_MatThree</li>
+              </defNames>
+              <designationCategory>Accessories</designationCategory>
+            </ArchitectSense.DesignationSubCategoryDef>
+			
+			<ArchitectSense.DesignationSubCategoryDef>
+              <defName>SubCategory_RR_PrimitiveSeats</defName>
+              <label>Primitive Seats</label>
+              <description>Primitive woven mats</description>
+              <defNames>
+				<li>RR_StoneStool</li>
+                <li>RR_StoneThrone</li>
+				<li>RR_WoodThrone</li>
+              </defNames>
+              <designationCategory>Furniture</designationCategory>
+            </ArchitectSense.DesignationSubCategoryDef>
+
+		  </value>
+        </li>
+
+        <li Class="PatchOperationInsert">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_TablesN"]/defNames/li[2]</xpath>
+          <value><li>RR_Stump</li></value>
+        </li>
+
+        <!-- <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Seats"]/defNames</xpath>
+          <value>
+            <li>RR_WoodThrone</li>
+            <li>RR_StoneThrone</li>
+            <li>RR_StoneStool</li>
+          </value>
+        </li> -->
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_ComfortableSeats"]/defNames</xpath>
+          <value>
+            <li>RR_FluffPillow</li>
+            <li>RR_RoundPillow</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_AncientRugs"]/defNames</xpath>
+          <value>
+            <li>RR_RectRugOne</li>
+            <li>RR_RectRugTwo</li>
+            <li>RR_FluffyRug</li>
+            <li>RR_FluffyRoundRug</li>
+            <li>RR_PeltRug</li>
+            <li>RR_RoundRug</li>
+			<li>RR_LeatherRoundRug</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_SpecialBeds"]/defNames</xpath>
+          <value><li>RR_Bedroll</li></value>
+        </li>
+
+        <li Class="PatchOperationInsert">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_StandartBeds"]/defNames/li[3]</xpath>
+          <value><li>RR_FurBed</li></value>
+        </li>
+
+        <li Class="PatchOperationInsert">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_DoubleBeds"]/defNames/li[3]</xpath>
+          <value><li>RR_FurDoubleBed</li></value>
+        </li>
+
+        <!-- <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Lights"]/defNames</xpath>
+          <value>
+            <li>RR_TallTorch</li>
+            <li>RR_ShortTorch</li>
+            <li>RR_StoneTorchOne</li>
+            <li>RR_StoneTorchTwo</li>
+            <li>RR_StoneTorchThree</li>
+            <li>RR_StoneTorchFour</li>
+            <li>RR_StoneTorchFive</li>
+            <li>RR_HangingTorch</li>
+            <li>RR_PotCandle</li>
+            <li>RR_PrimBraizer</li>
+          </value>
+        </li> -->
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_OutdoorStorage"]/defNames</xpath>
+          <value>
+            <li>RR_ClosedUrn</li>
+            <li>RR_OpenUrn</li>
+            <li>RR_HandleUrn</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_MiscAccessory"]/defNames</xpath>
+          <value>
+            <li>RR_DecoBones</li>
+          </value>
+        </li>
+	
+	<!-- Research -->
+	
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="RR_Furniture" or defName="RR_lighting" or defName="RR_Rugs" or defName="RR_Storage"]</xpath>
+          <value>
+			<modExtensions>
+				<li Class="ResearchTreeSK.ResearchTreeSKModExtension" />
+			</modExtensions>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="RR_Furniture"]</xpath>
+          <value>
+			<researchViewX>1.00</researchViewX>
+			<researchViewY>7.00</researchViewY>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="RR_lighting"]</xpath>
+          <value>
+			<researchViewX>1.00</researchViewX>
+			<researchViewY>9.00</researchViewY>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="RR_Rugs"]</xpath>
+          <value>
+			<researchViewX>0.00</researchViewX>
+			<researchViewY>1.00</researchViewY>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="RR_Storage"]</xpath>
+          <value>
+			<researchViewX>1.00</researchViewX>
+			<researchViewY>12.00</researchViewY>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="ComplexFurniture"]</xpath>
+          <value>
+			<prerequisites>
+				<li>RR_Furniture</li>
+			</prerequisites>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="Light_B1"]</xpath>
+          <value>
+			<prerequisites>
+				<li>RR_lighting</li>
+			</prerequisites>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="Storage_A1"]</xpath>
+          <value>
+			<prerequisites>
+				<li>RR_Storage</li>
+			</prerequisites>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ResearchProjectDef[defName="Carpets_A1"]</xpath>
+          <value>
+			<prerequisites>
+				<li>RR_Rugs</li>
+			</prerequisites>
+          </value>
+        </li>
+	
+	<!-- Cost -->
+		<!-- Primitve Mats-->
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="RR_MatOne"]</xpath>
+          <value>
+			 <costList>
+				<Kindling>20</Kindling>
+				<Hay>40</Hay>
+			 </costList>
+          </value>
+        </li>
+
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="RR_MatTwo"]</xpath>
+          <value>
+		    <costList>
+				<Kindling>10</Kindling>
+				<Hay>20</Hay>
+			</costList>
+          </value>
+        </li>
+
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="RR_MatThree"]</xpath>
+          <value>
+			<costList>
+				<Kindling>15</Kindling>
+				<Hay>30</Hay>
+			</costList>
+          </value>
+        </li>
+		
+		<li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="RR_MatOne" or defName="RR_MatTwo" or defName="RR_MatThree"]/stuffCategories</xpath>
+        </li>
+		
+		<li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="RR_MatOne" or defName="RR_MatTwo" or defName="RR_MatThree"]/costStuffCount</xpath>
+        </li>
+		
+		<!-- Rugs -->
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_LeatherRoundRug"]/stuffCategories</xpath>
+          <value>
+			<li>Fabric</li>
+          </value>
+        </li>
+		
+		<!-- Beds -->
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="RR_FurBed"]</xpath>
+          <value>
+			<costList>
+				<Hay>20</Hay>
+			</costList>
+			<stuffCategories Replace="True" Inherit="False">
+				<li>Leathery</li>
+			</stuffCategories>
+			<statBases>
+				<MaxHitPoints>140</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<WorkToBuild>800</WorkToBuild>
+				<Mass>30</Mass>
+				<BedRestEffectiveness>0.85</BedRestEffectiveness>
+			</statBases>
+          </value>
+        </li>
+		
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="RR_FurDoubleBed"]</xpath>
+          <value>
+			<costList>
+				<Hay>40</Hay>
+			</costList>
+			<stuffCategories Replace="True" Inherit="False">
+				<li>Leathery</li>
+			</stuffCategories>
+			<statBases>
+				<MaxHitPoints>200</MaxHitPoints>
+				<Beauty>2</Beauty>				
+				<WorkToBuild>1500</WorkToBuild>
+				<Mass>50</Mass>
+				<BedRestEffectiveness>0.85</BedRestEffectiveness>
+			</statBases>
+          </value>
+        </li>
+
+		<!-- Torches -->
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="RR_TallTorch" or defName="RR_ShortTorch"]</xpath>
+          <value>
+		    <costList>
+				<Kindling>10</Kindling>
+			</costList>
+			<stuffCategories>
+				<li>Woody</li>
+			</stuffCategories>
+          </value>
+        </li>
+
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="RR_PrimBraizer"]</xpath>
+          <value>
+		    <costList>
+				<Charcoal>5</Charcoal>
+			</costList>
+          </value>
+        </li>
+
+		<li Class="SK.PatchOperationReplaceExtended">
+          <xpath>Defs/ThingDef[defName="RR_StoneTorchOne"
+		  or defName="RR_StoneTorchTwo"
+		  or defName="RR_StoneTorchThree"
+		  or defName="RR_StoneTorchFour"
+		  or defName="RR_StoneTorchFive"
+		  or defName="RR_HangingTorch"
+		  or defName="RR_PotCandle"]</xpath>
+          <value>
+		    <costList>
+				<Tallow>5</Tallow>
+			</costList>
+          </value>
+        </li>
+
+	<!-- Attributes -->
+	
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RR_MatOne" or defName="RR_MatTwo" or defName="RR_MatThree"]/graphicData</xpath>
+		  <value>
+			<color>(185,150,105)</color>
+		  </value>
+        </li>
+		
+		<li Class="PatchOperationAdd">
+		  <xpath>Defs/ThingDef[defName="RR_LeatherRoundRug"]</xpath>
+		  <value>
+			<uiIconPath>Things/Building/Furniture/leatherroundrug/LeatherRoundRug_north</uiIconPath>
+			<uiIconScale>1.1</uiIconScale>
+		  </value>
+		</li>
+
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Standalone Hot Spring</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+	  
+	  <!-- Building -->
+	  
+	  <li Class="SK.PatchOperationReplaceExtended">
+		<xpath>Defs/ThingDef[defName="StandaloneHotSpring"]</xpath>
+		<value>
+			<costList>
+				<SandResource>200</SandResource>
+				<CrushedStone>120</CrushedStone>
+			</costList>
+			<stuffCategories>
+				<li>Stony</li>
+			</stuffCategories>
+			<costStuffCount>380</costStuffCount>
+			<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+			<building>
+				<paintable>true</paintable>
+			</building>
+			<!-- <rotatable>true</rotatable>
+			<defaultPlacingRot>East</defaultPlacingRot> -->
+		</value>
+	  </li>
+	  
+	  <!-- DBH Patch -->
+	  
+	  <li Class="SK.PatchOperationReplaceExtended" MayRequire = "dbhlitemode">
+		<xpath>Defs/ThingDef[defName="StandaloneHotSpring"]</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>LogBoilers</li>
+			</researchPrerequisites>
+			<building>
+				<bed_healPerDay>9</bed_healPerDay>
+				<ai_chillDestination>true</ai_chillDestination>
+				<joyKind Replace="True">Hydrotherapy</joyKind>
+			</building>
+			<comps>
+				<li Class="DubsBadHygiene.CompProperties_Pipe">
+					<mode>Sewage</mode>
+				</li>
+			</comps>
+		</value>
+	  </li>
+
+	  <!-- <li Class="PatchOperationAddModExtension">
+        <xpath>Defs/ThingDef[defName="StandaloneHotSpring"]</xpath>
+        <value>
+          <li Class="DBH_Hotspring_Compatibility.ThingDefExtension_HygieneProvider">
+            <hygienePerTick>0.001</hygienePerTick>
+          </li>
+        </value>
+      </li> -->
+	  
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

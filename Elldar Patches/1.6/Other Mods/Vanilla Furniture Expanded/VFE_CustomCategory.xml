@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs</xpath>
+          <value>
+            <DesignationCategoryDef>
+              <defName>AOMorefurniture</defName>
+              <label>VFE</label>
+              <description>The new pieces of furniture added by the Vanilla Furniture Expanded mod.</description>
+              <order>455</order>
+              <specialDesignatorClasses>
+                <li>Designator_Cancel</li>
+                <li>Designator_Deconstruct</li>
+              </specialDesignatorClasses>
+            </DesignationCategoryDef>
+          </value>
+        </li>
+
+        <!-- ========== Move VFE furniture to AOMorefurniture ========== -->
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Radio_Industrial"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Radio_Spacer"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Joy_Arcade"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Joy_InudstrialComputer"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Joy_ModernComputer"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Joy_Piano"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Joy_RouletteTable"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Joy_DartsBoard"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Joy_PunchingBag"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Bed_Ergonomic"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Bed_DoubleErgonomic"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Table_Wardrobe"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Seat_ModernChair"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+
+        <!-- <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Light_ModernLamp"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li> -->
+
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Bed_Kingsize"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Table_RoyalEndTable"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Table_RoyalDresser"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Seat_RoyalChair"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Seat_RoyalArmchair"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Table_Royal1x1c"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Table_Royal2x2c"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Table_Royal1x2c"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Table_Royal3x3c"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="Table_Royal2x4c"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+        <li Class="SK.PatchOperationReplaceExtended">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="AirConditioningUnit"]</xpath>
+          <value>
+            <designationCategory>AOMorefurniture</designationCategory>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+</Patch>

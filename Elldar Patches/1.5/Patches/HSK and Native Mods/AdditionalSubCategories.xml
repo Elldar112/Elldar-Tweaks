@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+		<operations>
+	  
+			<li Class="PatchOperationAdd">
+			  <xpath>Defs</xpath>
+				<value>
+				
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_JoySimple</defName>
+					  <label>Simple Games</label>
+					  <description>Simple joy sources.</description>
+						  <defNames>
+							<li>ArcheryTarget</li>
+							<li>HoopstoneRing</li>
+							<li>HorseshoesPin</li>
+							<li>GameOfUrBoard</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_NatureShrines</defName>
+					  <label>Nature Shrines</label>
+					  <description>Simple joy sources.</description>
+						  <defNames>
+							<li>NatureShrine_Small</li>
+							<li>NatureShrine_Large</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_NatureShrines</defName>
+					  <label>Nature Shrines</label>
+					  <description>Simple joy sources.</description>
+						  <defNames>
+							<li>NatureShrine_Small</li>
+							<li>NatureShrine_Large</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+			
+					<!-- <ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_Stele</defName>
+					  <label>Steles</label>
+					  <description>Ancient memorials</description>
+						  <defNames>
+							<li>SteleLarge</li>
+							<li>SteleGrand</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef> -->
+			
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_JoyArtistic</defName>
+					  <label>Monuments</label>
+					  <description>Ancient art</description>
+						  <defNames>
+							<li>GlowstoneMonument</li>
+							<li>SteleLarge</li>
+							<li>SteleGrand</li>
+							<li>Cairn</li>
+						  </defNames>
+					  <designationCategory>Joy</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+			
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_MiscAccessory</defName>
+					  <label>Misc.</label>
+					  <description>Miscellaneous accessories.</description>
+						  <defNames>
+							<li>FloorAddonA</li>
+							<li>HeadPike</li>
+							<li>WoodenDebris</li>
+						  </defNames>
+					  <designationCategory>Accessories</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+					
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_ArmoredGate</defName>
+					  <label>Armored gate</label>
+					  <description>Armored gate, can be remotely opened and closed by the player without colonist interaction.</description>
+						  <defNames>
+							<li>OpenBlastDoor</li>
+							<li>ClosedBlastDoor</li>
+						  </defNames>
+					  <designationCategory>Security</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+					
+					<ArchitectSense.DesignationSubCategoryDef>
+					  <defName>SubCategory_Campfires</defName>
+					  <label>Campfires</label>
+					  <description>Simple campfires, used for heating and cooking.</description>
+						  <defNames>
+							<li>Campfire</li>
+							<li MayRequire="arpomo6.hmc.project">HMC_EndothermicCampfire</li>
+						  </defNames>
+					  <designationCategory>Temperature</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+					
+					<!-- Backported from HSK 1.6 -->
+					
+					<ArchitectSense.DesignationSubCategoryDef>
+						<defName>SubCategory_SpecialDefences</defName>
+						<label>special defence systems</label>
+						<description>Various special defence systems.</description>
+						<defNames>
+							<li>IonSatelliteBroadcaster</li>
+							<li>SkywrathController</li>
+							<li>Building_Shield</li>
+							<li>Building_Pawn_Upgrader</li>
+						</defNames>
+						<designationCategory>Security</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+					
+					<ArchitectSense.DesignationSubCategoryDef>
+						<defName>SubCategory_PowerSafety</defName>
+						<label>power safety</label>
+						<description>Protect you power network from various incidents.</description>
+						<defNames>
+							<li>LightningRod</li>
+							<li MayRequire="mersid.backuppowerupdated">BackupPower_Attachment</li>
+							<li MayRequire="ratys.rtfuse">Building_RTMakeshiftFuse</li>
+							<li MayRequire="ratys.rtfuse">Building_RTCircuitBreaker</li>
+							<li MayRequire="ratys.rtfuse">Building_RTCircuitBreakerBig</li>
+							<li MayRequire="ratys.rtsolarflareshield">Building_RTMagneticShield</li>
+						</defNames>
+						<designationCategory>Power</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+					
+					<ArchitectSense.DesignationSubCategoryDef MayRequire="Dubwise.Rimatomics">
+						<defName>SubCategory_EnergyWeapons</defName>
+						<label>advanced weapons</label>
+						<description>Various advanced weapons.</description>
+						<defNames>
+							<li>PPCHEL</li>
+							<li>PPCTeslaCoil</li>
+							<li>PPCRailgun</li>
+							<li>PPCObelisk</li>
+							<li>PPCMarauder</li>
+							<li>MissileSilo</li>
+						</defNames>
+						<designationCategory>Security</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+					
+					<ArchitectSense.DesignationSubCategoryDef MayRequire="Dubwise.Rimatomics">
+						<defName>SubCategory_WeaponsUtilities</defName>
+						<label>support systems</label>
+						<description>Various support systems.</description>
+						<defNames>
+							<li>RimatomicsShieldGenerator</li>
+							<li>PPCWeaponsConsole</li>
+							<li>PPCADS</li>
+							<li>RadarDish</li>
+						</defNames>
+						<designationCategory>Security</designationCategory>
+					</ArchitectSense.DesignationSubCategoryDef>
+					
+				</value>
+			</li>
+			
+		</operations>
+  </Operation>
+
+</Patch>

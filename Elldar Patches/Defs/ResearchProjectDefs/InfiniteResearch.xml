@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>ResearchInfinite</defName>
+    <label>Infinite Research</label>
+    <description>This research serves no purpose other than to keep Your scientists busy or train them, when everything else is researched.</description>
+    <baseCost>50000000000</baseCost>
+    <techLevel>Archotech</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+		<li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+	<prerequisites>
+		<li>Stargate_F1</li>
+	</prerequisites>
+	<researchViewX>27.00</researchViewX>
+	<researchViewY>13.00</researchViewY>
+    <tab>Craft_SK</tab>
+  </ResearchProjectDef>
+  
+</Defs>
